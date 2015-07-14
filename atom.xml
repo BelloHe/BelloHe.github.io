@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
   
-  <title><![CDATA[Hyjal's Blog]]></title>
-  
+  <title><![CDATA[Hyjal's blog]]></title>
+  <subtitle><![CDATA[on the way]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://hyjal-binbin.com//"/>
   <updated>2015-07-13T12:16:53.895Z</updated>
