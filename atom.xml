@@ -5,7 +5,7 @@
   <subtitle><![CDATA[on the way]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://hyjal-binbin.com//"/>
-  <updated>2015-09-24T08:11:07.202Z</updated>
+  <updated>2015-09-24T08:58:26.084Z</updated>
   <id>http://hyjal-binbin.com//</id>
   
   <author>
@@ -19,8 +19,8 @@
     <title><![CDATA[如何获取设备的“身份证”]]></title>
     <link href="http://hyjal-binbin.com/2015/09/24/device-CA/"/>
     <id>http://hyjal-binbin.com/2015/09/24/device-CA/</id>
-    <published>2015-09-24T08:11:07.202Z</published>
-    <updated>2015-09-24T08:11:07.202Z</updated>
+    <published>2015-09-24T08:58:26.084Z</published>
+    <updated>2015-09-24T08:58:26.084Z</updated>
     <content type="html"><![CDATA[<h1 id="0x00_写在前面">0x00 写在前面</h1><pre><code>大概半年前做的关于设备检测的任务，在此记录。
 </code></pre><h1 id="0x01_以下内容文不对题^-^">0x01 以下内容文不对题^-^</h1><blockquote>
 <h1 id="include">include</h1><p><img src="https://ss0.baidu.com/73x1bjeh1BF3odCf/it/u=1522166854,3652826151&amp;fm=96&amp;s=3C0136745586C9660E976CC30300D0BA" alt="baidu"><br><a href="http://www.jd.com" target="_blank" rel="external">天猫</a><br><code>#include&lt;stdio.h&gt;</code></p>
@@ -31,6 +31,8 @@
 </code></pre><h1 id="0x01_以下内容文不对题^-^">0x01 以下内容文不对题^-^</h1><blockquote>
 ]]>
     </summary>
+    
+      <category term="Windows" scheme="http://hyjal-binbin.com/categories/Windows/"/>
     
   </entry>
   
