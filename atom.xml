@@ -5,7 +5,7 @@
   <subtitle><![CDATA[on the way]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://hyjal-binbin.com//"/>
-  <updated>2015-07-13T12:16:53.895Z</updated>
+  <updated>2015-09-24T07:57:30.218Z</updated>
   <id>http://hyjal-binbin.com//</id>
   
   <author>
@@ -16,11 +16,29 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title><![CDATA[Hello World]]></title>
-    <link href="http://hyjal-binbin.com/2015/07/13/hello-world/"/>
-    <id>http://hyjal-binbin.com/2015/07/13/hello-world/</id>
-    <published>2015-07-13T12:16:53.895Z</published>
-    <updated>2015-07-13T12:16:53.895Z</updated>
+    <title><![CDATA[如何获取设备的“身份证”]]></title>
+    <link href="http://hyjal-binbin.com/2015/09/24/device-CA/"/>
+    <id>http://hyjal-binbin.com/2015/09/24/device-CA/</id>
+    <published>2015-09-24T07:57:30.218Z</published>
+    <updated>2015-09-24T07:57:30.218Z</updated>
+    <content type="html"><![CDATA[<h1 id="0x00_写在前面">0x00 写在前面</h1><pre><code>大概半年前做的关于设备检测的任务，在此记录。
+</code></pre><h1 id="0x01_以下内容为测试代码部分，正式内容后续补上">0x01 以下内容为测试代码部分，正式内容后续补上</h1><blockquote>
+<h1 id="include">include</h1><p><img src="https://ss0.baidu.com/73x1bjeh1BF3odCf/it/u=1522166854,3652826151&amp;fm=96&amp;s=3C0136745586C9660E976CC30300D0BA" alt="baidu"><br><a href="http://www.jd.com" target="_blank" rel="external">天猫</a><br><code>#include&lt;stdio.h&gt;</code></p>
+</blockquote>
+]]></content>
+    <summary type="html">
+    <![CDATA[<h1 id="0x00_写在前面">0x00 写在前面</h1><pre><code>大概半年前做的关于设备检测的任务，在此记录。
+</code></pre><h1 id="0x01_以下内容为测试代码部分，正式内容后续补上">0x01 以下内容为测试代码部分，正式内容后续补上]]>
+    </summary>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[Hello World123]]></title>
+    <link href="http://hyjal-binbin.com/2015/09/24/hello-world/"/>
+    <id>http://hyjal-binbin.com/2015/09/24/hello-world/</id>
+    <published>2015-09-24T07:55:05.299Z</published>
+    <updated>2015-09-24T07:55:05.299Z</updated>
     <content type="html"><![CDATA[<p>Welcome to <a href="http://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="http://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="http://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
 <h2 id="Quick_Start">Quick Start</h2><h3 id="Create_a_new_post">Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
 <p>More info: <a href="http://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
