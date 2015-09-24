@@ -5,7 +5,7 @@
   <subtitle><![CDATA[on the way]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://hyjal-binbin.com//"/>
-  <updated>2015-09-24T07:57:30.218Z</updated>
+  <updated>2015-09-24T08:08:35.501Z</updated>
   <id>http://hyjal-binbin.com//</id>
   
   <author>
@@ -14,6 +14,19 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[device-CA.md]]></title>
+    <link href="http://hyjal-binbin.com/2015/09/24/device-CA-md/"/>
+    <id>http://hyjal-binbin.com/2015/09/24/device-CA-md/</id>
+    <published>2015-09-24T08:08:35.000Z</published>
+    <updated>2015-09-24T08:08:35.501Z</updated>
+    <content type="html"></content>
+    <summary type="html">
+    
+    </summary>
+    
+  </entry>
   
   <entry>
     <title><![CDATA[如何获取设备的“身份证”]]></title>
