@@ -5,7 +5,7 @@
   <subtitle><![CDATA[on the way]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://hyjal-binbin.com//"/>
-  <updated>2015-09-24T09:17:53.653Z</updated>
+  <updated>2015-09-30T06:59:28.053Z</updated>
   <id>http://hyjal-binbin.com//</id>
   
   <author>
@@ -16,20 +16,20 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title><![CDATA[如何获取设备的“身份证”]]></title>
-    <link href="http://hyjal-binbin.com/2015/09/24/device-CA/"/>
-    <id>http://hyjal-binbin.com/2015/09/24/device-CA/</id>
-    <published>2015-09-24T09:17:53.653Z</published>
-    <updated>2015-09-24T09:17:53.653Z</updated>
-    <content type="html"><![CDATA[<h1 id="0x00_写在前面">0x00 写在前面</h1><pre><code>大概半年前做的关于设备检测的任务，在此记录。
-</code></pre><h1 id="0x01_以下内容文不对题^-^">0x01 以下内容文不对题^-^</h1><blockquote>
-<h1 id="include">include</h1><p><img src="https://ss0.baidu.com/73x1bjeh1BF3odCf/it/u=1522166854,3652826151&amp;fm=96&amp;s=3C0136745586C9660E976CC30300D0BA" alt="baidu"><br><a href="http://www.jd.com" target="_blank" rel="external">天猫</a><br><a id="more"></a><br><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">def <span class="function"><span class="title">GetTime</span><span class="params">(cursor)</span></span>:</span><br><span class="line">    tH = <span class="tag">time</span>.<span class="function"><span class="title">strftime</span><span class="params">(<span class="string">"%H"</span>,time.localtime(time.time()</span></span>))</span><br><span class="line">    <span class="keyword">if</span> tH &lt; <span class="number">2</span>:</span><br><span class="line">        tTime = <span class="tag">time</span>.<span class="function"><span class="title">strftime</span><span class="params">(<span class="string">"%Y-%m-%d 02:00:00"</span>,time.localtime(time.time()</span></span>))</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        tTime = <span class="tag">time</span>.<span class="function"><span class="title">strftime</span><span class="params">(<span class="string">"%Y-%m-%d 02:00:00"</span>,time.localtime(time.time()</span></span>-<span class="number">86400</span>))</span><br><span class="line">    print tTime</span><br><span class="line">    <span class="id">#n</span> = <span class="attribute">cursor</span>.<span class="function"><span class="title">execute</span><span class="params">(<span class="string">"select Mac,SrcIP,Time from TTCPTraffice where "</span>)</span></span></span><br></pre></td></tr></table></figure></p>
+    <title><![CDATA[windows平台下获取设备“身份证”]]></title>
+    <link href="http://hyjal-binbin.com/2015/09/30/device-CA/"/>
+    <id>http://hyjal-binbin.com/2015/09/30/device-CA/</id>
+    <published>2015-09-30T06:59:28.053Z</published>
+    <updated>2015-09-30T06:59:28.053Z</updated>
+    <content type="html"><![CDATA[<h1 id="0x00_写在前面">0x00 写在前面</h1><pre><code>半年前做了设备检测相关的工作,里面涉及到了设备的识别，在此记录
+</code></pre><a id="more"></a>
+<h1 id="0x01_以下内容文不对题^-^">0x01 以下内容文不对题^-^</h1><blockquote>
+<h1 id="include">include</h1><p><img src="https://ss0.baidu.com/73x1bjeh1BF3odCf/it/u=1522166854,3652826151&amp;fm=96&amp;s=3C0136745586C9660E976CC30300D0BA" alt="baidu"><br><a href="http://www.jd.com" target="_blank" rel="external">天猫</a><br><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">def <span class="function"><span class="title">GetTime</span><span class="params">(cursor)</span></span>:</span><br><span class="line">    tH = <span class="tag">time</span>.<span class="function"><span class="title">strftime</span><span class="params">(<span class="string">"%H"</span>,time.localtime(time.time()</span></span>))</span><br><span class="line">    <span class="keyword">if</span> tH &lt; <span class="number">2</span>:</span><br><span class="line">        tTime = <span class="tag">time</span>.<span class="function"><span class="title">strftime</span><span class="params">(<span class="string">"%Y-%m-%d 02:00:00"</span>,time.localtime(time.time()</span></span>))</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        tTime = <span class="tag">time</span>.<span class="function"><span class="title">strftime</span><span class="params">(<span class="string">"%Y-%m-%d 02:00:00"</span>,time.localtime(time.time()</span></span>-<span class="number">86400</span>))</span><br><span class="line">    print tTime</span><br><span class="line">    <span class="id">#n</span> = <span class="attribute">cursor</span>.<span class="function"><span class="title">execute</span><span class="params">(<span class="string">"select Mac,SrcIP,Time from TTCPTraffice where "</span>)</span></span></span><br></pre></td></tr></table></figure></p>
 </blockquote>
 ]]></content>
     <summary type="html">
-    <![CDATA[<h1 id="0x00_写在前面">0x00 写在前面</h1><pre><code>大概半年前做的关于设备检测的任务，在此记录。
-</code></pre><h1 id="0x01_以下内容文不对题^-^">0x01 以下内容文不对题^-^</h1><blockquote>
-<h1 id="include">include</h1><p><img src="https://ss0.baidu.com/73x1bjeh1BF3odCf/it/u=1522166854,3652826151&amp;fm=96&amp;s=3C0136745586C9660E976CC30300D0BA" alt="baidu"><br><a href="http://www.jd.com">天猫</a><br>]]>
+    <![CDATA[<h1 id="0x00_写在前面">0x00 写在前面</h1><pre><code>半年前做了设备检测相关的工作,里面涉及到了设备的识别，在此记录
+</code></pre>]]>
     
     </summary>
     

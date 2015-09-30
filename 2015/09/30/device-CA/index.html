@@ -37,23 +37,17 @@
   <link rel="shorticon icon" type="image/x-icon" href="/favicon.ico?v=0.4.3" />
 
 
-<meta name="description" content="0x00 写在前面大概半年前做的关于设备检测的任务，在此记录。
-0x01 以下内容文不对题^-^
-include天猫">
+<meta name="description" content="0x00 写在前面半年前做了设备检测相关的工作,里面涉及到了设备的识别，在此记录">
 <meta property="og:type" content="article">
-<meta property="og:title" content="如何获取设备的“身份证”">
-<meta property="og:url" content="http://hyjal-binbin.com/2015/09/24/device-CA/index.html">
+<meta property="og:title" content="windows平台下获取设备“身份证”">
+<meta property="og:url" content="http://hyjal-binbin.com/2015/09/30/device-CA/index.html">
 <meta property="og:site_name" content="Hyjal's blog">
-<meta property="og:description" content="0x00 写在前面大概半年前做的关于设备检测的任务，在此记录。
-0x01 以下内容文不对题^-^
-include天猫">
+<meta property="og:description" content="0x00 写在前面半年前做了设备检测相关的工作,里面涉及到了设备的识别，在此记录">
 <meta property="og:image" content="https://ss0.baidu.com/73x1bjeh1BF3odCf/it/u=1522166854,3652826151&fm=96&s=3C0136745586C9660E976CC30300D0BA">
-<meta property="og:updated_time" content="2015-09-24T09:17:53.653Z">
+<meta property="og:updated_time" content="2015-09-30T06:59:28.053Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="如何获取设备的“身份证”">
-<meta name="twitter:description" content="0x00 写在前面大概半年前做的关于设备检测的任务，在此记录。
-0x01 以下内容文不对题^-^
-include天猫">
+<meta name="twitter:title" content="windows平台下获取设备“身份证”">
+<meta name="twitter:description" content="0x00 写在前面半年前做了设备检测相关的工作,里面涉及到了设备的识别，在此记录">
 
 
 <script type="text/javascript" id="hexo.configuration">
@@ -63,7 +57,7 @@ include天猫">
   };
 </script>
 
-    <title> 如何获取设备的“身份证” // Hyjal's blog </title>
+    <title> windows平台下获取设备“身份证” // Hyjal's blog </title>
 </head>
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
 <!--[if lte IE 8]>
@@ -186,7 +180,7 @@ include天猫">
           
           
             
-              如何获取设备的“身份证”
+              windows平台下获取设备“身份证”
             
           
         </h1>
@@ -195,8 +189,8 @@ include天猫">
       <div class="post-meta">
         <span class="post-time">
           发表于
-          <time itemprop="dateCreated" datetime="2015-09-24T17:17:53+08:00" content="2015-09-24">
-            2015-09-24
+          <time itemprop="dateCreated" datetime="2015-09-30T14:59:28+08:00" content="2015-09-30">
+            2015-09-30
           </time>
         </span>
 
@@ -217,8 +211,8 @@ include天猫">
           
             <span class="post-comments-count">
               &nbsp; | &nbsp;
-              <a href="/2015/09/24/device-CA/#comments" itemprop="discussionUrl">
-                <span class="post-comments-count ds-thread-count" data-thread-key="2015/09/24/device-CA/" itemprop="commentsCount"></span>
+              <a href="/2015/09/30/device-CA/#comments" itemprop="discussionUrl">
+                <span class="post-comments-count ds-thread-count" data-thread-key="2015/09/30/device-CA/" itemprop="commentsCount"></span>
               </a>
             </span>
           
@@ -232,9 +226,10 @@ include天猫">
       
 
       
-        <span itemprop="articleBody"><h1 id="0x00_写在前面">0x00 写在前面</h1><pre><code>大概半年前做的关于设备检测的任务，在此记录。
-</code></pre><h1 id="0x01_以下内容文不对题^-^">0x01 以下内容文不对题^-^</h1><blockquote>
-<h1 id="include">include</h1><p><img src="https://ss0.baidu.com/73x1bjeh1BF3odCf/it/u=1522166854,3652826151&amp;fm=96&amp;s=3C0136745586C9660E976CC30300D0BA" alt="baidu"><br><a href="http://www.jd.com" target="_blank" rel="external">天猫</a><br><a id="more"></a><br><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">def <span class="function"><span class="title">GetTime</span><span class="params">(cursor)</span></span>:</span><br><span class="line">    tH = <span class="tag">time</span>.<span class="function"><span class="title">strftime</span><span class="params">(<span class="string">"%H"</span>,time.localtime(time.time()</span></span>))</span><br><span class="line">    <span class="keyword">if</span> tH &lt; <span class="number">2</span>:</span><br><span class="line">        tTime = <span class="tag">time</span>.<span class="function"><span class="title">strftime</span><span class="params">(<span class="string">"%Y-%m-%d 02:00:00"</span>,time.localtime(time.time()</span></span>))</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        tTime = <span class="tag">time</span>.<span class="function"><span class="title">strftime</span><span class="params">(<span class="string">"%Y-%m-%d 02:00:00"</span>,time.localtime(time.time()</span></span>-<span class="number">86400</span>))</span><br><span class="line">    print tTime</span><br><span class="line">    <span class="id">#n</span> = <span class="attribute">cursor</span>.<span class="function"><span class="title">execute</span><span class="params">(<span class="string">"select Mac,SrcIP,Time from TTCPTraffice where "</span>)</span></span></span><br></pre></td></tr></table></figure></p>
+        <span itemprop="articleBody"><h1 id="0x00_写在前面">0x00 写在前面</h1><pre><code>半年前做了设备检测相关的工作,里面涉及到了设备的识别，在此记录
+</code></pre><a id="more"></a>
+<h1 id="0x01_以下内容文不对题^-^">0x01 以下内容文不对题^-^</h1><blockquote>
+<h1 id="include">include</h1><p><img src="https://ss0.baidu.com/73x1bjeh1BF3odCf/it/u=1522166854,3652826151&amp;fm=96&amp;s=3C0136745586C9660E976CC30300D0BA" alt="baidu"><br><a href="http://www.jd.com" target="_blank" rel="external">天猫</a><br><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">def <span class="function"><span class="title">GetTime</span><span class="params">(cursor)</span></span>:</span><br><span class="line">    tH = <span class="tag">time</span>.<span class="function"><span class="title">strftime</span><span class="params">(<span class="string">"%H"</span>,time.localtime(time.time()</span></span>))</span><br><span class="line">    <span class="keyword">if</span> tH &lt; <span class="number">2</span>:</span><br><span class="line">        tTime = <span class="tag">time</span>.<span class="function"><span class="title">strftime</span><span class="params">(<span class="string">"%Y-%m-%d 02:00:00"</span>,time.localtime(time.time()</span></span>))</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        tTime = <span class="tag">time</span>.<span class="function"><span class="title">strftime</span><span class="params">(<span class="string">"%Y-%m-%d 02:00:00"</span>,time.localtime(time.time()</span></span>-<span class="number">86400</span>))</span><br><span class="line">    print tTime</span><br><span class="line">    <span class="id">#n</span> = <span class="attribute">cursor</span>.<span class="function"><span class="title">execute</span><span class="params">(<span class="string">"select Mac,SrcIP,Time from TTCPTraffice where "</span>)</span></span></span><br></pre></td></tr></table></figure></p>
 </blockquote>
 </span>
       
@@ -277,8 +272,8 @@ include天猫">
             
               <div class="comments" id="comments">
                 
-                  <div class="ds-thread" data-thread-key="2015/09/24/device-CA/"
-                       data-title="如何获取设备的“身份证”" data-url="http://hyjal-binbin.com/2015/09/24/device-CA/">
+                  <div class="ds-thread" data-thread-key="2015/09/30/device-CA/"
+                       data-title="windows平台下获取设备“身份证”" data-url="http://hyjal-binbin.com/2015/09/30/device-CA/">
                   </div>
                 
               </div>
@@ -356,6 +351,13 @@ include天猫">
         
 
         <div class="links-of-author motion-element">
+          
+            <p class="site-author-name">Links</p>
+            
+              <span class="links-of-author-item">
+              <a href="http://macshuo.com/" target="_blank">MacTalk</a>
+              </span>
+            
           
         </div>
 
