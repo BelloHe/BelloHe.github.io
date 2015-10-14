@@ -5,7 +5,7 @@
   <subtitle><![CDATA[on the way]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://hyjal-binbin.com//"/>
-  <updated>2015-10-07T03:13:25.584Z</updated>
+  <updated>2015-10-14T07:12:59.012Z</updated>
   <id>http://hyjal-binbin.com//</id>
   
   <author>
@@ -14,6 +14,23 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title></title>
+    <link href="http://hyjal-binbin.com/2015/10/14/GetpdfContent/"/>
+    <id>http://hyjal-binbin.com/2015/10/14/GetpdfContent/</id>
+    <published>2015-10-14T07:13:37.010Z</published>
+    <updated>2015-10-14T07:12:59.012Z</updated>
+    <content type="html"><![CDATA[<p>title:利用acrobat SDK提取pdf文档内容</p>
+<h2 id="categories:windows">categories:windows</h2><h1 id="0x00_背景">0x00 背景</h1><p>　　HackingTeam泄漏事件影响颇大，415.77G的内容大多是邮件内容，分析起来比较麻烦，因而被大多数人忽略。网上有很多邮件分析的文章<a href="http://www.sec-un.org/analysis-on-the-hackingteam-mail-security-threat-intelligence-2.html" target="_blank" rel="external">HT邮件分析</a>,主要是针对邮件关联进行分析，若对邮件内容进行分析则需提取邮件附件中的内容，再针对内容做进一步分析。本文背景其实与上文无关，只是借此提升逼格，下面将介绍如何利用acrobat SDK提取pdf文档内容。</p>
+<h1 id="0x01_acrobat导入">0x01 acrobat导入</h1><pre><code>只要安装了Adobe Acrobat，就能在其安装目录下找到acrobat.tlb，其中包含了adobe公司提供的接口,可对pdf进行各种操作[<span class="link_label">参考文档</span>](<span class="link_url">http://partners.adobe.com/public/developer/en/acrobat/sdk/pdf/iac/IACOverview.pdf</span>)。
+</code></pre>]]></content>
+    <summary type="html">
+    <![CDATA[<p>title:利用acrobat SDK提取pdf文档内容</p>
+<h2 id="categories:windows">categories:windows</h2><h1 id="0x00_背景">0x00 背景</h1><p>　　HackingTeam泄漏事件影响颇大]]>
+    </summary>
+    
+  </entry>
   
   <entry>
     <title><![CDATA[windows平台下获取USB设备“身份证”]]></title>
