@@ -5,7 +5,7 @@
   <subtitle><![CDATA[on the way]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://hyjal-binbin.com//"/>
-  <updated>2015-10-22T02:54:44.177Z</updated>
+  <updated>2015-10-22T03:14:30.556Z</updated>
   <id>http://hyjal-binbin.com//</id>
   
   <author>
@@ -19,13 +19,15 @@
     <title><![CDATA[捕获USB设备插入/拔出消息]]></title>
     <link href="http://hyjal-binbin.com/2015/10/22/USBMessage/"/>
     <id>http://hyjal-binbin.com/2015/10/22/USBMessage/</id>
-    <published>2015-10-22T02:54:44.237Z</published>
-    <updated>2015-10-22T02:54:44.177Z</updated>
+    <published>2015-10-22T03:14:30.556Z</published>
+    <updated>2015-10-22T03:14:30.556Z</updated>
     <content type="html"><![CDATA[<h1 id="0x00_需求">0x00 需求</h1><p>　　捕获USB设备插入/拔出消息</p>
-<h1 id="0x01_WM_DEVICECHANGE">0x01 WM_DEVICECHANGE</h1>]]></content>
+<h1 id="0x01_WM_DEVICECHANGE">0x01 WM_DEVICECHANGE</h1><p>　　未完待续</p>
+]]></content>
     <summary type="html">
     <![CDATA[<h1 id="0x00_需求">0x00 需求</h1><p>　　捕获USB设备插入/拔出消息</p>
-<h1 id="0x01_WM_DEVICECHANGE">0x01 WM_DEVICECHANGE</h1>]]>
+<h1 id="0x01_WM_DEVICECHANGE">0x01 WM_DEVICECHANGE</h1><p>　　未完待续</p>
+]]>
     </summary>
     
       <category term="Windows" scheme="http://hyjal-binbin.com/categories/Windows/"/>
@@ -62,7 +64,7 @@
     <link href="http://hyjal-binbin.com/2015/10/07/device-CA/"/>
     <id>http://hyjal-binbin.com/2015/10/07/device-CA/</id>
     <published>2015-10-06T16:00:00.000Z</published>
-    <updated>2015-10-14T07:29:48.148Z</updated>
+    <updated>2015-10-22T03:13:30.149Z</updated>
     <content type="html"><![CDATA[<h1 id="0x00_写在前面">0x00 写在前面</h1><p>　　当我们将U盘插入windows主机时，会提示安装驱动，那么windows是如何判断应该安装哪个版本的驱动的呢？在这里将用到设备的身份信息，包括厂商、型号、序列号等。大概半年前做了一个关于设备检测的小工程，看了很多资料和帖子，将获取设备身份信息的方法在此记录，方便以后使用。</p>
 <h1 id="0x01_USB设备有哪些身份信息">0x01 USB设备有哪些身份信息</h1><p>　　根据USB规范中的说明<a href="http://www.usb.org/developers/docs" target="_blank" rel="external"><font color="blue">USB规范官方文档</font></a>，供应商ID(VID)/产品识别码(PID)唯一标识一个设备，VID和PID都是两个字节长，其中，供应商ID（VID）由供应商向USB执行论坛申请，每个供应商的VID是唯一的，PID由供应商自行决定，理论上来说，不同的产品、相同产品的不同型号、相同型号的不同设计的产品最好采用不同的PID，以便区别相同厂家的不同设备。<a id="more"></a><br>　　在windows系统中，我们可以通过设备管理器-&gt;要查看的设备-&gt;属性-&gt;详细信息-&gt;硬件ID来查看VID/PID，如下图</p>
 <p><div align="center"><br><img src="/img/hardwareID.png" width="414" height="430" alt="硬件ID" align="center"><br></div></p>
@@ -78,6 +80,8 @@
     </summary>
     
       <category term="Windows" scheme="http://hyjal-binbin.com/categories/Windows/"/>
+    
+      <category term="USB" scheme="http://hyjal-binbin.com/categories/Windows/USB/"/>
     
   </entry>
   
