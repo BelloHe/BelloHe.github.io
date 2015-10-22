@@ -40,7 +40,7 @@
 <meta name="description">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Hyjal's blog">
-<meta property="og:url" content="http://hyjal-binbin.com/index.html">
+<meta property="og:url" content="http://hyjal-binbin.com/categories/Windows/UBS/index.html">
 <meta property="og:site_name" content="Hyjal's blog">
 <meta property="og:description">
 <meta name="twitter:card" content="summary">
@@ -55,7 +55,7 @@
   };
 </script>
 
-    <title> Hyjal's blog </title>
+    <title> 分类: UBS // Hyjal's blog </title>
 </head>
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
 <!--[if lte IE 8]>
@@ -81,9 +81,7 @@
 
 
 
-<div class="container one-column 
-   page-home 
-">
+<div class="container one-column ">
     <div class="headband"></div>
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
         <div class="header-inner"><h1 class="site-meta">
@@ -167,262 +165,34 @@
         <div class="main-inner">
             <div id="content" class="content">
                 
-  <section id="posts" class="posts-expand">
-    
-      
 
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      
-      
-        <h1 class="post-title" itemprop="name headline">
-          
-          
-            
-              <a class="post-title-link" href="/2015/10/22/USBMessage/" itemprop="url">
-                捕获USB设备插入/拔出消息
-              </a>
-            
-          
-        </h1>
-      
-
-      <div class="post-meta">
-        <span class="post-time">
-          发表于
-          <time itemprop="dateCreated" datetime="2015-10-22T10:54:44+08:00" content="2015-10-22">
-            2015-10-22
-          </time>
-        </span>
-
-        
-          <span class="post-category" >
-            &nbsp; | &nbsp; 分类于
-            
-              <span itemprop="about" itemscope itemtype="https://schema.org/Thing"><a href="/categories/Windows/" itemprop="url" rel="index"><span itemprop="name">Windows</span></a></span>
-
-              
-              
-                ， 
-              
-
-            
-              <span itemprop="about" itemscope itemtype="https://schema.org/Thing"><a href="/categories/Windows/UBS/" itemprop="url" rel="index"><span itemprop="name">UBS</span></a></span>
-
-              
-              
-
-            
-          </span>
-        
-
-        
-          
-            <span class="post-comments-count">
-              &nbsp; | &nbsp;
-              <a href="/2015/10/22/USBMessage/#comments" itemprop="discussionUrl">
-                <span class="post-comments-count ds-thread-count" data-thread-key="2015/10/22/USBMessage/" itemprop="commentsCount"></span>
-              </a>
-            </span>
-          
-        
-      </div>
-    </header>
-
-    <div class="post-body">
-
-      
-      
-
-      
-        
-          <span itemprop="articleBody"><h1 id="0x00_需求">0x00 需求</h1><p>　　捕获USB设备插入/拔出消息</p>
-<h1 id="0x01_WM_DEVICECHANGE">0x01 WM_DEVICECHANGE</h1></span>
-        
-      
+  <section id="posts" class="posts-collapse">
+    <div class="collection-title">
+      <h2 >
+        UBS
+        <small>分类</small>
+      </h2>
     </div>
 
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
     
       
 
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  <article class="post post-type-normal"itemscope itemtype="http://schema.org/Article">
     <header class="post-header">
 
-      
-      
-        <h1 class="post-title" itemprop="name headline">
-          
-          
-            
-              <a class="post-title-link" href="/2015/10/14/GetpdfContent/" itemprop="url">
-                利用acrobat SDK提取pdf文档内容
-              </a>
-            
-          
-        </h1>
-      
-
-      <div class="post-meta">
-        <span class="post-time">
-          发表于
-          <time itemprop="dateCreated" datetime="2015-10-14T00:00:00+08:00" content="2015-10-14">
-            2015-10-14
-          </time>
-        </span>
-
+      <h1 class="post-title">
         
-          <span class="post-category" >
-            &nbsp; | &nbsp; 分类于
-            
-              <span itemprop="about" itemscope itemtype="https://schema.org/Thing"><a href="/categories/Windows/" itemprop="url" rel="index"><span itemprop="name">Windows</span></a></span>
-
-              
-              
-
-            
-          </span>
-        
-
-        
-          
-            <span class="post-comments-count">
-              &nbsp; | &nbsp;
-              <a href="/2015/10/14/GetpdfContent/#comments" itemprop="discussionUrl">
-                <span class="post-comments-count ds-thread-count" data-thread-key="2015/10/14/GetpdfContent/" itemprop="commentsCount"></span>
-              </a>
-            </span>
-          
-        
-      </div>
-    </header>
-
-    <div class="post-body">
-
-      
-      
-
-      
-        
-          <h1 id="0x00_背景">0x00 背景</h1><p>　　HackingTeam泄漏事件影响颇大，415.77G的内容大多是邮件内容，分析起来比较麻烦，因而被大多数人忽略。网上有很多邮件分析的文章<a href="http://www.sec-un.org/analysis-on-the-hackingteam-mail-security-threat-intelligence-2.html"><font color = "blue">HT邮件分析</font></a>,主要是针对邮件关联进行分析，若对邮件内容进行分析则需提取邮件附件中的内容，再针对内容做进一步分析。本文背景其实与上文无关，只是借此提升逼格，下面将介绍如何利用acrobat SDK提取pdf文档内容。</p>
-<h1 id="0x01_acrobat导入">0x01 acrobat导入</h1><p>　　只要安装了Adobe Acrobat，就能在其安装目录下找到acrobat.tlb，其中包含了adobe公司提供的接口,可对pdf进行各种操作<a href="http://partners.adobe.com/public/developer/en/acrobat/sdk/pdf/iac/IACOverview.pdf"><font color = "blue">参考文档</font></a>，使用类向导将其导入。<br>　　提取文本内容需导入CAcroApp、CAcroAVDoc、CAcroAVPageView、CAcroPDPage、CAcroPDTextSelect、CAcroHiliteList。<br>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2015/10/14/GetpdfContent/#more" rel="contents">
-              阅读全文 &raquo;
+            <a class="post-title-link" href="/2015/10/22/USBMessage/" itemprop="url">
+              <span itemprop="name">捕获USB设备插入/拔出消息</span>
             </a>
-          </div>
         
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      
-      
-        <h1 class="post-title" itemprop="name headline">
-          
-          
-            
-              <a class="post-title-link" href="/2015/10/07/device-CA/" itemprop="url">
-                windows平台下获取USB设备“身份证”
-              </a>
-            
-          
-        </h1>
-      
+      </h1>
 
       <div class="post-meta">
-        <span class="post-time">
-          发表于
-          <time itemprop="dateCreated" datetime="2015-10-07T00:00:00+08:00" content="2015-10-07">
-            2015-10-07
-          </time>
-        </span>
-
-        
-          <span class="post-category" >
-            &nbsp; | &nbsp; 分类于
-            
-              <span itemprop="about" itemscope itemtype="https://schema.org/Thing"><a href="/categories/Windows/" itemprop="url" rel="index"><span itemprop="name">Windows</span></a></span>
-
-              
-              
-
-            
-          </span>
-        
-
-        
-          
-            <span class="post-comments-count">
-              &nbsp; | &nbsp;
-              <a href="/2015/10/07/device-CA/#comments" itemprop="discussionUrl">
-                <span class="post-comments-count ds-thread-count" data-thread-key="2015/10/07/device-CA/" itemprop="commentsCount"></span>
-              </a>
-            </span>
-          
-        
+        <time class="post-time" datetime="2015-10-22T02:54:44.237Z" itemprop="dateCreated" content="2015-10-22"> 10-22 </time>
       </div>
+
     </header>
-
-    <div class="post-body">
-
-      
-      
-
-      
-        
-          <h1 id="0x00_写在前面">0x00 写在前面</h1><p>　　当我们将U盘插入windows主机时，会提示安装驱动，那么windows是如何判断应该安装哪个版本的驱动的呢？在这里将用到设备的身份信息，包括厂商、型号、序列号等。大概半年前做了一个关于设备检测的小工程，看了很多资料和帖子，将获取设备身份信息的方法在此记录，方便以后使用。</p>
-<h1 id="0x01_USB设备有哪些身份信息">0x01 USB设备有哪些身份信息</h1><p>　　根据USB规范中的说明<a href="http://www.usb.org/developers/docs"><font color = "blue">USB规范官方文档</font></a>，供应商ID(VID)/产品识别码(PID)唯一标识一个设备，VID和PID都是两个字节长，其中，供应商ID（VID）由供应商向USB执行论坛申请，每个供应商的VID是唯一的，PID由供应商自行决定，理论上来说，不同的产品、相同产品的不同型号、相同型号的不同设计的产品最好采用不同的PID，以便区别相同厂家的不同设备。
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2015/10/07/device-CA/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
   </article>
 
 
@@ -430,6 +200,7 @@
   </section>
 
   
+
 
             </div>
 
@@ -556,7 +327,13 @@
   
   
   
+    <script type="text/javascript">
+      postMotionOptions = {stagger: 100, drag: true};
+    </script>
   
+
+  
+    
 
   
     
@@ -574,8 +351,8 @@
     })();
   </script>
 
+    
   
-
   
   <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js"></script>
   <script type="text/javascript" src="/js/fancy-box.js?v=0.4.3"></script>
@@ -605,26 +382,6 @@
 
 
 
-
-  
-
-  
-    
-  
-
-  <script type="text/javascript">
-    var duoshuoQuery = {short_name:"hyjal"};
-    (function() {
-      var ds = document.createElement('script');
-      ds.type = 'text/javascript';ds.async = true;
-      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
-      ds.charset = 'UTF-8';
-      (document.getElementsByTagName('head')[0]
-      || document.getElementsByTagName('body')[0]).appendChild(ds);
-    })();
-  </script>
-
-  
 
 
 

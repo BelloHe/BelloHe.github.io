@@ -5,7 +5,7 @@
   <subtitle><![CDATA[on the way]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://hyjal-binbin.com//"/>
-  <updated>2015-10-14T08:16:52.157Z</updated>
+  <updated>2015-10-22T02:54:44.177Z</updated>
   <id>http://hyjal-binbin.com//</id>
   
   <author>
@@ -14,6 +14,25 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[捕获USB设备插入/拔出消息]]></title>
+    <link href="http://hyjal-binbin.com/2015/10/22/USBMessage/"/>
+    <id>http://hyjal-binbin.com/2015/10/22/USBMessage/</id>
+    <published>2015-10-22T02:54:44.237Z</published>
+    <updated>2015-10-22T02:54:44.177Z</updated>
+    <content type="html"><![CDATA[<h1 id="0x00_需求">0x00 需求</h1><p>　　捕获USB设备插入/拔出消息</p>
+<h1 id="0x01_WM_DEVICECHANGE">0x01 WM_DEVICECHANGE</h1>]]></content>
+    <summary type="html">
+    <![CDATA[<h1 id="0x00_需求">0x00 需求</h1><p>　　捕获USB设备插入/拔出消息</p>
+<h1 id="0x01_WM_DEVICECHANGE">0x01 WM_DEVICECHANGE</h1>]]>
+    </summary>
+    
+      <category term="Windows" scheme="http://hyjal-binbin.com/categories/Windows/"/>
+    
+      <category term="UBS" scheme="http://hyjal-binbin.com/categories/Windows/UBS/"/>
+    
+  </entry>
   
   <entry>
     <title><![CDATA[利用acrobat SDK提取pdf文档内容]]></title>
