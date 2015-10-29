@@ -180,7 +180,7 @@
           
           
             
-              <a class="post-title-link" href="/2015/10/22/USBMessage/" itemprop="url">
+              <a class="post-title-link" href="/2015/10/29/USBMessage/" itemprop="url">
                 捕获所有USB设备插入消息
               </a>
             
@@ -191,8 +191,8 @@
       <div class="post-meta">
         <span class="post-time">
           发表于
-          <time itemprop="dateCreated" datetime="2015-10-22T16:57:57+08:00" content="2015-10-22">
-            2015-10-22
+          <time itemprop="dateCreated" datetime="2015-10-29T10:13:55+08:00" content="2015-10-29">
+            2015-10-29
           </time>
         </span>
 
@@ -221,8 +221,8 @@
           
             <span class="post-comments-count">
               &nbsp; | &nbsp;
-              <a href="/2015/10/22/USBMessage/#comments" itemprop="discussionUrl">
-                <span class="post-comments-count ds-thread-count" data-thread-key="2015/10/22/USBMessage/" itemprop="commentsCount"></span>
+              <a href="/2015/10/29/USBMessage/#comments" itemprop="discussionUrl">
+                <span class="post-comments-count ds-thread-count" data-thread-key="2015/10/29/USBMessage/" itemprop="commentsCount"></span>
               </a>
             </span>
           
@@ -237,11 +237,13 @@
 
       
         
-          <span itemprop="articleBody"><h1 id="0x00_说明">0x00 说明</h1><p>　　最先在网上copy的代码，能捕获U盘插入的消息，但不能捕获其他USB设备的消息，且无法获取U盘dbcc_name，多次询问度娘后终于找到正确的姿势，通过RegisterDeviceNotification注册，获取不同类型设备的通知。</p>
-<h1 id="0x01_WM_DEVICECHANGE">0x01 WM_DEVICECHANGE</h1><p>　　<br>　　未完待续</p>
-<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">...</span><br><span class="line"><span class="hexcolor">#def</span>ine DBT_DEVTYP_OEM                  <span class="number">0</span>x00000000  <span class="comment">// oem-defined device type</span></span><br><span class="line"><span class="hexcolor">#def</span>ine DBT_DEVTYP_DEVNODE              <span class="number">0</span>x00000001  <span class="comment">// devnode number</span></span><br><span class="line"><span class="hexcolor">#def</span>ine DBT_DEVTYP_VOLUME               <span class="number">0</span>x00000002  <span class="comment">// logical volume</span></span><br><span class="line"><span class="hexcolor">#def</span>ine DBT_DEVTYP_PORT                 <span class="number">0</span>x00000003  <span class="comment">// serial, parallel</span></span><br><span class="line"><span class="hexcolor">#def</span>ine DBT_DEVTYP_NET                  <span class="number">0</span>x00000004  <span class="comment">// network resource</span></span><br><span class="line"></span><br><span class="line">#<span class="function"><span class="title">if</span><span class="params">(WINVER &gt;= <span class="number">0</span>x040A)</span></span></span><br><span class="line"><span class="hexcolor">#def</span>ine DBT_DEVTYP_DEVICEINTERFACE      <span class="number">0</span>x00000005  <span class="comment">// device interface class</span></span><br><span class="line"><span class="hexcolor">#def</span>ine DBT_DEVTYP_HANDLE               <span class="number">0</span>x00000006  <span class="comment">// file system handle</span></span><br><span class="line">...</span><br><span class="line">#<span class="function"><span class="title">if</span><span class="params">(WINVER &gt;= _WIN32_WINNT_WIN7)</span></span></span><br><span class="line"><span class="hexcolor">#def</span>ine DBT_DEVTYP_DEVINST              <span class="number">0</span>x00000007  <span class="comment">// device instance</span></span><br></pre></td></tr></table></figure>
-<p>参考资料<br><a href="http://bbs.csdn.net/topics/390158016" target="_blank" rel="external"><font color="blue">http://bbs.csdn.net/topics/390158016</font></a><br><a href="http://blog.sina.com.cn/s/blog_9ffb29e101018sug.html" target="_blank" rel="external"><font color="blue">http://blog.sina.com.cn/s/blog_9ffb29e101018sug.html</font></a></p>
-</span>
+          <h1 id="0x00_说明">0x00 说明</h1><p>　　最先在网上copy的代码，能捕获U盘插入的消息，但不能捕获其他USB设备的消息，且无法获取U盘dbcc_name，多次询问度娘后终于找到正确的姿势，通过RegisterDeviceNotification注册，获取不同类型设备的通知。</p>
+<h1 id="0x01_WM_DEVICECHANGE">0x01 WM_DEVICECHANGE</h1><p>　　查询MSDN<a href="https://msdn.microsoft.com/en-us/library/aa363480(VS.85"><font color = "blue">[WM_DEVICECHANGE message]</font></a>.aspx),当设备或电脑的硬件配置发生改变时，会给每一个顶层窗口发通知，窗口通过WindowPro接收这个消息。WindowPro中的wParam参数告诉我们是具体是发生了什么事件，即设备或电脑的硬件配置发生了怎样的变化;lParam参数包含了一些设备具体的信息（wParam不用，对应的lParam也有一点的变化）。如果有U盘插入（这里为什么说是U盘而不是USB设备将会在后面进行说明），wParam=DBT_DEVICEARRIVAL,lParam中包含了U盘的盘符信息。<br>　　有了上述信息，我们可自己创建一个顶层窗口来接WM_DEVICECHANGE消息。首先定义一个WindwPro函数，当message参数为WM_DEVICECHANGE，wParam参数为DBT_DEVICEARRIVAL时，即表示有U盘插入。<br>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2015/10/29/USBMessage/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
         
       
     </div>
