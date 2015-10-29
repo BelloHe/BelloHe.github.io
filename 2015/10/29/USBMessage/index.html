@@ -45,7 +45,7 @@
 <meta property="og:site_name" content="Hyjal's blog">
 <meta property="og:description" content="0x00 说明　　最先在网上copy的代码，能捕获U盘插入的消息，但不能捕获其他USB设备的消息，且无法获取U盘dbcc_name，多次询问度娘后终于找到正确的姿势，通过RegisterDeviceNotification注册，获取不同类型设备的通知。
 0x01 WM_DEVICECHANGE　　查询MSDN[WM_DEVICECHANGE message].aspx),当设备或电脑的硬件配置发生">
-<meta property="og:updated_time" content="2015-10-29T09:26:13.485Z">
+<meta property="og:updated_time" content="2015-10-29T09:33:49.531Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="捕获所有USB设备插入消息">
 <meta name="twitter:description" content="0x00 说明　　最先在网上copy的代码，能捕获U盘插入的消息，但不能捕获其他USB设备的消息，且无法获取U盘dbcc_name，多次询问度娘后终于找到正确的姿势，通过RegisterDeviceNotification注册，获取不同类型设备的通知。
@@ -191,7 +191,7 @@
       <div class="post-meta">
         <span class="post-time">
           发表于
-          <time itemprop="dateCreated" datetime="2015-10-29T17:26:13+08:00" content="2015-10-29">
+          <time itemprop="dateCreated" datetime="2015-10-29T17:33:49+08:00" content="2015-10-29">
             2015-10-29
           </time>
         </span>
@@ -242,7 +242,7 @@
 <h1 id="0x03_RegisterDeviceNotification">0x03 RegisterDeviceNotification</h1><p>　　通过上面的代码，能够捕获U盘插入的消息，但却无法捕获到其他类型的USB设备。经过调试，发现只有当dbcc_devicetype=DBT_DEVTYP_VOLUME时，才会接收到通知。</p>
 <p>　　未完待续</p>
 <figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">...</span><br><span class="line"><span class="hexcolor">#def</span>ine DBT_DEVTYP_OEM                  <span class="number">0</span>x00000000  <span class="comment">// oem-defined device type</span></span><br><span class="line"><span class="hexcolor">#def</span>ine DBT_DEVTYP_DEVNODE              <span class="number">0</span>x00000001  <span class="comment">// devnode number</span></span><br><span class="line"><span class="hexcolor">#def</span>ine DBT_DEVTYP_VOLUME               <span class="number">0</span>x00000002  <span class="comment">// logical volume</span></span><br><span class="line"><span class="hexcolor">#def</span>ine DBT_DEVTYP_PORT                 <span class="number">0</span>x00000003  <span class="comment">// serial, parallel</span></span><br><span class="line"><span class="hexcolor">#def</span>ine DBT_DEVTYP_NET                  <span class="number">0</span>x00000004  <span class="comment">// network resource</span></span><br><span class="line"></span><br><span class="line">#<span class="function"><span class="title">if</span><span class="params">(WINVER &gt;= <span class="number">0</span>x040A)</span></span></span><br><span class="line"><span class="hexcolor">#def</span>ine DBT_DEVTYP_DEVICEINTERFACE      <span class="number">0</span>x00000005  <span class="comment">// device interface class</span></span><br><span class="line"><span class="hexcolor">#def</span>ine DBT_DEVTYP_HANDLE               <span class="number">0</span>x00000006  <span class="comment">// file system handle</span></span><br><span class="line">...</span><br><span class="line">#<span class="function"><span class="title">if</span><span class="params">(WINVER &gt;= _WIN32_WINNT_WIN7)</span></span></span><br><span class="line"><span class="hexcolor">#def</span>ine DBT_DEVTYP_DEVINST              <span class="number">0</span>x00000007  <span class="comment">// device instance</span></span><br></pre></td></tr></table></figure>
-<p>参考资料<br><a href="http://bbs.csdn.net/topics/390158016" target="_blank" rel="external"><font color="blue">http://bbs.csdn.net/topics/390158016</font></a><br><a href="http://blog.sina.com.cn/s/blog_9ffb29e101018sug.html" target="_blank" rel="external"><font color="blue">http://blog.sina.com.cn/s/blog_9ffb29e101018sug.html</font></a><br><a href="http://blog.csdn.net/jhqin/article/details/6775321" target="_blank" rel="external"><font color="blue">常用设备接口类GUID</font></a></p>
+<p>参考资料<br><a href="http://bbs.csdn.net/topics/390158016" target="_blank" rel="external"><font color="blue">CSDN-关于u盘识别（OnDeviceChange方式）的几个问题，请教！</font></a><br><a href="http://blog.sina.com.cn/s/blog_9ffb29e101018sug.html" target="_blank" rel="external"><font color="blue">新浪博客-利用服务获取USB设备插拨事件以及获取设备硬件信息</font></a><br><a href="http://blog.csdn.net/jhqin/article/details/6775321" target="_blank" rel="external"><font color="blue">常用设备接口类GUID</font></a></p>
 </span>
       
     </div>
