@@ -237,8 +237,8 @@
 
       
         
-          <h1 id="0x00_说明">0x00 说明</h1><p>　　最先在网上copy的代码，能捕获U盘插入的消息，但不能捕获其他USB设备的消息，且无法获取U盘dbcc_name，多次询问度娘后终于找到正确的姿势，通过RegisterDeviceNotification注册，获取不同类型设备的通知。</p>
-<h1 id="0x01_WM_DEVICECHANGE">0x01 WM_DEVICECHANGE</h1><p>　　查询MSDN<a href="https://msdn.microsoft.com/en-us/library/aa363480(VS.85).aspx"><font color="blue">[WM_DEVICECHANGE message]</font></a>,当设备或电脑的硬件配置发生改变时，会给每一个顶层窗口发通知，窗口通过WindowPro接收这个消息。WindowPro中的wParam参数告诉我们是具体是发生了什么事件，即设备或电脑的硬件配置发生了怎样的变化;lParam参数包含了一些设备具体的信息（wParam不同，对应的lParam也有一点的变化）。如果有U盘插入（这里为什么说是U盘而不是USB设备将会在后面进行说明），wParam=DBT_DEVICEARRIVAL,lParam中包含了U盘的盘符信息。<br>　　有了上述信息，我们可自己创建一个顶层窗口来接WM_DEVICECHANGE消息。首先定义一个WindwPro函数，当message参数为WM_DEVICECHANGE，wParam参数为DBT_DEVICEARRIVAL时，即表示有U盘插入。<br>
+          <h1 id="0x00_说明">0x00 说明</h1><p>　　最先在网上copy的代码，能捕获U盘插入的消息，但不能捕获其他USB设备的消息，且无法获取U盘dbcc_name，多次询问度娘后终于找到正确的姿势，通过RegisterDeviceNotification注册DBT_DEVTYP_DEVICEINTERFACE，获取所有USB类设备的通知。</p>
+<h1 id="0x01_WM_DEVICECHANGE">0x01 WM_DEVICECHANGE</h1><p>　　查询MSDN<a href="https://msdn.microsoft.com/en-us/library/aa363480(VS.85).aspx"><font color="blue">[WM_DEVICECHANGE message]</font></a>,当设备或电脑的硬件配置发生改变时，会给每一个顶层窗口发通知，窗口通过WindowPro接收这个消息。WindowPro中的wParam参数告诉我们是具体是发生了什么事件，即设备或电脑的硬件配置发生了怎样的变化;lParam参数包含了一些设备具体的信息（wParam不同，对应的lParam也有一点的变化）。如果有U盘插入（这里为什么说是U盘而不是USB设备将会在后面进行说明），wParam=DBT_DEVICEARRIVAL,lParam中包含了U盘的盘符信息。<br>　　有了上述信息，我们可自己创建一个顶层窗口来接WM_DEVICECHANGE消息。首先定义一个WindowPro函数，当message参数为WM_DEVICECHANGE，wParam参数为DBT_DEVICEARRIVAL时，即表示有U盘插入。<br>
           <div class="post-more-link text-center">
             <a class="btn" href="/2015/10/28/USBMessage/#more" rel="contents">
               阅读全文 &raquo;
