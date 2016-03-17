@@ -37,20 +37,24 @@
   <link rel="shorticon icon" type="image/x-icon" href="/favicon.ico?v=0.4.3" />
 
 
-<meta name="description" content="0x00 背景　　HackingTeam泄漏事件影响颇大，415.77G的内容大多是邮件内容，分析起来比较麻烦，因而被大多数人忽略。网上有很多邮件分析的文章HT邮件分析,主要是针对邮件关联进行分析，若对邮件内容进行分析则需提取邮件附件中的内容，再针对内容做进一步分析。本文背景其实与上文无关，只是借此提升逼格，下面将介绍如何利用acrobat SDK提取pdf文档内容。
-0x01 acrobat导入">
+<meta name="description" content="0x00 我是小白　　机器学习依然处于小白阶段。记录此次比赛的成长。
+0x01 数据初探　　前面一篇博客已经介绍了pandas库的库的一些基本使用方法，我也是在这次比赛中第一次接触pandas库，有效的使用pandas库将会帮助我们快速理解数据。　　乘车刷卡交易数据表（gd_train_data）944M，无法用记事本、Notepad++打开。
+123根据天池给的表格格式打开gd_train_da">
 <meta property="og:type" content="article">
-<meta property="og:title" content="利用acrobat SDK提取pdf文档内容">
-<meta property="og:url" content="http://hyjal-binbin.com/2015/10/14/GetpdfContent/index.html">
+<meta property="og:title" content="天池之公交客流预测">
+<meta property="og:url" content="http://hyjal-binbin.com/2015/11/19/BusPredict/index.html">
 <meta property="og:site_name" content="Hyjal's blog">
-<meta property="og:description" content="0x00 背景　　HackingTeam泄漏事件影响颇大，415.77G的内容大多是邮件内容，分析起来比较麻烦，因而被大多数人忽略。网上有很多邮件分析的文章HT邮件分析,主要是针对邮件关联进行分析，若对邮件内容进行分析则需提取邮件附件中的内容，再针对内容做进一步分析。本文背景其实与上文无关，只是借此提升逼格，下面将介绍如何利用acrobat SDK提取pdf文档内容。
-0x01 acrobat导入">
-<meta property="og:image" content="http://hyjal-binbin.com/img/GetPDFConTent.png">
-<meta property="og:updated_time" content="2015-10-14T08:16:52.157Z">
+<meta property="og:description" content="0x00 我是小白　　机器学习依然处于小白阶段。记录此次比赛的成长。
+0x01 数据初探　　前面一篇博客已经介绍了pandas库的库的一些基本使用方法，我也是在这次比赛中第一次接触pandas库，有效的使用pandas库将会帮助我们快速理解数据。　　乘车刷卡交易数据表（gd_train_data）944M，无法用记事本、Notepad++打开。
+123根据天池给的表格格式打开gd_train_da">
+<meta property="og:image" content="http://hyjal-binbin.com/img/gd_train_data.png">
+<meta property="og:image" content="http://hyjal-binbin.com/img/head.png">
+<meta property="og:updated_time" content="2015-11-19T06:50:52.071Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="利用acrobat SDK提取pdf文档内容">
-<meta name="twitter:description" content="0x00 背景　　HackingTeam泄漏事件影响颇大，415.77G的内容大多是邮件内容，分析起来比较麻烦，因而被大多数人忽略。网上有很多邮件分析的文章HT邮件分析,主要是针对邮件关联进行分析，若对邮件内容进行分析则需提取邮件附件中的内容，再针对内容做进一步分析。本文背景其实与上文无关，只是借此提升逼格，下面将介绍如何利用acrobat SDK提取pdf文档内容。
-0x01 acrobat导入">
+<meta name="twitter:title" content="天池之公交客流预测">
+<meta name="twitter:description" content="0x00 我是小白　　机器学习依然处于小白阶段。记录此次比赛的成长。
+0x01 数据初探　　前面一篇博客已经介绍了pandas库的库的一些基本使用方法，我也是在这次比赛中第一次接触pandas库，有效的使用pandas库将会帮助我们快速理解数据。　　乘车刷卡交易数据表（gd_train_data）944M，无法用记事本、Notepad++打开。
+123根据天池给的表格格式打开gd_train_da">
 
 
 <script type="text/javascript" id="hexo.configuration">
@@ -60,7 +64,7 @@
   };
 </script>
 
-    <title> 利用acrobat SDK提取pdf文档内容 // Hyjal's blog </title>
+    <title> 天池之公交客流预测 // Hyjal's blog </title>
 </head>
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
 <!--[if lte IE 8]>
@@ -183,7 +187,7 @@
           
           
             
-              利用acrobat SDK提取pdf文档内容
+              天池之公交客流预测
             
           
         </h1>
@@ -192,8 +196,8 @@
       <div class="post-meta">
         <span class="post-time">
           发表于
-          <time itemprop="dateCreated" datetime="2015-10-14T00:00:00+08:00" content="2015-10-14">
-            2015-10-14
+          <time itemprop="dateCreated" datetime="2015-11-19T14:50:52+08:00" content="2015-11-19">
+            2015-11-19
           </time>
         </span>
 
@@ -201,7 +205,7 @@
           <span class="post-category" >
             &nbsp; | &nbsp; 分类于
             
-              <span itemprop="about" itemscope itemtype="https://schema.org/Thing"><a href="/categories/Windows/" itemprop="url" rel="index"><span itemprop="name">Windows</span></a></span>
+              <span itemprop="about" itemscope itemtype="https://schema.org/Thing"><a href="/categories/机器学习/" itemprop="url" rel="index"><span itemprop="name">机器学习</span></a></span>
 
               
               
@@ -214,8 +218,8 @@
           
             <span class="post-comments-count">
               &nbsp; | &nbsp;
-              <a href="/2015/10/14/GetpdfContent/#comments" itemprop="discussionUrl">
-                <span class="post-comments-count ds-thread-count" data-thread-key="2015/10/14/GetpdfContent/" itemprop="commentsCount"></span>
+              <a href="/2015/11/19/BusPredict/#comments" itemprop="discussionUrl">
+                <span class="post-comments-count ds-thread-count" data-thread-key="2015/11/19/BusPredict/" itemprop="commentsCount"></span>
               </a>
             </span>
           
@@ -229,13 +233,52 @@
       
 
       
-        <span itemprop="articleBody"><h1 id="0x00_背景">0x00 背景</h1><p>　　HackingTeam泄漏事件影响颇大，415.77G的内容大多是邮件内容，分析起来比较麻烦，因而被大多数人忽略。网上有很多邮件分析的文章<a href="http://www.sec-un.org/analysis-on-the-hackingteam-mail-security-threat-intelligence-2.html" target="_blank" rel="external"><font color="blue">HT邮件分析</font></a>,主要是针对邮件关联进行分析，若对邮件内容进行分析则需提取邮件附件中的内容，再针对内容做进一步分析。本文背景其实与上文无关，只是借此提升逼格，下面将介绍如何利用acrobat SDK提取pdf文档内容。</p>
-<h1 id="0x01_acrobat导入">0x01 acrobat导入</h1><p>　　只要安装了Adobe Acrobat，就能在其安装目录下找到acrobat.tlb，其中包含了adobe公司提供的接口,可对pdf进行各种操作<a href="http://partners.adobe.com/public/developer/en/acrobat/sdk/pdf/iac/IACOverview.pdf" target="_blank" rel="external"><font color="blue">参考文档</font></a>，使用类向导将其导入。<br>　　提取文本内容需导入CAcroApp、CAcroAVDoc、CAcroAVPageView、CAcroPDPage、CAcroPDTextSelect、CAcroHiliteList。<br><a id="more"></a></p>
-<h1 id="0x02_提取文档内容">0x02 提取文档内容</h1><p>　　首先需要”打开”pdf，核心代码如下：<br><figure class="highlight lasso"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">CAcroApp <span class="subst">*</span>pAcrpApp <span class="subst">=</span> <span class="literal">new</span> CAcroApp;</span><br><span class="line">COleException e;</span><br><span class="line">pAcrpApp<span class="subst">-&gt;</span>CreateDispatch(<span class="string">"AcroExch.App"</span>,<span class="subst">&amp;</span>e);</span><br><span class="line">CAcroAVDoc <span class="subst">*</span>pAvdoc <span class="subst">=</span> <span class="literal">new</span> CAcroAVDoc;</span><br><span class="line">pAvdoc<span class="subst">-&gt;</span>CreateDispatch(<span class="string">"AcroExch.AVDoc"</span>,<span class="subst">&amp;</span>e);</span><br><span class="line"><span class="comment">//打开pdf,其中PDFName为全路径</span></span><br><span class="line"><span class="keyword">if</span> (<span class="subst">!</span>pAvdoc<span class="subst">-&gt;</span>Open(PDFName,<span class="built_in">NULL</span>))</span><br><span class="line">&#123;</span><br><span class="line">	printf(<span class="string">"open pdf failed"</span>);</span><br><span class="line">	<span class="attribute">...</span></span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>　　打开文档后，通过pAvdoc可选择页数(默认为第一页)，创建高亮板(CAcroHiliteList),将选择页数的内容加入高亮板，然后就可以从中提取出该页的内容，核心代码如下：<br><figure class="highlight openscad"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">CAcroAVPageView pageView;</span><br><span class="line">CAcroPDPage page;</span><br><span class="line">CAcroPDTextSelect<span class="built_in">*</span> textSelect = new CAcroPDTextSelect;</span><br><span class="line">CAcroHiliteList<span class="built_in">*</span> hilite = new CAcroHiliteList;</span><br><span class="line">long selectionSize;</span><br><span class="line">pageView.AttachDispatch<span class="params">(pAvdoc-&gt;GetAVPageView<span class="params">()</span>,TRUE)</span>;</span><br><span class="line">	</span><br><span class="line">hilite-&gt;CreateDispatch<span class="params">(<span class="string">"AcroExch.HiliteList"</span>)</span>;</span><br><span class="line"><span class="keyword">if</span> <span class="params">(hilite)</span> </span><br><span class="line">&#123;</span><br><span class="line">    <span class="comment">//设置为第一页</span></span><br><span class="line">	pageView.GoTo<span class="params">(<span class="number">0</span>)</span>;</span><br><span class="line">	<span class="comment">/*</span><br><span class="line">	这里是设置高亮板的大小</span><br><span class="line">	由于没有找到如何在设置高亮板前获取该页内容长度的方法，所以采用设置成极大的长度</span><br><span class="line">	如有朋友知道方法，欢迎提出相互学习</span><br><span class="line">	*/</span></span><br><span class="line">	hilite-&gt;Add<span class="params">(<span class="number">0</span>,<span class="number">4000</span>)</span>;		</span><br><span class="line">	page.AttachDispatch<span class="params">(pageView.GetPage<span class="params">()</span>, TRUE)</span>;				</span><br><span class="line">	textSelect-&gt;AttachDispatch<span class="params">(page.CreateWordHilite<span class="params">(hilite-&gt;m_lpDispatch)</span>)</span>;</span><br><span class="line"></span><br><span class="line">	pAvdoc-&gt;SetTextSelection<span class="params">(textSelect-&gt;m_lpDispatch)</span>;</span><br><span class="line"></span><br><span class="line">	selectionSize = textSelect-&gt;GetNumText<span class="params">()</span>;		</span><br><span class="line">	<span class="keyword">if</span> <span class="params">(selectionSize &amp;&amp; strText.GetLength<span class="params">()</span> &lt; <span class="number">4000</span>)</span></span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">for</span><span class="params">(int i = <span class="number">0</span>;i &lt; selectionSize;i ++)</span></span><br><span class="line">		&#123;</span><br><span class="line">			strText += textSelect-&gt;GetText<span class="params">(i)</span>;</span><br><span class="line">		&#125;			</span><br><span class="line">	&#125;				</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>　　程序效果如下：</p>
-<p><div align="center"><br><img src="/img/GetPDFConTent.png" alt="GetPDFConTent" align="center"><br></div><br>　　要完整提取出文档中的全部内容，可通过CAcroPDDoc获取pdf总页数，然后利用pageView.GoTo循环每一页，下面给出的完整工程将不包含此部分代码。<br><a href="http://download.csdn.net/detail/hyjal/9179615" target="_blank" rel="external"><font color="blue">完整工程下载</font></a></p>
-</span>
+        <span itemprop="articleBody"><h1 id="0x00_我是小白">0x00 我是小白</h1><p>　　机器学习依然处于小白阶段。记录此次比赛的成长。</p>
+<h1 id="0x01_数据初探">0x01 数据初探</h1><p>　　前面一篇博客已经介绍了pandas库的库的一些基本使用方法，我也是在这次比赛中第一次接触pandas库，有效的使用pandas库将会帮助我们快速理解数据。<br>　　乘车刷卡交易数据表（gd_train_data）944M，无法用记事本、Notepad++打开。</p>
+<p><div align="center"><br><img src="/img/gd_train_data.png" alt="gd_train_data" align="center"><br></div><br><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">根据天池给的表格格式打开gd_train_data.txt，显示前<span class="number">5</span>行</span><br><span class="line">df = pd.<span class="function"><span class="title">read_csv</span><span class="params">(<span class="string">"gd_train_data.txt"</span>,header=None,names = [<span class="string">'Use_city'</span>,<span class="string">'Line_name'</span>,<span class="string">'Terminal_id'</span>,<span class="string">'Card_id'</span>,<span class="string">'Create_city'</span>,<span class="string">'Deal_time'</span>,<span class="string">'Card_type'</span>])</span></span></span><br><span class="line">print df.<span class="function"><span class="title">head</span><span class="params">()</span></span></span><br></pre></td></tr></table></figure></p>
+<p><div align="center"><br><img src="/img/head.png" alt="head" align="center"><br></div><br>　　从上图可以看到gd_train_data.txt中与官方给的数据结构是完全一样的，首先统计每项有哪些种类的数据。Use_city只有广州一种数据，所以将忽略Use_city这一项。Line_name只有线路10、线路15这两条线路，所以gd_line_desc.txt里的内容也可以忽略。Create_city包含广州、佛山、汕尾、揭阳等20个城市，由于线路10、线路15均为广佛跨区域公交，且广州和佛山的数量远大与其他城市，所以初步将Create_city分为广佛地区和非广佛地区。Card_type分为普通卡、老人卡、学生卡、员工卡、残疾卡、治安监督卡、军属卡，其中军属卡只出现了一次，故忽略。<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Terminal_id,Card_id暂时放在一边，Deal_time已经在比赛说明中告知了</span></span><br><span class="line"><span class="keyword">print</span> df[<span class="string">u'Use_city'</span>].value_counts()</span><br><span class="line"><span class="keyword">print</span> df[<span class="string">u'Line_name'</span>].value_counts()</span><br><span class="line"><span class="keyword">print</span> df[<span class="string">u'Create_city'</span>].value_counts()</span><br><span class="line"><span class="keyword">print</span> df[<span class="string">u'Card_type'</span>].value_counts()</span><br></pre></td></tr></table></figure></p>
+<h1 id="0x01_统计分析">0x01 统计分析</h1><p>　　比赛要求预测小时段中乘车人数，在提供的训练数据中并没有人数统计，用pandas统计各时间段每种类型公交卡的乘车人数和总的乘车人数。<br>```</p>
+<h1 id="train_date_report-txt_为时间文件，格式：2014080106">train_date_report.txt 为时间文件，格式：2014080106</h1><p>datefile = open(‘train_date_report.txt’)<br>numfile = open(‘num_report.txt’,’w’)</p>
+<p>timehour = [‘06’,’07’,’08’,’09’,’10’,’11’,’12’,’13’,’14’,’15’,’16’,’17’,’18’,’19’,’20’,’21’]<br>linename  = [‘线路10’,’线路15’] </p>
+<p>for date in datefile.readlines():<br>    Deal_date = date.strip()<br>    for Deal_hour in timehour:<br>        Deal_time = int(str(Deal_date) + str(Deal_hour))</p>
+<pre><code>        <span class="id">#print</span> Deal_time
+        <span class="keyword">for</span> Line_name <span class="keyword">in</span> linename:
+            <span class="id">#Card_type</span>     
+            nomal_card  = <span class="number">0</span>
+            old_card    = <span class="number">0</span>
+            stu_card    = <span class="number">0</span>
+            mem_card    = <span class="number">0</span>
+            unable_card = <span class="number">0</span>
+            police_card = <span class="number">0</span>
+            army_card   = <span class="number">0</span>
+            Passenger_count  = <span class="number">0</span>
+
+            df_Line_name = df[(df[u<span class="string">'Line_name'</span>]== Line_name ) &amp; (df[u<span class="string">'Deal_time'</span>] == Deal_time)]
+            Card_type_table = df_Line_name[u<span class="string">'Card_type'</span>].<span class="function"><span class="title">value_counts</span><span class="params">()</span></span>
+            <span class="id">#print</span> Card_type_table
+            len_index = <span class="function"><span class="title">len</span><span class="params">(Card_type_table.index)</span></span>
+            <span class="keyword">for</span> <span class="tag">i</span> <span class="keyword">in</span> <span class="function"><span class="title">range</span><span class="params">(<span class="number">0</span>,len_index)</span></span>:
+                <span class="keyword">if</span> Card_type_table<span class="class">.index</span>[i] == <span class="string">'普通卡'</span>:
+                    nomal_card = Card_type_table<span class="class">.values</span>[i]
+                elif Card_type_table<span class="class">.index</span>[i] == <span class="string">'老人卡'</span>:
+                    old_card = Card_type_table<span class="class">.values</span>[i]
+                elif Card_type_table<span class="class">.index</span>[i] == <span class="string">'学生卡'</span>:
+                    stu_card = Card_type_table<span class="class">.values</span>[i]
+                elif Card_type_table<span class="class">.index</span>[i] == <span class="string">'员工卡'</span>:
+                    mem_card = Card_type_table<span class="class">.values</span>[i]
+                elif Card_type_table<span class="class">.index</span>[i] == <span class="string">'残疾卡'</span>:
+                    unable_card = Card_type_table<span class="class">.values</span>[i]
+                elif Card_type_table<span class="class">.index</span>[i] == <span class="string">'治安监督卡'</span>:
+                    police_card = Card_type_table<span class="class">.values</span>[i]
+                <span class="keyword">else</span>:
+                    army_card = Card_type_table<span class="class">.values</span>[i]
+            Passenger_count = nomal_card + old_card + stu_card + mem_card + unable_card + police_card + army_card
+            strRet = Deal_date  + <span class="string">','</span> + <span class="function"><span class="title">str</span><span class="params">(Deal_hour)</span></span> + <span class="string">','</span> + Line_name + <span class="string">','</span> + <span class="function"><span class="title">str</span><span class="params">(nomal_card)</span></span> + <span class="string">','</span> + <span class="function"><span class="title">str</span><span class="params">(old_card)</span></span> + <span class="string">','</span> + <span class="function"><span class="title">str</span><span class="params">(stu_card)</span></span> + <span class="string">','</span> + <span class="function"><span class="title">str</span><span class="params">(mem_card)</span></span> + <span class="string">','</span> + <span class="function"><span class="title">str</span><span class="params">(unable_card)</span></span> + <span class="string">','</span> + <span class="function"><span class="title">str</span><span class="params">(police_card)</span></span> + <span class="string">','</span> + <span class="function"><span class="title">str</span><span class="params">(army_card)</span></span> + <span class="string">','</span> + <span class="function"><span class="title">str</span><span class="params">(Passenger_count)</span></span> + <span class="string">'\n'</span>  
+            numfile.<span class="function"><span class="title">write</span><span class="params">(strRet)</span></span>
+numfile.<span class="function"><span class="title">close</span><span class="params">()</span></span>
+datefile.<span class="function"><span class="title">close</span><span class="params">()</span></span>
+</code></pre><p>```　</p>
+<h1 id="0x03_GBDT">0x03 GBDT</h1><font color="red">Gradient Boosting Regression Decistion Tree</font></span>
       
     </div>
 
@@ -246,13 +289,11 @@
         <div class="post-nav">
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2015/10/28/USBMessage/" rel="prev">捕获所有USB设备插入消息</a>
-            
           </div>
 
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2015/10/07/device-CA/" rel="next">windows平台下获取USB设备“身份证”</a>
+              <a href="/2015/11/10/pandas/" rel="next">pandas库学习笔记</a>
             
           </div>
         </div>
@@ -278,8 +319,8 @@
             
               <div class="comments" id="comments">
                 
-                  <div class="ds-thread" data-thread-key="2015/10/14/GetpdfContent/"
-                       data-title="利用acrobat SDK提取pdf文档内容" data-url="http://hyjal-binbin.com/2015/10/14/GetpdfContent/">
+                  <div class="ds-thread" data-thread-key="2015/11/19/BusPredict/"
+                       data-title="天池之公交客流预测" data-url="http://hyjal-binbin.com/2015/11/19/BusPredict/">
                   </div>
                 
               </div>
@@ -375,7 +416,7 @@
           <div class="post-toc">
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#0x00_背景"><span class="nav-number">1.</span> <span class="nav-text">0x00 背景</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#0x01_acrobat导入"><span class="nav-number">2.</span> <span class="nav-text">0x01 acrobat导入</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#0x02_提取文档内容"><span class="nav-number">3.</span> <span class="nav-text">0x02 提取文档内容</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#0x00_我是小白"><span class="nav-number">1.</span> <span class="nav-text">0x00 我是小白</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#0x01_数据初探"><span class="nav-number">2.</span> <span class="nav-text">0x01 数据初探</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#0x01_统计分析"><span class="nav-number">3.</span> <span class="nav-text">0x01 统计分析</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#train_date_report-txt_为时间文件，格式：2014080106"><span class="nav-number">4.</span> <span class="nav-text">train_date_report.txt 为时间文件，格式：2014080106</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#0x03_GBDT"><span class="nav-number">5.</span> <span class="nav-text">0x03 GBDT</span></a></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator"></div>
