@@ -5,7 +5,7 @@
   <subtitle><![CDATA[on the way]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://hyjal-binbin.com//"/>
-  <updated>2015-11-19T06:50:52.071Z</updated>
+  <updated>2016-04-14T08:35:36.042Z</updated>
   <id>http://hyjal-binbin.com//</id>
   
   <author>
@@ -14,6 +14,30 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[Python编码转换]]></title>
+    <link href="http://hyjal-binbin.com/2016/03/24/decode/"/>
+    <id>http://hyjal-binbin.com/2016/03/24/decode/</id>
+    <published>2016-03-24T12:27:25.000Z</published>
+    <updated>2016-04-14T08:35:36.042Z</updated>
+    <content type="html"><![CDATA[<h1 id="0x00_概要">0x00 概要</h1><p>　　记录通过从linux传输文件到windows的辛酸历程。</p>
+<h1 id="0x01_向ascii说不">0x01 向ascii说不</h1><p>　　ASCII码一共规定了128个字符的编码，比如空格”SPACE”是32（二进制00100000），大写的字母A是65（二进制01000001）。这128个符号（包括32个不能打印出来的控制符号），只占用了一个字节的后面7位，最前面的1位统一规定为0。128个字符对于英文来说足够了，但对于中文来说是远远不够的。当接收文件名中包含中文的文件时，在创建文件的过程中易出现<font color="red">IOError: [Errno 22] invalid mode (‘r’) or filename</font>这样的错误。python 2.7 默认编码为ascii。可以通过如图所示方式查看python默认编码</p>
+<p><div align="center"><br><img src="/img/defaultencoding.png" alt="defaultencoding" align="center"><br></div><br>　　利用python从linux传输文件到windows第一步要做的就是设置默认编码为utf-8<br>‘’’<br>import sys<br>default_encoding = ‘utf-8’<br>    if sys.getdefaultencoding() != default_encoding:<br>        reload(sys)<br>        sys.setdefaultencoding(default_encoding)<br>‘’’</p>
+<h1 id="0x02_判断编码，进行编码转换">0x02 判断编码，进行编码转换</h1><p>　　判断编码推荐用chardet。chardet将给出为某种编码的可能性，代码如下：<br>‘’’<br>import chardet<br>print chardet.detect(XXX)<br>‘’’<br>　　判断出编码类型后，对编码进行转换。<br>‘’’</p>
+<h1 id="假设判断为utf8编码">假设判断为utf8编码</h1><p>strtmp = strXXX.decode(‘UTF-8’)<br>strXXX = strtmp.encode(‘GBK’)<br>‘’’</p>
+<h1 id="0x02_decode/encode失败处理">0x02 decode/encode失败处理</h1><p>　　在程序使用过程中，出现了decode/encode错误的情况，网上搜索后判断应该是字符串中存在半/全角符号无法被识别的情况。强行解决方案如下：<br>‘’’<br>try:<br>　　strtmp = strXXX.decode(‘UTF-8’)<br>except:<br>　　strtmp = strXXX.decode(‘UTF-8’,’ignore’)<br>try:<br>　　strXXX = strtmp.encode(‘GBK’)<br>except:<br>　　strXXX = strtmp.encode(‘GBK’,’ignore’)<br>‘’’<br>　　上面的方法虽然能在一定程度上解决问题，但不可靠，如有建议欢迎留言。</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<h1 id="0x00_概要">0x00 概要</h1><p>　　记录通过从linux传输文件到windows的辛酸历程。</p>
+<h1 id="0x01_向ascii说不">0x01 向ascii说不</h1><p>　　ASCII码一共规定了128个字符的编码，比如空格”S]]>
+    </summary>
+    
+      <category term="python" scheme="http://hyjal-binbin.com/tags/python/"/>
+    
+      <category term="编码" scheme="http://hyjal-binbin.com/tags/%E7%BC%96%E7%A0%81/"/>
+    
+  </entry>
   
   <entry>
     <title><![CDATA[天池之公交客流预测]]></title>

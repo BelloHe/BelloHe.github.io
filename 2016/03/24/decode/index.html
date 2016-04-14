@@ -26,7 +26,7 @@
 
 
 
-  <meta name="keywords" content="Hexo,next" />
+  <meta name="keywords" content="python,编码," />
 
 
 
@@ -37,19 +37,20 @@
   <link rel="shorticon icon" type="image/x-icon" href="/favicon.ico?v=0.4.3" />
 
 
-<meta name="description" content="0x00 简单说明　　作为机器学习小白，看了一段时间的coursera上Andrew Ng的视频，感觉还是难以入门，所以报名参加阿里天池上的比赛将理论和实践结合来提高姿势。题目是公交线路客流预测，所给的数据中并没有将乘客数量统计出来，需要自己对数据进行统计。先是自己写个python来统计分析数据(大概900M)，但跑了一晚上，发现太慢，在网上搜索到了pandas库，不到半个小时就统计完成。
-0x0">
+<meta name="description" content="0x00 概要　　记录通过从linux传输文件到windows的辛酸历程。
+0x01 向ascii说不　　ASCII码一共规定了128个字符的编码，比如空格”SPACE”是32（二进制00100000），大写的字母A是65（二进制01000001）。这128个符号（包括32个不能打印出来的控制符号），只占用了一个字节的后面7位，最前面的1位统一规定为0。128个字符对于英文来说足够了，但对于中文来">
 <meta property="og:type" content="article">
-<meta property="og:title" content="pandas库学习笔记">
-<meta property="og:url" content="http://hyjal-binbin.com/2015/11/10/pandas/index.html">
+<meta property="og:title" content="Python编码转换">
+<meta property="og:url" content="http://hyjal-binbin.com/2016/03/24/decode/index.html">
 <meta property="og:site_name" content="Hyjal's blog">
-<meta property="og:description" content="0x00 简单说明　　作为机器学习小白，看了一段时间的coursera上Andrew Ng的视频，感觉还是难以入门，所以报名参加阿里天池上的比赛将理论和实践结合来提高姿势。题目是公交线路客流预测，所给的数据中并没有将乘客数量统计出来，需要自己对数据进行统计。先是自己写个python来统计分析数据(大概900M)，但跑了一晚上，发现太慢，在网上搜索到了pandas库，不到半个小时就统计完成。
-0x0">
-<meta property="og:updated_time" content="2015-11-13T07:35:26.497Z">
+<meta property="og:description" content="0x00 概要　　记录通过从linux传输文件到windows的辛酸历程。
+0x01 向ascii说不　　ASCII码一共规定了128个字符的编码，比如空格”SPACE”是32（二进制00100000），大写的字母A是65（二进制01000001）。这128个符号（包括32个不能打印出来的控制符号），只占用了一个字节的后面7位，最前面的1位统一规定为0。128个字符对于英文来说足够了，但对于中文来">
+<meta property="og:image" content="http://hyjal-binbin.com/img/defaultencoding.png">
+<meta property="og:updated_time" content="2016-04-14T08:35:36.042Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="pandas库学习笔记">
-<meta name="twitter:description" content="0x00 简单说明　　作为机器学习小白，看了一段时间的coursera上Andrew Ng的视频，感觉还是难以入门，所以报名参加阿里天池上的比赛将理论和实践结合来提高姿势。题目是公交线路客流预测，所给的数据中并没有将乘客数量统计出来，需要自己对数据进行统计。先是自己写个python来统计分析数据(大概900M)，但跑了一晚上，发现太慢，在网上搜索到了pandas库，不到半个小时就统计完成。
-0x0">
+<meta name="twitter:title" content="Python编码转换">
+<meta name="twitter:description" content="0x00 概要　　记录通过从linux传输文件到windows的辛酸历程。
+0x01 向ascii说不　　ASCII码一共规定了128个字符的编码，比如空格”SPACE”是32（二进制00100000），大写的字母A是65（二进制01000001）。这128个符号（包括32个不能打印出来的控制符号），只占用了一个字节的后面7位，最前面的1位统一规定为0。128个字符对于英文来说足够了，但对于中文来">
 
 
 <script type="text/javascript" id="hexo.configuration">
@@ -59,7 +60,7 @@
   };
 </script>
 
-    <title> pandas库学习笔记 // Hyjal's blog </title>
+    <title> Python编码转换 // Hyjal's blog </title>
 </head>
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
 <!--[if lte IE 8]>
@@ -190,7 +191,7 @@
           
           
             
-              pandas库学习笔记
+              Python编码转换
             
           
         </h1>
@@ -199,30 +200,19 @@
       <div class="post-meta">
         <span class="post-time">
           发表于
-          <time itemprop="dateCreated" datetime="2015-11-10T00:00:00+08:00" content="2015-11-10">
-            2015-11-10
+          <time itemprop="dateCreated" datetime="2016-03-24T20:27:25+08:00" content="2016-03-24">
+            2016-03-24
           </time>
         </span>
 
-        
-          <span class="post-category" >
-            &nbsp; | &nbsp; 分类于
-            
-              <span itemprop="about" itemscope itemtype="https://schema.org/Thing"><a href="/categories/机器学习/" itemprop="url" rel="index"><span itemprop="name">机器学习</span></a></span>
-
-              
-              
-
-            
-          </span>
         
 
         
           
             <span class="post-comments-count">
               &nbsp; | &nbsp;
-              <a href="/2015/11/10/pandas/#comments" itemprop="discussionUrl">
-                <span class="post-comments-count ds-thread-count" data-thread-key="2015/11/10/pandas/" itemprop="commentsCount"></span>
+              <a href="/2016/03/24/decode/#comments" itemprop="discussionUrl">
+                <span class="post-comments-count ds-thread-count" data-thread-key="2016/03/24/decode/" itemprop="commentsCount"></span>
               </a>
             </span>
           
@@ -236,32 +226,36 @@
       
 
       
-        <span itemprop="articleBody"><h1 id="0x00_简单说明">0x00 简单说明</h1><p>　　作为机器学习小白，看了一段时间的coursera上Andrew Ng的视频，感觉还是难以入门，所以报名参加阿里天池上的比赛将理论和实践结合来提高姿势。题目是公交线路客流预测，所给的数据中并没有将乘客数量统计出来，需要自己对数据进行统计。先是自己写个python来统计分析数据(大概900M)，但跑了一晚上，发现太慢，在网上搜索到了pandas库，不到半个小时就统计完成。</p>
-<h1 id="0x01_数据提取">0x01 数据提取</h1><p>　　pandas.read_csv可按照一定的格式打开txt、csv文件。read_csv可选参数很多，全部参数请看<a href="http://pandas.pydata.org/pandas-docs/stable/generated/pandas.read_csv.html?highlight=read_csv#pandas.read_csv" target="_blank" rel="external"><font color="blue">官方文档</font></a>，这里我只记录我觉得有用的和我用到的参数。<a id="more"></a><br><figure class="highlight vala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor"># filepath_or_buffer    数据文件的路径</span></span><br><span class="line"><span class="preprocessor"># sep                   数据的分割符号，不填则默认为','。阿里天池和kaggle的数据一般都是用','分割</span></span><br><span class="line"><span class="preprocessor"># header                每一列的列名，如果数据文件中有列名，则忽略，否则填None</span></span><br><span class="line"><span class="preprocessor"># names                 当header=None，names填入你要设置的列名</span></span><br><span class="line">e.g.</span><br><span class="line">df = pd.read_csv(<span class="string">"gd_train_data.txt"</span>,header=None,names = [<span class="string">'Use_city'</span>,<span class="string">'Line_name'</span>,<span class="string">'Terminal_id'</span>,<span class="string">'Card_id'</span>,<span class="string">'Create_city'</span>,<span class="string">'Deal_time'</span>,<span class="string">'Card_type'</span>])</span><br></pre></td></tr></table></figure></p>
-<h1 id="0x02_数据分析与统计">0x02 数据分析与统计</h1><p>　　当数据比较大时，记事本或者notepad++等程序无法打开，pandas给出了几个函数可以快速进行数据分析与统计。</p>
-<h2 id="df-head()"><font color="red">df.head()</font></h2><p>　　查看前5行数据</p>
-<h2 id="df-describe()"><font color="red">df.describe()</font></h2><p>　　快速统计数据，可以方便我们观察数据的特性。describe有3个参数percentiles、include、exclude。percentliles可设置数据分层百分比，不填则默认为25%、50%、75%。include设置要统计的数据类型，默认为numeric dtypes，还有object dtypes、mixed dtypes可选。<br><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">e<span class="class">.g</span>.</span><br><span class="line">df.<span class="function"><span class="title">describe</span><span class="params">(include=[<span class="string">'O'</span>])</span></span></span><br></pre></td></tr></table></figure></p>
-<h2 id="df[u’columns_name’]-value_counts()"><font color="red">df[u’columns name’].value_counts()</font></h2><p>　　统计设置的columns有哪些value，对应的value counts，返回的结构中包含index和value数组。index数组存放value，value数组存放value counts。<br><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">e<span class="class">.g</span>.</span><br><span class="line">Card_type_table = df[u<span class="string">'Card_type'</span>].<span class="function"><span class="title">value_counts</span><span class="params">()</span></span> #统计卡片类型有哪几种，每种类型的卡片有多少张</span><br><span class="line"><span class="keyword">for</span> <span class="tag">i</span> <span class="keyword">in</span> <span class="function"><span class="title">range</span><span class="params">(<span class="number">0</span>,len(Card_type_table.index)</span></span>):</span><br><span class="line">	<span class="keyword">if</span> Card_type_table<span class="class">.index</span>[i] == <span class="string">'卡片种类'</span>:</span><br><span class="line">		Num_Card_type_XXX == Card_type_table<span class="class">.values</span>[i]</span><br><span class="line">	elif ...</span><br><span class="line">	...</span><br></pre></td></tr></table></figure></p>
-<h2 id="条件过滤"><font color="red">条件过滤</font></h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">e.g.</span><br><span class="line">df[df[<span class="string">u'Line_name'</span>]== Line_name)]  <span class="comment">#单个条件</span></span><br><span class="line">df[(df[<span class="string">u'Line_name'</span>]== Line_name ) &amp; (df[<span class="string">u'Deal_time'</span>] == Deal_time)]  <span class="comment">#多条件过滤用'&amp;'连接，并加上'()'</span></span><br></pre></td></tr></table></figure>
-<h2 id="pd-Series()"><font color="red">pd.Series()</font></h2><p>　　添加列。两个参数，第一个参数为要添加的列数组，第二个参数为index。<br><figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">e</span>.<span class="keyword">g</span>.</span><br><span class="line"># 为df添加列<span class="string">'common'</span>,<span class="built_in">add</span>为要添加的列数组：<span class="built_in">add</span> = [<span class="string">''</span>,<span class="string">''</span>,<span class="string">''</span>,...]</span><br><span class="line">df = pd.read_csv(<span class="string">"gd_train_data.txt"</span>,header=None,names = [<span class="string">'Use_city'</span>,<span class="string">'Line_name'</span>,<span class="string">'Terminal_id'</span>,<span class="string">'Card_id'</span>,<span class="string">'Create_city'</span>,<span class="string">'Deal_time'</span>,<span class="string">'Card_type'</span>])</span><br><span class="line">df[<span class="string">'common'</span>] = pd.Series(<span class="built_in">add</span>,<span class="built_in">index</span> = df.<span class="built_in">index</span>)</span><br></pre></td></tr></table></figure></p>
+        <span itemprop="articleBody"><h1 id="0x00_概要">0x00 概要</h1><p>　　记录通过从linux传输文件到windows的辛酸历程。</p>
+<h1 id="0x01_向ascii说不">0x01 向ascii说不</h1><p>　　ASCII码一共规定了128个字符的编码，比如空格”SPACE”是32（二进制00100000），大写的字母A是65（二进制01000001）。这128个符号（包括32个不能打印出来的控制符号），只占用了一个字节的后面7位，最前面的1位统一规定为0。128个字符对于英文来说足够了，但对于中文来说是远远不够的。当接收文件名中包含中文的文件时，在创建文件的过程中易出现<font color="red">IOError: [Errno 22] invalid mode (‘r’) or filename</font>这样的错误。python 2.7 默认编码为ascii。可以通过如图所示方式查看python默认编码</p>
+<p><div align="center"><br><img src="/img/defaultencoding.png" alt="defaultencoding" align="center"><br></div><br>　　利用python从linux传输文件到windows第一步要做的就是设置默认编码为utf-8<br>‘’’<br>import sys<br>default_encoding = ‘utf-8’<br>    if sys.getdefaultencoding() != default_encoding:<br>        reload(sys)<br>        sys.setdefaultencoding(default_encoding)<br>‘’’</p>
+<h1 id="0x02_判断编码，进行编码转换">0x02 判断编码，进行编码转换</h1><p>　　判断编码推荐用chardet。chardet将给出为某种编码的可能性，代码如下：<br>‘’’<br>import chardet<br>print chardet.detect(XXX)<br>‘’’<br>　　判断出编码类型后，对编码进行转换。<br>‘’’</p>
+<h1 id="假设判断为utf8编码">假设判断为utf8编码</h1><p>strtmp = strXXX.decode(‘UTF-8’)<br>strXXX = strtmp.encode(‘GBK’)<br>‘’’</p>
+<h1 id="0x02_decode/encode失败处理">0x02 decode/encode失败处理</h1><p>　　在程序使用过程中，出现了decode/encode错误的情况，网上搜索后判断应该是字符串中存在半/全角符号无法被识别的情况。强行解决方案如下：<br>‘’’<br>try:<br>　　strtmp = strXXX.decode(‘UTF-8’)<br>except:<br>　　strtmp = strXXX.decode(‘UTF-8’,’ignore’)<br>try:<br>　　strXXX = strtmp.encode(‘GBK’)<br>except:<br>　　strXXX = strtmp.encode(‘GBK’,’ignore’)<br>‘’’<br>　　上面的方法虽然能在一定程度上解决问题，但不可靠，如有建议欢迎留言。</p>
 </span>
       
     </div>
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/python/" rel="tag">#python</a>
+          
+            <a href="/tags/编码/" rel="tag">#编码</a>
+          
+        </div>
+      
 
       
         <div class="post-nav">
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2015/11/19/BusPredict/" rel="prev">天池之公交客流预测</a>
-            
           </div>
 
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2015/11/02/pythonweibo/" rel="next">python urllib2学习</a>
+              <a href="/2015/11/19/BusPredict/" rel="next">天池之公交客流预测</a>
             
           </div>
         </div>
@@ -287,8 +281,8 @@
             
               <div class="comments" id="comments">
                 
-                  <div class="ds-thread" data-thread-key="2015/11/10/pandas/"
-                       data-title="pandas库学习笔记" data-url="http://hyjal-binbin.com/2015/11/10/pandas/">
+                  <div class="ds-thread" data-thread-key="2016/03/24/decode/"
+                       data-title="Python编码转换" data-url="http://hyjal-binbin.com/2016/03/24/decode/">
                   </div>
                 
               </div>
@@ -384,7 +378,7 @@
           <div class="post-toc">
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#0x00_简单说明"><span class="nav-number">1.</span> <span class="nav-text">0x00 简单说明</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#0x01_数据提取"><span class="nav-number">2.</span> <span class="nav-text">0x01 数据提取</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#0x02_数据分析与统计"><span class="nav-number">3.</span> <span class="nav-text">0x02 数据分析与统计</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#df-head()"><span class="nav-number">3.1.</span> <span class="nav-text">df.head()</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#df-describe()"><span class="nav-number">3.2.</span> <span class="nav-text">df.describe()</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#df[u’columns_name’]-value_counts()"><span class="nav-number">3.3.</span> <span class="nav-text">df[u’columns name’].value_counts()</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#条件过滤"><span class="nav-number">3.4.</span> <span class="nav-text">条件过滤</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#pd-Series()"><span class="nav-number">3.5.</span> <span class="nav-text">pd.Series()</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#0x00_概要"><span class="nav-number">1.</span> <span class="nav-text">0x00 概要</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#0x01_向ascii说不"><span class="nav-number">2.</span> <span class="nav-text">0x01 向ascii说不</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#0x02_判断编码，进行编码转换"><span class="nav-number">3.</span> <span class="nav-text">0x02 判断编码，进行编码转换</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#假设判断为utf8编码"><span class="nav-number">4.</span> <span class="nav-text">假设判断为utf8编码</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#0x02_decode/encode失败处理"><span class="nav-number">5.</span> <span class="nav-text">0x02 decode/encode失败处理</span></a></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator"></div>
