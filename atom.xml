@@ -5,7 +5,7 @@
   <subtitle><![CDATA[on the way]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://hyjal-binbin.com//"/>
-  <updated>2016-04-14T08:35:36.042Z</updated>
+  <updated>2016-04-14T08:39:43.598Z</updated>
   <id>http://hyjal-binbin.com//</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://hyjal-binbin.com/2016/03/24/decode/"/>
     <id>http://hyjal-binbin.com/2016/03/24/decode/</id>
     <published>2016-03-24T12:27:25.000Z</published>
-    <updated>2016-04-14T08:35:36.042Z</updated>
+    <updated>2016-04-14T08:39:43.598Z</updated>
     <content type="html"><![CDATA[<h1 id="0x00_概要">0x00 概要</h1><p>　　记录通过从linux传输文件到windows的辛酸历程。</p>
 <h1 id="0x01_向ascii说不">0x01 向ascii说不</h1><p>　　ASCII码一共规定了128个字符的编码，比如空格”SPACE”是32（二进制00100000），大写的字母A是65（二进制01000001）。这128个符号（包括32个不能打印出来的控制符号），只占用了一个字节的后面7位，最前面的1位统一规定为0。128个字符对于英文来说足够了，但对于中文来说是远远不够的。当接收文件名中包含中文的文件时，在创建文件的过程中易出现<font color="red">IOError: [Errno 22] invalid mode (‘r’) or filename</font>这样的错误。python 2.7 默认编码为ascii。可以通过如图所示方式查看python默认编码</p>
 <p><div align="center"><br><img src="/img/defaultencoding.png" alt="defaultencoding" align="center"><br></div><br>　　利用python从linux传输文件到windows第一步要做的就是设置默认编码为utf-8<br>‘’’<br>import sys<br>default_encoding = ‘utf-8’<br>    if sys.getdefaultencoding() != default_encoding:<br>        reload(sys)<br>        sys.setdefaultencoding(default_encoding)<br>‘’’</p>
