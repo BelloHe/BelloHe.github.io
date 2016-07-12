@@ -42,10 +42,10 @@
   
   <entry>
     <title><![CDATA[pandas库学习笔记]]></title>
-    <link href="http://hyjal-binbin.com/2015/11/10/pandas/"/>
-    <id>http://hyjal-binbin.com/2015/11/10/pandas/</id>
-    <published>2015-11-09T16:00:00.000Z</published>
-    <updated>2015-11-13T07:35:26.497Z</updated>
+    <link href="http://hyjal-binbin.com/2015/12/10/pandas/"/>
+    <id>http://hyjal-binbin.com/2015/12/10/pandas/</id>
+    <published>2015-12-09T16:00:00.000Z</published>
+    <updated>2016-07-12T10:38:09.110Z</updated>
     <content type="html"><![CDATA[<h1 id="0x00_简单说明">0x00 简单说明</h1><p>　　作为机器学习小白，看了一段时间的coursera上Andrew Ng的视频，感觉还是难以入门，所以报名参加阿里天池上的比赛将理论和实践结合来提高姿势。题目是公交线路客流预测，所给的数据中并没有将乘客数量统计出来，需要自己对数据进行统计。先是自己写个python来统计分析数据(大概900M)，但跑了一晚上，发现太慢，在网上搜索到了pandas库，不到半个小时就统计完成。</p>
 <h1 id="0x01_数据提取">0x01 数据提取</h1><p>　　pandas.read_csv可按照一定的格式打开txt、csv文件。read_csv可选参数很多，全部参数请看<a href="http://pandas.pydata.org/pandas-docs/stable/generated/pandas.read_csv.html?highlight=read_csv#pandas.read_csv" target="_blank" rel="external"><font color="blue">官方文档</font></a>，这里我只记录我觉得有用的和我用到的参数。<a id="more"></a><br><figure class="highlight vala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor"># filepath_or_buffer    数据文件的路径</span></span><br><span class="line"><span class="preprocessor"># sep                   数据的分割符号，不填则默认为','。阿里天池和kaggle的数据一般都是用','分割</span></span><br><span class="line"><span class="preprocessor"># header                每一列的列名，如果数据文件中有列名，则忽略，否则填None</span></span><br><span class="line"><span class="preprocessor"># names                 当header=None，names填入你要设置的列名</span></span><br><span class="line">e.g.</span><br><span class="line">df = pd.read_csv(<span class="string">"gd_train_data.txt"</span>,header=None,names = [<span class="string">'Use_city'</span>,<span class="string">'Line_name'</span>,<span class="string">'Terminal_id'</span>,<span class="string">'Card_id'</span>,<span class="string">'Create_city'</span>,<span class="string">'Deal_time'</span>,<span class="string">'Card_type'</span>])</span><br></pre></td></tr></table></figure></p>
 <h1 id="0x02_数据分析与统计">0x02 数据分析与统计</h1><p>　　当数据比较大时，记事本或者notepad++等程序无法打开，pandas给出了几个函数可以快速进行数据分析与统计。</p>
