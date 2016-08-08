@@ -5,7 +5,7 @@
   <subtitle><![CDATA[on the way]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://hyjal-binbin.com//"/>
-  <updated>2016-08-08T14:20:50.295Z</updated>
+  <updated>2016-08-08T14:22:36.441Z</updated>
   <id>http://hyjal-binbin.com//</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://hyjal-binbin.com/2016/08/08/ShowMeTheGirl/"/>
     <id>http://hyjal-binbin.com/2016/08/08/ShowMeTheGirl/</id>
     <published>2016-08-08T12:27:25.000Z</published>
-    <updated>2016-08-08T14:20:50.295Z</updated>
+    <updated>2016-08-08T14:22:36.441Z</updated>
     <content type="html"><![CDATA[<h1 id="0x00_背景">0x00 背景</h1><p>　　接到妹纸电话，问我会不会使用按键精灵，帮她到一个网站上刷题。<br>　　<font color="red" size="12">我会！！！</font><br>　　妹纸提供的方案是用按键精灵实现每个题都选C，然后提交，但在实际使用过程中出现了以下问题：<br>　　(1)有些题并没有C选项<br>　　(2)选择答案按钮，提交按钮和下一题按钮的位置随题干和解析的长度变换，位置不固定<br>　　(3)该做题系统应该是部署在内网的，妹纸给的外网地址访问奇慢无比，经常掉线<br>　　由于以上原因，我认为无法通过按键精灵的方法达到500分(回答正确一题得0.2分)，所有决定采取其他的方法。<br><a id="more"></a></p>
 <h1 id="0x01_发现漏洞">0x01 发现漏洞</h1><p>　　首先想到的是在点击提交按钮时抓包，是否能够直接暴力遍历提交。利用Burpsuite抓包，发现了一个惊人的事实，在我拦截了提交答案的post包的情况下，网页依然对我提交的答案进行了判断，而放行post包后的返回包中只包含题目解析，没有答题是否正确的信息。由此判断题目答案已经保存在网页中，不需要再与服务器进行交互。按F12，果然找到了所有题目的答案，如下图：</p>
 <p><div align="center"><br><img src="/img/answer.png" alt="answer" align="center"><br></div><br>　　再观察提交按钮的post包，如下图：</p>
@@ -32,7 +32,7 @@
 <p>　　利用Burpsuite中的Intruder功能，选择Pitchfork模式，载入tmAnswer.txt、treeId.txt、treeRoad.txt、tmId.txt，实现遍历答题。</p>
 <p><div align="center"><br><img src="/img/Pitchfork.png" alt="Pitchfork" align="center"><br></div></p>
 <p><div align="center"><br><img src="/img/PitchforkRet.png" alt="PitchforkRet" align="center"><br></div></p>
-<h1 id="0x03">0x03</h1><p>　　<font color="red" size="12">妹纸说分不能太高，不要太高调！！！</font></p>
+<h1 id="0x03">0x03</h1><p>　　<font color="red" size="12">妹纸说分不要弄太高，不要太高调！！！</font></p>
 ]]></content>
     <summary type="html">
     <![CDATA[<h1 id="0x00_背景">0x00 背景</h1><p>　　接到妹纸电话，问我会不会使用按键精灵，帮她到一个网站上刷题。<br>　　<font color = "red" size = "12">我会！！！</font><br>　　妹纸提供的方案是用按键精灵实现每个题都选C，然后提交，但在实际使用过程中出现了以下问题：<br>　　(1)有些题并没有C选项<br>　　(2)选择答案按钮，提交按钮和下一题按钮的位置随题干和解析的长度变换，位置不固定<br>　　(3)该做题系统应该是部署在内网的，妹纸给的外网地址访问奇慢无比，经常掉线<br>　　由于以上原因，我认为无法通过按键精灵的方法达到500分(回答正确一题得0.2分)，所有决定采取其他的方法。<br>]]>
