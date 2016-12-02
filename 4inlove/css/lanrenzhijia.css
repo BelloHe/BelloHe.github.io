@@ -42,7 +42,7 @@ header .stuts span {
 /* Photo Gallery styles */
 .gallery {
     margin: 50px auto 0;
-    width: 840px;
+    width: auto;
 }
 .gallery a {
     display: inline-block;
@@ -150,6 +150,114 @@ header .stuts span {
     box-shadow: 2px 2px 4px #444;
 }
 
+.gallery c {
+    display: inline-block;
+    height: 377px;
+    margin: 10px;
+    opacity: 1;
+    position: absolute;
+    width: 350px;
+	max-width:50%;
+	max-height:50%;
+    -khtml-user-drag: element;
+	right: 0px;
+	top: 0px;
+    /* CSS3 Prevent selections */
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    user-select: none;
+
+    /* CSS3 transition rules */
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+.gallery c img {
+    border: 8px solid #fff;
+    border-bottom: 20px solid #fff;
+    cursor: pointer;
+    display: block;
+    height: 100%;
+    left: 0px;
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    z-index: 1;
+
+    /* CSS3 Box sizing property */
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    box-sizing: border-box;
+
+    /* CSS3 transition rules */
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+
+    /* CSS3 Box Shadow */
+    -moz-box-shadow: 2px 2px 4px #444;
+    -webkit-box-shadow: 2px 2px 4px #444;
+    -o-box-shadow: 2px 2px 4px #444;
+    box-shadow: 2px 2px 4px #444;
+}
+
+.gallery d {
+    display: inline-block;
+    height: 299px;
+    margin: 10px;
+    opacity: 1;
+    position: absolute;
+    width: 400px;
+    -khtml-user-drag: element;
+	right: 0px;
+	top: 500px;
+    /* CSS3 Prevent selections */
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    user-select: none;
+
+    /* CSS3 transition rules */
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+.gallery d img {
+    border: 8px solid #fff;
+    border-bottom: 20px solid #fff;
+    cursor: pointer;
+    display: block;
+    height: 100%;
+    left: 0px;
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    z-index: 1;
+
+    /* CSS3 Box sizing property */
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    box-sizing: border-box;
+
+    /* CSS3 transition rules */
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+
+    /* CSS3 Box Shadow */
+    -moz-box-shadow: 2px 2px 4px #444;
+    -webkit-box-shadow: 2px 2px 4px #444;
+    -o-box-shadow: 2px 2px 4px #444;
+    box-shadow: 2px 2px 4px #444;
+}
+
 /* Custom CSS3 rotate transformation */
 .gallery a:nth-child(1) img {
     -moz-transform: rotate(-25deg);
@@ -161,6 +269,18 @@ header .stuts span {
     -moz-transform: rotate(25deg);
     -webkit-transform: rotate(25deg);
     transform: rotate(25deg);
+}
+
+.gallery c:nth-child(1) img {
+    -moz-transform: rotate(25deg);
+    -webkit-transform: rotate(25deg);
+    transform: rotate(25deg);
+}
+
+.gallery d:nth-child(1) img {
+    -moz-transform: rotate(-25deg);
+    -webkit-transform: rotate(-25deg);
+    transform: rotate(-25deg);
 }
 
 .gallery a:nth-child(2) img {
@@ -234,6 +354,36 @@ header .stuts span {
     transform: rotate(0deg);
 }
 .gallery b:hover img {
+    z-index: 5;
+
+    /* CSS3 transition rules */
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+
+    /* CSS3 transform rules */
+    -moz-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+}
+.gallery c:hover img {
+    z-index: 5;
+
+    /* CSS3 transition rules */
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+
+    /* CSS3 transform rules */
+    -moz-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+}
+.gallery d:hover img {
     z-index: 5;
 
     /* CSS3 transition rules */
