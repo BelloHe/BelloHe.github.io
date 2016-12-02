@@ -207,11 +207,11 @@ header .stuts span {
 
 .gallery d {
     display: inline-block;
-    height: 299px;
+    height: 400px;
     margin: 10px;
     opacity: 1;
     position: absolute;
-    width: 400px;
+    width: 300px;
     -khtml-user-drag: element;
 	right: 0px;
 	top: 70%;
@@ -272,15 +272,15 @@ header .stuts span {
 }
 
 .gallery c:nth-child(1) img {
-    -moz-transform: rotate(25deg);
-    -webkit-transform: rotate(25deg);
-    transform: rotate(25deg);
-}
-
-.gallery d:nth-child(1) img {
     -moz-transform: rotate(-25deg);
     -webkit-transform: rotate(-25deg);
     transform: rotate(-25deg);
+}
+
+.gallery d:nth-child(1) img {
+    -moz-transform: rotate(25deg);
+    -webkit-transform: rotate(25deg);
+    transform: rotate(25deg);
 }
 
 .gallery a:nth-child(2) img {
