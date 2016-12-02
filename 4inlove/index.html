@@ -38,14 +38,17 @@
 				<span class="space"/><span class="comments">*/</span><br />
 				Boy i = <span class="keyword">new</span> Boy(<span class="string">"He Shuai"</span>);<br />
 				Girl u = <span class="keyword">new</span> Girl(<span class="string">"Zheng BinBin"</span>);<br />
-				<span class="comments">// Dec 5, 2012, We fall in love. </span><br />
+				<span class="comments">// 2012.12.05 我们相恋 </span><br />
 				fallinlove(i, u);<br />
-				<span class="comments">// Luckily, you accepted and became my girlfriend eversince.</span><br />
-				u.accepted();<br />
-				<span class="comments">// Since then, I miss u every day.</span><br />
+				<span class="comments">// 在西科大，我们度过了充满回忆的2年.</span><br />
+				i.liveHappillyWith(u,swust);<br />
+				<span class="comments">// 然后开始了充满艰辛的异地.</span><br />
 				i.miss(u);<br />
-				<span class="comments">// And take care of u and our love.</span><br />
-				i.takeCareOf(u);<br />
+				<span class="comments">// 在过去的四年中，我们经历了吵架与和好.</span><br />
+				for(year=0;;year+1s){<br />
+				<span class="placeholder"/>row(i,u);<br />
+				<span class="placeholder"/>i.makeourpeacewith(u);<br />
+				}<br />
 				<span class="comments">// You say that you won't be so easy to marry me.</span><br />
 				<span class="comments">// So I keep waiting and I have confidence that you will.</span><br />
 				<span class="keyword">boolean</span> isHesitate = <span class="keyword">true</span>;<br />
@@ -56,8 +59,8 @@
 				<span class="placeholder"/>isHesitate = u.thinkOver();<br />
 				}<br />
 				<span class="comments">// After a romantic wedding, we will live happily ever after.</span><br />
-				i.marry(u);<br />
 				i.liveHappilyWith(u);<br />
+				i.love(u,forever);<br />
 			</div>
 			<div id="loveHeart">
 				<canvas id="garden"></canvas>
