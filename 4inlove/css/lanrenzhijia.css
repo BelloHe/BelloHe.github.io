@@ -53,7 +53,7 @@ header .stuts span {
     width: 400px;
     -khtml-user-drag: element;
 	left: 0px;
-	top: 20px;
+	top: 0%;
     /* CSS3 Prevent selections */
     -moz-user-select: none;
     -webkit-user-select: none;
@@ -106,7 +106,7 @@ header .stuts span {
     width: 400px;
     -khtml-user-drag: element;
 	left: 0px;
-	top: 500px;
+	top: 70%;
     /* CSS3 Prevent selections */
     -moz-user-select: none;
     -webkit-user-select: none;
@@ -161,7 +161,7 @@ header .stuts span {
 	max-height:50%;
     -khtml-user-drag: element;
 	right: 0px;
-	top: 0px;
+	top: 0%;
     /* CSS3 Prevent selections */
     -moz-user-select: none;
     -webkit-user-select: none;
@@ -214,7 +214,7 @@ header .stuts span {
     width: 400px;
     -khtml-user-drag: element;
 	right: 0px;
-	top: 500px;
+	top: 70%;
     /* CSS3 Prevent selections */
     -moz-user-select: none;
     -webkit-user-select: none;
