@@ -106,7 +106,7 @@ header .stuts span {
     width: 400px;
     -khtml-user-drag: element;
 	left: 0px;
-	top: 70%;
+	top: 80%;
     /* CSS3 Prevent selections */
     -moz-user-select: none;
     -webkit-user-select: none;
