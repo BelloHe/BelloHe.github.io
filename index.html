@@ -1,11 +1,23 @@
-<!doctype html>
-<html class="theme-next use-motion theme-next-mist">
-<head>
-    
+<!DOCTYPE html>
 
-<meta charset="UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
 
 
 <meta http-equiv="Cache-Control" content="no-transform" />
@@ -16,17 +28,49 @@
 
 
 
-  <link rel="stylesheet" type="text/css" href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5"/>
 
 
 
 
-<link rel="stylesheet" type="text/css" href="/css/main.css?v=0.4.3"/>
 
 
 
 
-  <meta name="keywords" content="Hexo,next" />
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
 
 
 
@@ -34,46 +78,63 @@
 
 
 
-  <link rel="shorticon icon" type="image/x-icon" href="/favicon.ico?v=0.4.3" />
 
 
-<meta name="description">
+
 <meta property="og:type" content="website">
-<meta property="og:title" content="Hyjal's blog">
+<meta property="og:title" content="Hyjal&#39;s blog">
 <meta property="og:url" content="http://hyjal-binbin.com/index.html">
-<meta property="og:site_name" content="Hyjal's blog">
-<meta property="og:description">
+<meta property="og:site_name" content="Hyjal&#39;s blog">
+<meta property="og:locale" content="zh-Hans">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hyjal's blog">
-<meta name="twitter:description">
+<meta name="twitter:title" content="Hyjal&#39;s blog">
 
 
-<script type="text/javascript" id="hexo.configuration">
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
   var CONFIG = {
+    root: '/',
     scheme: 'Mist',
-    sidebar: 'post'
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
   };
 </script>
 
-    <title> Hyjal's blog </title>
-</head>
-<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
-<!--[if lte IE 8]>
-  <div style=' clear: both; height: 59px; padding:0 0 0 15px; position: relative;margin:0 auto;'>
-    <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
-      <img src="http://7u2nvr.com1.z0.glb.clouddn.com/picouterie.jpg" border="0" height="42" width="820"
-           alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today or use other browser ,like chrome firefox safari."
-           style='margin-left:auto;margin-right:auto;display: block;'/>
-    </a>
-  </div>
-<![endif]-->
+
+
+  <link rel="canonical" href="http://hyjal-binbin.com/"/>
+
+
+
+
+
+  <title>Hyjal's blog</title>
+  
+
+
+
 
 
   <script type="text/javascript">
     var _hmt = _hmt || [];
     (function() {
       var hm = document.createElement("script");
-      hm.src = "//hm.baidu.com/hm.js?0ac8866292cce272f08dbfe297d38fbc";
+      hm.src = "https://hm.baidu.com/hm.js?0ac8866292cce272f08dbfe297d38fbc";
       var s = document.getElementsByTagName("script")[0];
       s.parentNode.insertBefore(hm, s);
     })();
@@ -81,57 +142,82 @@
 
 
 
-<div class="container one-column 
-   page-home 
-">
-    <div class="headband"></div>
-    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
-        <div class="header-inner"><h1 class="site-meta">
-  <span class="logo-line-before"><i></i></span>
-  <a href="/" class="brand" rel="start">
-      <span class="logo">
-        <i class="icon-logo"></i>
-      </span>
-      <span class="site-title">Hyjal's blog</span>
-  </a>
-  <span class="logo-line-after"><i></i></span>
-</h1>
 
-<div class="site-nav-toggle">
-  <button>
-    <span class="btn-bar"></span>
-    <span class="btn-bar"></span>
-    <span class="btn-bar"></span>
-  </button>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left 
+  page-home">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Hyjal's blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">on the way</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
 </div>
 
 <nav class="site-nav">
   
 
   
-    <ul id="menu" class="menu menu-left">
+    <ul id="menu" class="menu">
       
         
         <li class="menu-item menu-item-home">
           <a href="/" rel="section">
-            <i class="menu-item-icon icon-home"></i> <br />
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
             首页
           </a>
         </li>
       
         
-        <li class="menu-item menu-item-categories">
-          <a href="/categories" rel="section">
-            <i class="menu-item-icon icon-categories"></i> <br />
-            分类
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
           </a>
         </li>
       
-        
-        <li class="menu-item menu-item-archives">
-          <a href="/archives" rel="section">
-            <i class="menu-item-icon icon-archives"></i> <br />
-            归档
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="st-search-show-outputs">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
           </a>
         </li>
       
@@ -141,10 +227,10 @@
   
     <div class="site-search">
       
-  
-<form class="site-search-form">
+  <form class="site-search-form">
   <input type="text" id="st-search-input" class="st-search-input st-default-search-input" />
 </form>
+
 <script type="text/javascript">
   (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
     (w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
@@ -154,81 +240,142 @@
   _st('install', 'K8iS6Hbs2PyW-eM93Gg8','2.0.0');
 </script>
 
-<div class="site-search-toggle"></div>
+
+
     </div>
   
 </nav>
 
 
-        </div>
+
+ </div>
     </header>
 
     <main id="main" class="main">
-        <div class="main-inner">
-            <div id="content" class="content">
-                
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
   <section id="posts" class="posts-expand">
     
       
 
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+  
 
-      
-      
-        <h1 class="post-title" itemprop="name headline">
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://hyjal-binbin.com/2017/10/12/bigbrother/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Hyjal">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hyjal's blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/10/12/bigbrother/" itemprop="url">涨知识</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-10-12T19:33:44+08:00">
+                2017-10-12
+              </time>
+            
+
+            
+
+            
+          </span>
+
           
+
           
             
-              <a class="post-title-link" href="/2016/08/08/ShowMeTheGirl/" itemprop="url">
-                做一个对妹纸有用的程序员
-              </a>
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2017/10/12/bigbrother/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/10/12/bigbrother/" itemprop="commentCount"></span>
+                </a>
+              </span>
             
           
-        </h1>
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
       
 
-      <div class="post-meta">
-        <span class="post-time">
-          发表于
-          <time itemprop="dateCreated" datetime="2016-08-08T20:27:25+08:00" content="2016-08-08">
-            2016-08-08
-          </time>
-        </span>
-
-        
-
+      
         
           
-            <span class="post-comments-count">
-              &nbsp; | &nbsp;
-              <a href="/2016/08/08/ShowMeTheGirl/#comments" itemprop="discussionUrl">
-                <span class="post-comments-count ds-thread-count" data-thread-key="2016/08/08/ShowMeTheGirl/" itemprop="commentsCount"></span>
-              </a>
-            </span>
+            <h1 id="0x00_公共资源">0x00 公共资源</h1><h2 id="安全资讯">安全资讯</h2><p>　　<a href="http://www.freebuf.com" target="_blank" rel="external"><font color="blue" size="5">FreeBuf</font></a>    黑客与极客,国内关注度最高的全球互联网安全媒体平台,同时也是爱好者们交流与分享安全技术的最佳社区。<br>　　<a href="http://bobao.360.cn" target="_blank" rel="external"><font color="blue" size="5">安全客</font></a>    为广大安全爱好者和安全从业人员提供权威信息发布的漏洞信息,最新的安全资讯,最全的安全知识和精彩的安全活动直播。<br>　　<a href="http://bobao.360.cn" target="_blank" rel="external"><font color="blue" size="5">SeccWiki</font></a>    致力于提供最新、最专业的安全资讯分享平台,方便安全人员获取安全事件、精品技术文章、技术专题。</p>
+<h2 id="技术论坛">技术论坛</h2><p>　　<a href="https://bbs.pediy.com/" target="_blank" rel="external"><font color="blue" size="5">看雪论坛</font></a>    致力于PC、移动、智能设备安全研究及逆向工程的开发者社区。<br>　　<a href="https://www.52pojie.cn/" target="_blank" rel="external"><font color="blue" size="5">吾爱破解</font></a>    论坛致力于软件安全与病毒分析的前沿,丰富的技术版块交相辉映,由无数热衷于软件加密解密及反病毒爱好者共同维护</p>
+<h1 id="0x01_巨人的肩膀">0x01 巨人的肩膀</h1><h2 id="说明">说明</h2><p>　　[<font color="green">绿色</font>]：活跃<br>　　[<font color="gray">灰色</font>]：几乎不再更新<br>　　[<font color="red">红色</font>]：炫富类</p>
+<h2 id="博客">博客</h2><p>　　<a href="https://www.leavesongs.com/" target="_blank" rel="external"><font color="green" size="5">离别歌</font></a><br>　　<a href="http://taosay.net/" target="_blank" rel="external"><font color="gray" size="5">道哥的黑板报</font></a><br>　　<a href="http://www.ms509.com/" target="_blank" rel="external"><font color="green" size="5">MS509 Team</font></a></p>
+<h2 id="微博">微博</h2><p>　　<a href="http://weibo.com/zhengmin1989" target="_blank" rel="external"><font color="green" size="5">蒸米spark</font></a>    越狱大佬。<br>　　<a href="http://weibo.com/evilcos" target="_blank" rel="external"><font color="green" size="5">余弦</font></a>    知道创宇<br>　　<a href="http://weibo.com/sunwe4r" target="_blank" rel="external"><font color="red" size="5">sunwear</font></a>    邪恶八进制<br>　　<a href="http://weibo.com/pstyunshu" target="_blank" rel="external"><font color="red" size="5">安全_云舒</font></a>    默安科技联合创始人兼CTO，资深网络安全研究人员。</p>
+<h2 id="公众号">公众号</h2><p>　　<font color="green" size="5">腾讯玄武实验室</font><br>　　<font color="green" size="5">360威胁情报中心</font></p>
+<h2 id="推特">推特</h2>
           
-        
-      </div>
-    </header>
-
-    <div class="post-body">
-
-      
-      
-
-      
-        
-          <h1 id="0x00_背景">0x00 背景</h1><p>　　接到妹纸电话，问我会不会使用按键精灵，帮她到一个网站上刷题。<br>　　<font color = "red" size = "12">我会！！！</font><br>　　妹纸提供的方案是用按键精灵实现每个题都选C，然后提交，但在实际使用过程中出现了以下问题：<br>　　(1)有些题并没有C选项<br>　　(2)选择答案按钮，提交按钮和下一题按钮的位置随题干和解析的长度变换，位置不固定<br>　　(3)该做题系统应该是部署在内网的，妹纸给的外网地址访问奇慢无比，经常掉线<br>　　由于以上原因，我认为无法通过按键精灵的方法达到500分(回答正确一题得0.2分)，所有决定采取其他的方法。<br>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2016/08/08/ShowMeTheGirl/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
         
       
     </div>
+    
+    
+    
+
+    
+
+    
+
+    
 
     <footer class="post-footer">
+      
+
       
 
       
@@ -238,53 +385,399 @@
         <div class="post-eof"></div>
       
     </footer>
+  </div>
+  
+  
+  
   </article>
 
 
     
       
 
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+  
 
-      
-      
-        <h1 class="post-title" itemprop="name headline">
-          
-          
-            
-              <a class="post-title-link" href="/2016/03/24/decode/" itemprop="url">
-                Python编码转换
-              </a>
-            
-          
-        </h1>
-      
+  
+  
+  
 
-      <div class="post-meta">
-        <span class="post-time">
-          发表于
-          <time itemprop="dateCreated" datetime="2016-03-24T20:27:25+08:00" content="2016-03-24">
-            2016-03-24
-          </time>
-        </span>
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://hyjal-binbin.com/2017/02/07/SinaL2/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Hyjal">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hyjal's blog">
+    </span>
+
+    
+      <header class="post-header">
 
         
-
         
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/02/07/SinaL2/" itemprop="url">SinaL2行情接口C#</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-02-07T00:00:00+08:00">
+                2017-02-07
+              </time>
+            
+
+            
+
+            
+          </span>
+
           
-            <span class="post-comments-count">
-              &nbsp; | &nbsp;
-              <a href="/2016/03/24/decode/#comments" itemprop="discussionUrl">
-                <span class="post-comments-count ds-thread-count" data-thread-key="2016/03/24/decode/" itemprop="commentsCount"></span>
-              </a>
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/python/" itemprop="url" rel="index">
+                    <span itemprop="name">python</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/python/C/" itemprop="url" rel="index">
+                    <span itemprop="name">C#</span>
+                  </a>
+                </span>
+
+                
+                
+              
             </span>
           
-        
-      </div>
-    </header>
 
-    <div class="post-body">
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2017/02/07/SinaL2/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/02/07/SinaL2/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="0x00_说明">0x00 说明</h1><p>　　改自开源项目<a href="https://github.com/Emptyset110/SinaL2" target="_blank" rel="external"><font color="blue">dHydra</font></a>，因需求原因只提取其中行情订阅的部分。由于需要订阅全部股票，而python对于异步不够友好，所以改为C#版本以提升性能。</p>
+<h1 id="0x01_新浪登录">0x01 新浪登录</h1><p>　　太懒没内容了，抱歉</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://hyjal-binbin.com/2016/08/08/ShowMeTheGirl/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Hyjal">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hyjal's blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2016/08/08/ShowMeTheGirl/" itemprop="url">做一个对妹纸有用的程序员</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2016-08-08T20:27:25+08:00">
+                2016-08-08
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2016/08/08/ShowMeTheGirl/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/08/08/ShowMeTheGirl/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h1 id="0x00_背景">0x00 背景</h1><p>　　接到妹纸电话，问我会不会使用按键精灵，帮她到一个网站上刷题。<br>　　<font color="red" size="12">我会！！！</font><br>　　妹纸提供的方案是用按键精灵实现每个题都选C，然后提交，但在实际使用过程中出现了以下问题：<br>　　(1)有些题并没有C选项<br>　　(2)选择答案按钮，提交按钮和下一题按钮的位置随题干和解析的长度变换，位置不固定<br>　　(3)该做题系统应该是部署在内网的，妹纸给的外网地址访问奇慢无比，经常掉线<br>　　由于以上原因，我认为无法通过按键精灵的方法达到500分(回答正确一题得0.2分)，所有决定采取其他的方法。<br>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2016/08/08/ShowMeTheGirl/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://hyjal-binbin.com/2016/03/24/decode/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Hyjal">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hyjal's blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2016/03/24/decode/" itemprop="url">Python编码转换</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2016-03-24T20:27:25+08:00">
+                2016-03-24
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2016/03/24/decode/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/03/24/decode/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
       
@@ -292,17 +785,30 @@
       
         
           <h1 id="0x00_概要">0x00 概要</h1><p>　　记录通过从linux传输文件到windows的辛酸历程。</p>
-<h1 id="0x01_向ascii说不">0x01 向ascii说不</h1><p>　　ASCII码一共规定了128个字符的编码，比如空格”SPACE”是32（二进制00100000），大写的字母A是65（二进制01000001）。这128个符号（包括32个不能打印出来的控制符号），只占用了一个字节的后面7位，最前面的1位统一规定为0。128个字符对于英文来说足够了，但对于中文来说是远远不够的。当接收文件名中包含中文的文件时，在创建文件的过程中易出现<font color = "red">IOError: [Errno 22] invalid mode (‘r’) or filename</font>这样的错误。python 2.7 默认编码为ascii。
-          <div class="post-more-link text-center">
+<h1 id="0x01_向ascii说不">0x01 向ascii说不</h1><p>　　ASCII码一共规定了128个字符的编码，比如空格”SPACE”是32（二进制00100000），大写的字母A是65（二进制01000001）。这128个符号（包括32个不能打印出来的控制符号），只占用了一个字节的后面7位，最前面的1位统一规定为0。128个字符对于英文来说足够了，但对于中文来说是远远不够的。当接收文件名中包含中文的文件时，在创建文件的过程中易出现<font color="red">IOError: [Errno 22] invalid mode (‘r’) or filename</font>这样的错误。python 2.7 默认编码为ascii。
+          <!--noindex-->
+          <div class="post-button text-center">
             <a class="btn" href="/2016/03/24/decode/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
+          <!--/noindex-->
         
       
     </div>
+    
+    
+    
+
+    
+
+    
+
+    
 
     <footer class="post-footer">
+      
+
       
 
       
@@ -312,64 +818,123 @@
         <div class="post-eof"></div>
       
     </footer>
+  </div>
+  
+  
+  
   </article>
 
 
     
       
 
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+  
 
-      
-      
-        <h1 class="post-title" itemprop="name headline">
-          
-          
-            
-              <a class="post-title-link" href="/2015/12/10/pandas/" itemprop="url">
-                pandas库学习笔记
-              </a>
-            
-          
-        </h1>
-      
+  
+  
+  
 
-      <div class="post-meta">
-        <span class="post-time">
-          发表于
-          <time itemprop="dateCreated" datetime="2015-12-10T00:00:00+08:00" content="2015-12-10">
-            2015-12-10
-          </time>
-        </span>
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://hyjal-binbin.com/2015/12/10/pandas/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Hyjal">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hyjal's blog">
+    </span>
+
+    
+      <header class="post-header">
 
         
-          <span class="post-category" >
-            &nbsp; | &nbsp; 分类于
-            
-              <span itemprop="about" itemscope itemtype="https://schema.org/Thing"><a href="/categories/机器学习/" itemprop="url" rel="index"><span itemprop="name">机器学习</span></a></span>
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2015/12/10/pandas/" itemprop="url">pandas库学习笔记</a></h1>
+        
 
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
               
+                <span class="post-meta-item-text">发表于</span>
               
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2015-12-10T00:00:00+08:00">
+                2015-12-10
+              </time>
+            
+
+            
 
             
           </span>
-        
 
-        
           
-            <span class="post-comments-count">
-              &nbsp; | &nbsp;
-              <a href="/2015/12/10/pandas/#comments" itemprop="discussionUrl">
-                <span class="post-comments-count ds-thread-count" data-thread-key="2015/12/10/pandas/" itemprop="commentsCount"></span>
-              </a>
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/机器学习/" itemprop="url" rel="index">
+                    <span itemprop="name">机器学习</span>
+                  </a>
+                </span>
+
+                
+                
+              
             </span>
           
-        
-      </div>
-    </header>
 
-    <div class="post-body">
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2015/12/10/pandas/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2015/12/10/pandas/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
       
@@ -377,17 +942,30 @@
       
         
           <h1 id="0x00_简单说明">0x00 简单说明</h1><p>　　作为机器学习小白，看了一段时间的coursera上Andrew Ng的视频，感觉还是难以入门，所以报名参加阿里天池上的比赛将理论和实践结合来提高姿势。题目是公交线路客流预测，所给的数据中并没有将乘客数量统计出来，需要自己对数据进行统计。先是自己写个python来统计分析数据(大概900M)，但跑了一晚上，发现太慢，在网上搜索到了pandas库，不到半个小时就统计完成。</p>
-<h1 id="0x01_数据提取">0x01 数据提取</h1><p>　　pandas.read_csv可按照一定的格式打开txt、csv文件。read_csv可选参数很多，全部参数请看<a href="http://pandas.pydata.org/pandas-docs/stable/generated/pandas.read_csv.html?highlight=read_csv#pandas.read_csv"><font color = "blue">官方文档</font></a>，这里我只记录我觉得有用的和我用到的参数。
-          <div class="post-more-link text-center">
+<h1 id="0x01_数据提取">0x01 数据提取</h1><p>　　pandas.read_csv可按照一定的格式打开txt、csv文件。read_csv可选参数很多，全部参数请看<a href="http://pandas.pydata.org/pandas-docs/stable/generated/pandas.read_csv.html?highlight=read_csv#pandas.read_csv" target="_blank" rel="external"><font color="blue">官方文档</font></a>，这里我只记录我觉得有用的和我用到的参数。
+          <!--noindex-->
+          <div class="post-button text-center">
             <a class="btn" href="/2015/12/10/pandas/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
+          <!--/noindex-->
         
       
     </div>
+    
+    
+    
+
+    
+
+    
+
+    
 
     <footer class="post-footer">
+      
+
       
 
       
@@ -397,89 +975,164 @@
         <div class="post-eof"></div>
       
     </footer>
+  </div>
+  
+  
+  
   </article>
 
 
     
       
 
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+  
 
-      
-      
-        <h1 class="post-title" itemprop="name headline">
-          
-          
-            
-              <a class="post-title-link" href="/2015/11/02/pythonweibo/" itemprop="url">
-                python urllib2学习
-              </a>
-            
-          
-        </h1>
-      
+  
+  
+  
 
-      <div class="post-meta">
-        <span class="post-time">
-          发表于
-          <time itemprop="dateCreated" datetime="2015-11-02T17:20:53+08:00" content="2015-11-02">
-            2015-11-02
-          </time>
-        </span>
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://hyjal-binbin.com/2015/10/30/pythonweibo/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Hyjal">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hyjal's blog">
+    </span>
+
+    
+      <header class="post-header">
 
         
-          <span class="post-category" >
-            &nbsp; | &nbsp; 分类于
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2015/10/30/pythonweibo/" itemprop="url">python urllib2学习</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
             
-              <span itemprop="about" itemscope itemtype="https://schema.org/Thing"><a href="/categories/python/" itemprop="url" rel="index"><span itemprop="name">python</span></a></span>
-
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
               
+                <span class="post-meta-item-text">发表于</span>
               
-                ， 
-              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2015-10-30T18:05:39+08:00">
+                2015-10-30
+              </time>
+            
 
             
-              <span itemprop="about" itemscope itemtype="https://schema.org/Thing"><a href="/categories/python/爬虫/" itemprop="url" rel="index"><span itemprop="name">爬虫</span></a></span>
-
-              
-              
 
             
           </span>
-        
 
-        
           
-            <span class="post-comments-count">
-              &nbsp; | &nbsp;
-              <a href="/2015/11/02/pythonweibo/#comments" itemprop="discussionUrl">
-                <span class="post-comments-count ds-thread-count" data-thread-key="2015/11/02/pythonweibo/" itemprop="commentsCount"></span>
-              </a>
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/python/" itemprop="url" rel="index">
+                    <span itemprop="name">python</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/python/爬虫/" itemprop="url" rel="index">
+                    <span itemprop="name">爬虫</span>
+                  </a>
+                </span>
+
+                
+                
+              
             </span>
           
-        
-      </div>
-    </header>
 
-    <div class="post-body">
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2015/10/30/pythonweibo/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2015/10/30/pythonweibo/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
       
 
       
         
-          <span itemprop="articleBody"><h1 id="0x00_初探">0x00 初探</h1><p>　　提取百度主页html<br><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">#coding=utf8</span><br><span class="line">import urllib2</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</span><br><span class="line">    url = <span class="string">'http://www.baidu.com'</span></span><br><span class="line">    print urllib2.<span class="function"><span class="title">urlopen</span><span class="params">(url)</span></span>.<span class="function"><span class="title">read</span><span class="params">()</span></span></span><br></pre></td></tr></table></figure></p>
+          
+            <h1 id="0x00_初探">0x00 初探</h1><p>　　提取百度主页html<br><figure class="highlight arduino"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#coding=utf8</span></div><div class="line"><span class="keyword">import</span> urllib2</div><div class="line"></div><div class="line"><span class="built_in">if</span> __name__ == <span class="string">'__main__'</span>:</div><div class="line">    url = <span class="string">'http://www.baidu.com'</span></div><div class="line">    <span class="built_in">print</span> urllib2.urlopen(url).<span class="built_in">read</span>()</div></pre></td></tr></table></figure></p>
 <p><div align="center"><br><img src="/img/baidu.png" alt="baidu" align="center"><br></div></p>
-<h1 id="0x01_cookie&amp;timeout">0x01 cookie&amp;timeout</h1><p>　　提取新浪微博“weibo.com/u/1000000002”出错，分析返回的html，请教同学后，猜测可能是没有加入cookie的原因用burpsuite拦截抓包，提取cookie:SUBP=0033W…….。也可用浏览器访问，保存cookie，然后提取。<br><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">#coding=utf8</span><br><span class="line">import urllib2</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</span><br><span class="line">    url = <span class="string">'http://weibo.com/u/1000000002'</span></span><br><span class="line">    rep = urllib2.<span class="function"><span class="title">Request</span><span class="params">(url)</span></span></span><br><span class="line">    rep.<span class="function"><span class="title">add_header</span><span class="params">(<span class="string">'cookie'</span>,<span class="string">'你的cookie'</span>)</span></span></span><br><span class="line">    print urllib2.<span class="function"><span class="title">urlopen</span><span class="params">(rep)</span></span>.<span class="function"><span class="title">read</span><span class="params">()</span></span></span><br></pre></td></tr></table></figure></p>
-<p>　　遍历获取weibo信息时,会出现卡死在urlopen，加入timeout解决此问题<br><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">print urllib2.<span class="function"><span class="title">urlopen</span><span class="params">(rep,timeout=<span class="number">10</span>)</span></span>.<span class="function"><span class="title">read</span><span class="params">()</span></span></span><br></pre></td></tr></table></figure></p>
+<h1 id="0x01_cookie&amp;timeout">0x01 cookie&amp;timeout</h1><p>　　提取新浪微博“weibo.com/u/1000000002”出错，分析返回的html，请教同学后，猜测可能是没有加入cookie的原因用burpsuite拦截抓包，提取cookie:SUBP=0033W…….。也可用浏览器访问，保存cookie，然后提取。<br><figure class="highlight lua"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">#coding=utf8</div><div class="line">import urllib2</div><div class="line"></div><div class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</div><div class="line">    url = <span class="string">'http://weibo.com/u/1000000002'</span></div><div class="line">    <span class="built_in">rep</span> = urllib2.Request(url)</div><div class="line">    <span class="built_in">rep</span>.add_header(<span class="string">'cookie'</span>,<span class="string">'你的cookie'</span>)</div><div class="line">    <span class="built_in">print</span> urllib2.urlopen(<span class="built_in">rep</span>).<span class="built_in">read</span>()</div></pre></td></tr></table></figure></p>
+<p>　　遍历获取weibo信息时,会出现卡死在urlopen，加入timeout解决此问题<br><figure class="highlight routeros"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="builtin-name">print</span> urllib2.urlopen(rep,<span class="attribute">timeout</span>=10).read()</div></pre></td></tr></table></figure></p>
 <p>参考资料：<br><a href="http://zhuoqiang.me/python-urllib2-usage.html" target="_blank" rel="external"><font color="blue">Python 标准库 urllib2 的使用细节</font></a></p>
-</span>
+
+          
         
       
     </div>
+    
+    
+    
+
+    
+
+    
+
+    
 
     <footer class="post-footer">
+      
+
       
 
       
@@ -489,72 +1142,134 @@
         <div class="post-eof"></div>
       
     </footer>
+  </div>
+  
+  
+  
   </article>
 
 
     
       
 
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+  
 
-      
-      
-        <h1 class="post-title" itemprop="name headline">
-          
-          
-            
-              <a class="post-title-link" href="/2015/10/28/USBMessage/" itemprop="url">
-                捕获所有USB设备插入消息
-              </a>
-            
-          
-        </h1>
-      
+  
+  
+  
 
-      <div class="post-meta">
-        <span class="post-time">
-          发表于
-          <time itemprop="dateCreated" datetime="2015-10-28T00:00:00+08:00" content="2015-10-28">
-            2015-10-28
-          </time>
-        </span>
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://hyjal-binbin.com/2015/10/28/USBMessage/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Hyjal">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hyjal's blog">
+    </span>
+
+    
+      <header class="post-header">
 
         
-          <span class="post-category" >
-            &nbsp; | &nbsp; 分类于
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2015/10/28/USBMessage/" itemprop="url">捕获所有USB设备插入消息</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
             
-              <span itemprop="about" itemscope itemtype="https://schema.org/Thing"><a href="/categories/Windows/" itemprop="url" rel="index"><span itemprop="name">Windows</span></a></span>
-
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
               
+                <span class="post-meta-item-text">发表于</span>
               
-                ， 
-              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2015-10-28T00:00:00+08:00">
+                2015-10-28
+              </time>
+            
 
             
-              <span itemprop="about" itemscope itemtype="https://schema.org/Thing"><a href="/categories/Windows/USB/" itemprop="url" rel="index"><span itemprop="name">USB</span></a></span>
-
-              
-              
 
             
           </span>
-        
 
-        
           
-            <span class="post-comments-count">
-              &nbsp; | &nbsp;
-              <a href="/2015/10/28/USBMessage/#comments" itemprop="discussionUrl">
-                <span class="post-comments-count ds-thread-count" data-thread-key="2015/10/28/USBMessage/" itemprop="commentsCount"></span>
-              </a>
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Windows/" itemprop="url" rel="index">
+                    <span itemprop="name">Windows</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Windows/USB/" itemprop="url" rel="index">
+                    <span itemprop="name">USB</span>
+                  </a>
+                </span>
+
+                
+                
+              
             </span>
           
-        
-      </div>
-    </header>
 
-    <div class="post-body">
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2015/10/28/USBMessage/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2015/10/28/USBMessage/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
       
@@ -562,17 +1277,30 @@
       
         
           <h1 id="0x00_说明">0x00 说明</h1><p>　　最先在网上copy的代码，能捕获U盘插入的消息，但不能捕获其他USB设备的消息，且无法获取U盘dbcc_name，多次询问度娘后终于找到正确的姿势，通过RegisterDeviceNotification注册DBT_DEVTYP_DEVICEINTERFACE，获取所有USB类设备的通知。</p>
-<h1 id="0x01_WM_DEVICECHANGE">0x01 WM_DEVICECHANGE</h1><p>　　查询MSDN<a href="https://msdn.microsoft.com/en-us/library/aa363480(VS.85).aspx"><font color="blue">[WM_DEVICECHANGE message]</font></a>,当设备或电脑的硬件配置发生改变时，会给每一个顶层窗口发通知，窗口通过WindowPro接收这个消息。WindowPro中的wParam参数告诉我们是具体是发生了什么事件，即设备或电脑的硬件配置发生了怎样的变化;lParam参数包含了一些设备具体的信息（wParam不同，对应的lParam也有一点的变化）。如果有U盘插入（这里为什么说是U盘而不是USB设备将会在后面进行说明），wParam=DBT_DEVICEARRIVAL,lParam中包含了U盘的盘符信息。<br>　　有了上述信息，我们可自己创建一个顶层窗口来接WM_DEVICECHANGE消息。首先定义一个WindowPro函数，当message参数为WM_DEVICECHANGE，wParam参数为DBT_DEVICEARRIVAL时，即表示有U盘插入。<br>
-          <div class="post-more-link text-center">
+<h1 id="0x01_WM_DEVICECHANGE">0x01 WM_DEVICECHANGE</h1><p>　　查询MSDN<a href="https://msdn.microsoft.com/en-us/library/aa363480(VS.85).aspx" target="_blank" rel="external"><font color="blue">[WM_DEVICECHANGE message]</font></a>,当设备或电脑的硬件配置发生改变时，会给每一个顶层窗口发通知，窗口通过WindowPro接收这个消息。WindowPro中的wParam参数告诉我们是具体是发生了什么事件，即设备或电脑的硬件配置发生了怎样的变化;lParam参数包含了一些设备具体的信息（wParam不同，对应的lParam也有一点的变化）。如果有U盘插入（这里为什么说是U盘而不是USB设备将会在后面进行说明），wParam=DBT_DEVICEARRIVAL,lParam中包含了U盘的盘符信息。<br>　　有了上述信息，我们可自己创建一个顶层窗口来接WM_DEVICECHANGE消息。首先定义一个WindowPro函数，当message参数为WM_DEVICECHANGE，wParam参数为DBT_DEVICEARRIVAL时，即表示有U盘插入。<br>
+          <!--noindex-->
+          <div class="post-button text-center">
             <a class="btn" href="/2015/10/28/USBMessage/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
+          <!--/noindex-->
         
       
     </div>
+    
+    
+    
+
+    
+
+    
+
+    
 
     <footer class="post-footer">
+      
+
       
 
       
@@ -582,82 +1310,154 @@
         <div class="post-eof"></div>
       
     </footer>
+  </div>
+  
+  
+  
   </article>
 
 
     
       
 
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+  
 
-      
-      
-        <h1 class="post-title" itemprop="name headline">
-          
-          
-            
-              <a class="post-title-link" href="/2015/10/14/GetpdfContent/" itemprop="url">
-                利用acrobat SDK提取pdf文档内容
-              </a>
-            
-          
-        </h1>
-      
+  
+  
+  
 
-      <div class="post-meta">
-        <span class="post-time">
-          发表于
-          <time itemprop="dateCreated" datetime="2015-10-14T00:00:00+08:00" content="2015-10-14">
-            2015-10-14
-          </time>
-        </span>
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://hyjal-binbin.com/2015/10/14/GetpdfContent/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Hyjal">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hyjal's blog">
+    </span>
+
+    
+      <header class="post-header">
 
         
-          <span class="post-category" >
-            &nbsp; | &nbsp; 分类于
-            
-              <span itemprop="about" itemscope itemtype="https://schema.org/Thing"><a href="/categories/Windows/" itemprop="url" rel="index"><span itemprop="name">Windows</span></a></span>
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2015/10/14/GetpdfContent/" itemprop="url">利用acrobat SDK提取pdf文档内容</a></h1>
+        
 
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
               
+                <span class="post-meta-item-text">发表于</span>
               
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2015-10-14T00:00:00+08:00">
+                2015-10-14
+              </time>
+            
+
+            
 
             
           </span>
-        
 
-        
           
-            <span class="post-comments-count">
-              &nbsp; | &nbsp;
-              <a href="/2015/10/14/GetpdfContent/#comments" itemprop="discussionUrl">
-                <span class="post-comments-count ds-thread-count" data-thread-key="2015/10/14/GetpdfContent/" itemprop="commentsCount"></span>
-              </a>
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Windows/" itemprop="url" rel="index">
+                    <span itemprop="name">Windows</span>
+                  </a>
+                </span>
+
+                
+                
+              
             </span>
           
-        
-      </div>
-    </header>
 
-    <div class="post-body">
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2015/10/14/GetpdfContent/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2015/10/14/GetpdfContent/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
       
 
       
         
-          <h1 id="0x00_背景">0x00 背景</h1><p>　　HackingTeam泄漏事件影响颇大，415.77G的内容大多是邮件内容，分析起来比较麻烦，因而被大多数人忽略。网上有很多邮件分析的文章<a href="http://www.sec-un.org/analysis-on-the-hackingteam-mail-security-threat-intelligence-2.html"><font color = "blue">HT邮件分析</font></a>,主要是针对邮件关联进行分析，若对邮件内容进行分析则需提取邮件附件中的内容，再针对内容做进一步分析。本文背景其实与上文无关，只是借此提升逼格，下面将介绍如何利用acrobat SDK提取pdf文档内容。</p>
-<h1 id="0x01_acrobat导入">0x01 acrobat导入</h1><p>　　只要安装了Adobe Acrobat，就能在其安装目录下找到acrobat.tlb，其中包含了adobe公司提供的接口,可对pdf进行各种操作<a href="http://partners.adobe.com/public/developer/en/acrobat/sdk/pdf/iac/IACOverview.pdf"><font color = "blue">参考文档</font></a>，使用类向导将其导入。<br>　　提取文本内容需导入CAcroApp、CAcroAVDoc、CAcroAVPageView、CAcroPDPage、CAcroPDTextSelect、CAcroHiliteList。<br>
-          <div class="post-more-link text-center">
+          <h1 id="0x00_背景">0x00 背景</h1><p>　　HackingTeam泄漏事件影响颇大，415.77G的内容大多是邮件内容，分析起来比较麻烦，因而被大多数人忽略。网上有很多邮件分析的文章<a href="http://www.sec-un.org/analysis-on-the-hackingteam-mail-security-threat-intelligence-2.html" target="_blank" rel="external"><font color="blue">HT邮件分析</font></a>,主要是针对邮件关联进行分析，若对邮件内容进行分析则需提取邮件附件中的内容，再针对内容做进一步分析。本文背景其实与上文无关，只是借此提升逼格，下面将介绍如何利用acrobat SDK提取pdf文档内容。</p>
+<h1 id="0x01_acrobat导入">0x01 acrobat导入</h1><p>　　只要安装了Adobe Acrobat，就能在其安装目录下找到acrobat.tlb，其中包含了adobe公司提供的接口,可对pdf进行各种操作<a href="http://partners.adobe.com/public/developer/en/acrobat/sdk/pdf/iac/IACOverview.pdf" target="_blank" rel="external"><font color="blue">参考文档</font></a>，使用类向导将其导入。<br>　　提取文本内容需导入CAcroApp、CAcroAVDoc、CAcroAVPageView、CAcroPDPage、CAcroPDTextSelect、CAcroHiliteList。<br>
+          <!--noindex-->
+          <div class="post-button text-center">
             <a class="btn" href="/2015/10/14/GetpdfContent/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
+          <!--/noindex-->
         
       
     </div>
+    
+    
+    
+
+    
+
+    
+
+    
 
     <footer class="post-footer">
+      
+
       
 
       
@@ -667,72 +1467,134 @@
         <div class="post-eof"></div>
       
     </footer>
+  </div>
+  
+  
+  
   </article>
 
 
     
       
 
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+  
 
-      
-      
-        <h1 class="post-title" itemprop="name headline">
-          
-          
-            
-              <a class="post-title-link" href="/2015/10/07/device-CA/" itemprop="url">
-                windows平台下获取USB设备“身份证”
-              </a>
-            
-          
-        </h1>
-      
+  
+  
+  
 
-      <div class="post-meta">
-        <span class="post-time">
-          发表于
-          <time itemprop="dateCreated" datetime="2015-10-07T00:00:00+08:00" content="2015-10-07">
-            2015-10-07
-          </time>
-        </span>
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://hyjal-binbin.com/2015/10/07/device-CA/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Hyjal">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hyjal's blog">
+    </span>
+
+    
+      <header class="post-header">
 
         
-          <span class="post-category" >
-            &nbsp; | &nbsp; 分类于
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2015/10/07/device-CA/" itemprop="url">windows平台下获取USB设备“身份证”</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
             
-              <span itemprop="about" itemscope itemtype="https://schema.org/Thing"><a href="/categories/Windows/" itemprop="url" rel="index"><span itemprop="name">Windows</span></a></span>
-
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
               
+                <span class="post-meta-item-text">发表于</span>
               
-                ， 
-              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2015-10-07T00:00:00+08:00">
+                2015-10-07
+              </time>
+            
 
             
-              <span itemprop="about" itemscope itemtype="https://schema.org/Thing"><a href="/categories/Windows/USB/" itemprop="url" rel="index"><span itemprop="name">USB</span></a></span>
-
-              
-              
 
             
           </span>
-        
 
-        
           
-            <span class="post-comments-count">
-              &nbsp; | &nbsp;
-              <a href="/2015/10/07/device-CA/#comments" itemprop="discussionUrl">
-                <span class="post-comments-count ds-thread-count" data-thread-key="2015/10/07/device-CA/" itemprop="commentsCount"></span>
-              </a>
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Windows/" itemprop="url" rel="index">
+                    <span itemprop="name">Windows</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Windows/USB/" itemprop="url" rel="index">
+                    <span itemprop="name">USB</span>
+                  </a>
+                </span>
+
+                
+                
+              
             </span>
           
-        
-      </div>
-    </header>
 
-    <div class="post-body">
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2015/10/07/device-CA/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2015/10/07/device-CA/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
       
@@ -740,17 +1602,30 @@
       
         
           <h1 id="0x00_写在前面">0x00 写在前面</h1><p>　　当我们将U盘插入windows主机时，会提示安装驱动，那么windows是如何判断应该安装哪个版本的驱动的呢？在这里将用到设备的身份信息，包括厂商、型号、序列号等。大概半年前做了一个关于设备检测的小工程，看了很多资料和帖子，将获取设备身份信息的方法在此记录，方便以后使用。</p>
-<h1 id="0x01_USB设备有哪些身份信息">0x01 USB设备有哪些身份信息</h1><p>　　根据USB规范中的说明<a href="http://www.usb.org/developers/docs"><font color = "blue">USB规范官方文档</font></a>，供应商ID(VID)/产品识别码(PID)唯一标识一个设备，VID和PID都是两个字节长，其中，供应商ID（VID）由供应商向USB执行论坛申请，每个供应商的VID是唯一的，PID由供应商自行决定，理论上来说，不同的产品、相同产品的不同型号、相同型号的不同设计的产品最好采用不同的PID，以便区别相同厂家的不同设备。
-          <div class="post-more-link text-center">
+<h1 id="0x01_USB设备有哪些身份信息">0x01 USB设备有哪些身份信息</h1><p>　　根据USB规范中的说明<a href="http://www.usb.org/developers/docs" target="_blank" rel="external"><font color="blue">USB规范官方文档</font></a>，供应商ID(VID)/产品识别码(PID)唯一标识一个设备，VID和PID都是两个字节长，其中，供应商ID（VID）由供应商向USB执行论坛申请，每个供应商的VID是唯一的，PID由供应商自行决定，理论上来说，不同的产品、相同产品的不同型号、相同型号的不同设计的产品最好采用不同的PID，以便区别相同厂家的不同设备。
+          <!--noindex-->
+          <div class="post-button text-center">
             <a class="btn" href="/2015/10/07/device-CA/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
+          <!--/noindex-->
         
       
     </div>
+    
+    
+    
+
+    
+
+    
+
+    
 
     <footer class="post-footer">
+      
+
       
 
       
@@ -760,6 +1635,10 @@
         <div class="post-eof"></div>
       
     </footer>
+  </div>
+  
+  
+  
   </article>
 
 
@@ -768,14 +1647,16 @@
 
   
 
-            </div>
 
-            
+          </div>
+          
 
-            
+
+          
+
         </div>
-
         
+          
   
   <div class="sidebar-toggle">
     <div class="sidebar-toggle-line-wrap">
@@ -786,68 +1667,99 @@
   </div>
 
   <aside id="sidebar" class="sidebar">
+    
     <div class="sidebar-inner">
 
       
 
-      <section class="site-overview">
-        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-          <img class="site-author-image" src="/images/avatar.jpg" alt="Hyjal" itemprop="image"/>
-          <p class="site-author-name" itemprop="name">Hyjal</p>
-        </div>
-        <p class="site-description motion-element" itemprop="description"></p>
-        <nav class="site-state motion-element">
-          <div class="site-state-item site-state-posts">
-            <a href="/archives">
-              <span class="site-state-item-count">7</span>
-              <span class="site-state-item-name">日志</span>
-            </a>
-          </div>
+      
 
-          <div class="site-state-item site-state-categories">
-            <a href="/categories">
-              <span class="site-state-item-count">5</span>
-              <span class="site-state-item-name">分类</span>
-              </a>
-          </div>
-
-          <div class="site-state-item site-state-tags">
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
-              <span class="site-state-item-count">3</span>
-              <span class="site-state-item-name">标签</span>
+              <img class="site-author-image" itemprop="image"
+                src="/images/avatar.jpg"
+                alt="Hyjal" />
+            
+              <p class="site-author-name" itemprop="name">Hyjal</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
               
-          </div>
-
-        </nav>
-
-        
-          <div class="feed-link motion-element">
-            <a href="/atom.xml" rel="alternate">
-              <i class="menu-item-icon icon-feed"></i>
-              RSS
-            </a>
-          </div>
-        
-
-        <div class="links-of-author motion-element">
-          
-        </div>
-
-        
-        
-
-        <div class="links-of-author motion-element">
-          
-            <p class="site-author-name">友情链接</p>
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">9</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
             
-              <span class="links-of-author-item">
-              <a href="http://youngroe.com/" target="_blank">Lyon's blog</a>
-              </span>
-            
-          
-        </div>
 
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">6</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+
+          
+          
+
+          
+          
+            <div class="links-of-blogroll motion-element links-of-blogroll-block">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-link"></i>
+                Links
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://youngroe.com/" title="Lyon's blog" target="_blank">Lyon's blog</a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+
+        </div>
       </section>
+
+      
 
       
 
@@ -855,44 +1767,139 @@
   </aside>
 
 
+        
+      </div>
     </main>
 
     <footer id="footer" class="footer">
-        <div class="footer-inner">
-            <div class="copyright" >
-  
-  &copy; &nbsp; 
-  <span itemprop="copyrightYear">2016</span>
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
   <span class="with-love">
-    <i class="icon-heart"></i>
+    <i class="fa fa-user"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">Hyjal</span>
-</div>
 
-<div class="powered-by">
-  由 <a class="theme-link" href="http://hexo.io">Hexo</a> 强力驱动
-</div>
-
-<div class="theme-info">
-  主题 -
-  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
-    NexT.Mist
-  </a>
+  
 </div>
 
 
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
 
-        </div>
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Mist</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
     </footer>
 
-    <div class="back-to-top"></div>
-</div>
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
 
-<script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
 
   
   
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
   
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+  
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
   
 
   
@@ -904,78 +1911,58 @@
     (function() {
       var ds = document.createElement('script');
       ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
       ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
       ds.charset = 'UTF-8';
       (document.getElementsByTagName('head')[0]
       || document.getElementsByTagName('body')[0]).appendChild(ds);
     })();
   </script>
-
-  
-
-  
-  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js"></script>
-  <script type="text/javascript" src="/js/fancy-box.js?v=0.4.3"></script>
-
-
-  <script type="text/javascript" src="/js/helpers.js?v=0.4.3"></script>
-  
-
-  <script type="text/javascript" src="/vendors/velocity/velocity.min.js"></script>
-  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js"></script>
-
-  <script type="text/javascript" src="/js/motion_global.js?v=0.4.3" id="motion.global"></script>
-
-
-
-  <script type="text/javascript" src="/js/search-toggle.js"></script>
-
-
-
-<script type="text/javascript">
-    $(document).ready(function () {
-        if (CONFIG.sidebar === 'always') {
-            displaySidebar();
-        }
-    });
-</script>
-
-
-
-
-  
 
   
     
-  
-
-  <script type="text/javascript">
-    var duoshuoQuery = {short_name:"hyjal"};
-    (function() {
-      var ds = document.createElement('script');
-      ds.type = 'text/javascript';ds.async = true;
-      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
-      ds.charset = 'UTF-8';
-      (document.getElementsByTagName('head')[0]
-      || document.getElementsByTagName('body')[0]).appendChild(ds);
-    })();
-  </script>
-
+    
+    <script src="/lib/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+    <script src="/js/src/hook-duoshuo.js"></script>
   
 
 
 
 
 
-<!-- lazyload -->
-<script type="text/javascript" src="/js/lazyload.js"></script>
-<script type="text/javascript">
-    jQuery(function () {
-        jQuery("#posts img").lazyload({
-            placeholder: "/images/loading.gif",
-            effect: "fadeIn"
-        });
-    });
-</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
 </body>
 </html>

@@ -1,4 +1,4 @@
-// ��������������֮�� lanrenzhijia.com
+// ������������֮�� lanrenzhijia.com
 var addEvent = (function () {
   if (document.addEventListener) {
     return function (el, type, fn) {
@@ -98,4 +98,4 @@ addEvent(dropAreas, 'drop', function (event) {
     return false;
 });
 
-// ��������������֮�� lanrenzhijia.com
+// ������������֮�� lanrenzhijia.com

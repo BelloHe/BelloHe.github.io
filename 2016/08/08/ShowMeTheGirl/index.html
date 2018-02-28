@@ -1,11 +1,23 @@
-<!doctype html>
-<html class="theme-next use-motion theme-next-mist">
-<head>
-    
+<!DOCTYPE html>
 
-<meta charset="UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
 
 
 <meta http-equiv="Cache-Control" content="no-transform" />
@@ -16,17 +28,49 @@
 
 
 
-  <link rel="stylesheet" type="text/css" href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5"/>
 
 
 
 
-<link rel="stylesheet" type="text/css" href="/css/main.css?v=0.4.3"/>
 
 
 
 
-  <meta name="keywords" content="Burp Suite,python," />
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="python,Burp Suite," />
+
+
 
 
 
@@ -34,15 +78,17 @@
 
 
 
-  <link rel="shorticon icon" type="image/x-icon" href="/favicon.ico?v=0.4.3" />
+
 
 
 <meta name="description" content="0x00 背景　　接到妹纸电话，问我会不会使用按键精灵，帮她到一个网站上刷题。　　我会！！！　　妹纸提供的方案是用按键精灵实现每个题都选C，然后提交，但在实际使用过程中出现了以下问题：　　(1)有些题并没有C选项　　(2)选择答案按钮，提交按钮和下一题按钮的位置随题干和解析的长度变换，位置不固定　　(3)该做题系统应该是部署在内网的，妹纸给的外网地址访问奇慢无比，经常掉线　　由于以上原因，我认为无">
+<meta name="keywords" content="python,Burp Suite">
 <meta property="og:type" content="article">
 <meta property="og:title" content="做一个对妹纸有用的程序员">
 <meta property="og:url" content="http://hyjal-binbin.com/2016/08/08/ShowMeTheGirl/index.html">
-<meta property="og:site_name" content="Hyjal's blog">
+<meta property="og:site_name" content="Hyjal&#39;s blog">
 <meta property="og:description" content="0x00 背景　　接到妹纸电话，问我会不会使用按键精灵，帮她到一个网站上刷题。　　我会！！！　　妹纸提供的方案是用按键精灵实现每个题都选C，然后提交，但在实际使用过程中出现了以下问题：　　(1)有些题并没有C选项　　(2)选择答案按钮，提交按钮和下一题按钮的位置随题干和解析的长度变换，位置不固定　　(3)该做题系统应该是部署在内网的，妹纸给的外网地址访问奇慢无比，经常掉线　　由于以上原因，我认为无">
+<meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://hyjal-binbin.com/img/answer.png">
 <meta property="og:image" content="http://hyjal-binbin.com/img/post.png">
 <meta property="og:image" content="http://hyjal-binbin.com/img/GetPracticeList.png">
@@ -53,34 +99,54 @@
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="做一个对妹纸有用的程序员">
 <meta name="twitter:description" content="0x00 背景　　接到妹纸电话，问我会不会使用按键精灵，帮她到一个网站上刷题。　　我会！！！　　妹纸提供的方案是用按键精灵实现每个题都选C，然后提交，但在实际使用过程中出现了以下问题：　　(1)有些题并没有C选项　　(2)选择答案按钮，提交按钮和下一题按钮的位置随题干和解析的长度变换，位置不固定　　(3)该做题系统应该是部署在内网的，妹纸给的外网地址访问奇慢无比，经常掉线　　由于以上原因，我认为无">
+<meta name="twitter:image" content="http://hyjal-binbin.com/img/answer.png">
 
 
-<script type="text/javascript" id="hexo.configuration">
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
   var CONFIG = {
+    root: '/',
     scheme: 'Mist',
-    sidebar: 'post'
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
   };
 </script>
 
-    <title> 做一个对妹纸有用的程序员 // Hyjal's blog </title>
-</head>
-<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
-<!--[if lte IE 8]>
-  <div style=' clear: both; height: 59px; padding:0 0 0 15px; position: relative;margin:0 auto;'>
-    <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
-      <img src="http://7u2nvr.com1.z0.glb.clouddn.com/picouterie.jpg" border="0" height="42" width="820"
-           alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today or use other browser ,like chrome firefox safari."
-           style='margin-left:auto;margin-right:auto;display: block;'/>
-    </a>
-  </div>
-<![endif]-->
+
+
+  <link rel="canonical" href="http://hyjal-binbin.com/2016/08/08/ShowMeTheGirl/"/>
+
+
+
+
+
+  <title>做一个对妹纸有用的程序员 | Hyjal's blog</title>
+  
+
+
+
 
 
   <script type="text/javascript">
     var _hmt = _hmt || [];
     (function() {
       var hm = document.createElement("script");
-      hm.src = "//hm.baidu.com/hm.js?0ac8866292cce272f08dbfe297d38fbc";
+      hm.src = "https://hm.baidu.com/hm.js?0ac8866292cce272f08dbfe297d38fbc";
       var s = document.getElementsByTagName("script")[0];
       s.parentNode.insertBefore(hm, s);
     })();
@@ -88,55 +154,81 @@
 
 
 
-<div class="container one-column page-post-detail">
-    <div class="headband"></div>
-    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
-        <div class="header-inner"><h1 class="site-meta">
-  <span class="logo-line-before"><i></i></span>
-  <a href="/" class="brand" rel="start">
-      <span class="logo">
-        <i class="icon-logo"></i>
-      </span>
-      <span class="site-title">Hyjal's blog</span>
-  </a>
-  <span class="logo-line-after"><i></i></span>
-</h1>
 
-<div class="site-nav-toggle">
-  <button>
-    <span class="btn-bar"></span>
-    <span class="btn-bar"></span>
-    <span class="btn-bar"></span>
-  </button>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Hyjal's blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">on the way</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
 </div>
 
 <nav class="site-nav">
   
 
   
-    <ul id="menu" class="menu menu-left">
+    <ul id="menu" class="menu">
       
         
         <li class="menu-item menu-item-home">
           <a href="/" rel="section">
-            <i class="menu-item-icon icon-home"></i> <br />
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
             首页
           </a>
         </li>
       
         
-        <li class="menu-item menu-item-categories">
-          <a href="/categories" rel="section">
-            <i class="menu-item-icon icon-categories"></i> <br />
-            分类
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
           </a>
         </li>
       
-        
-        <li class="menu-item menu-item-archives">
-          <a href="/archives" rel="section">
-            <i class="menu-item-icon icon-archives"></i> <br />
-            归档
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="st-search-show-outputs">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
           </a>
         </li>
       
@@ -146,10 +238,10 @@
   
     <div class="site-search">
       
-  
-<form class="site-search-form">
+  <form class="site-search-form">
   <input type="text" id="st-search-input" class="st-search-input st-default-search-input" />
 </form>
+
 <script type="text/javascript">
   (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
     (w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
@@ -159,103 +251,171 @@
   _st('install', 'K8iS6Hbs2PyW-eM93Gg8','2.0.0');
 </script>
 
-<div class="site-search-toggle"></div>
+
+
     </div>
   
 </nav>
 
 
-        </div>
+
+ </div>
     </header>
 
     <main id="main" class="main">
-        <div class="main-inner">
-            <div id="content" class="content">
-                
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
 
   <div id="posts" class="posts-expand">
     
 
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+  
 
-      
-      
-        <h1 class="post-title" itemprop="name headline">
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://hyjal-binbin.com/2016/08/08/ShowMeTheGirl/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Hyjal">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hyjal's blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">做一个对妹纸有用的程序员</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2016-08-08T20:27:25+08:00">
+                2016-08-08
+              </time>
+            
+
+            
+
+            
+          </span>
+
           
+
           
             
-              做一个对妹纸有用的程序员
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2016/08/08/ShowMeTheGirl/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/08/08/ShowMeTheGirl/" itemprop="commentCount"></span>
+                </a>
+              </span>
             
           
-        </h1>
-      
 
-      <div class="post-meta">
-        <span class="post-time">
-          发表于
-          <time itemprop="dateCreated" datetime="2016-08-08T20:27:25+08:00" content="2016-08-08">
-            2016-08-08
-          </time>
-        </span>
-
-        
-
-        
           
-            <span class="post-comments-count">
-              &nbsp; | &nbsp;
-              <a href="/2016/08/08/ShowMeTheGirl/#comments" itemprop="discussionUrl">
-                <span class="post-comments-count ds-thread-count" data-thread-key="2016/08/08/ShowMeTheGirl/" itemprop="commentsCount"></span>
-              </a>
-            </span>
           
-        
-      </div>
-    </header>
 
-    <div class="post-body">
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
       
 
       
-        <span itemprop="articleBody"><h1 id="0x00_背景">0x00 背景</h1><p>　　接到妹纸电话，问我会不会使用按键精灵，帮她到一个网站上刷题。<br>　　<font color="red" size="12">我会！！！</font><br>　　妹纸提供的方案是用按键精灵实现每个题都选C，然后提交，但在实际使用过程中出现了以下问题：<br>　　(1)有些题并没有C选项<br>　　(2)选择答案按钮，提交按钮和下一题按钮的位置随题干和解析的长度变换，位置不固定<br>　　(3)该做题系统应该是部署在内网的，妹纸给的外网地址访问奇慢无比，经常掉线<br>　　由于以上原因，我认为无法通过按键精灵的方法达到500分(回答正确一题得0.2分)，所有决定采取其他的方法。<br><a id="more"></a></p>
+        <h1 id="0x00_背景">0x00 背景</h1><p>　　接到妹纸电话，问我会不会使用按键精灵，帮她到一个网站上刷题。<br>　　<font color="red" size="12">我会！！！</font><br>　　妹纸提供的方案是用按键精灵实现每个题都选C，然后提交，但在实际使用过程中出现了以下问题：<br>　　(1)有些题并没有C选项<br>　　(2)选择答案按钮，提交按钮和下一题按钮的位置随题干和解析的长度变换，位置不固定<br>　　(3)该做题系统应该是部署在内网的，妹纸给的外网地址访问奇慢无比，经常掉线<br>　　由于以上原因，我认为无法通过按键精灵的方法达到500分(回答正确一题得0.2分)，所有决定采取其他的方法。<br><a id="more"></a></p>
 <h1 id="0x01_发现漏洞">0x01 发现漏洞</h1><p>　　首先想到的是在点击提交按钮时抓包，是否能够直接暴力遍历提交。利用Burpsuite抓包，发现了一个惊人的事实，在我拦截了提交答案的post包的情况下，网页依然对我提交的答案进行了判断，而放行post包后的返回包中只包含题目解析，没有答题是否正确的信息。由此判断题目答案已经保存在网页中，不需要再与服务器进行交互。按F12，果然找到了所有题目的答案，如下图：</p>
 <p><div align="center"><br><img src="/img/answer.png" alt="answer" align="center"><br></div><br>　　再观察提交按钮的post包，如下图：</p>
 <p><div align="center"><br><img src="/img/post.png" alt="post" align="center"><br></div><br>　　根据post包的payload信息，只要找到了答案tmAnswer与treeId、treeRoad、tmId的对应关系，就能提供正确答案遍历试题。全程抓包，在点击开始做题时，向服务器请求题目(GetPracticeList)在返回包中包含了tmAnswer、treeId、treeRoad、tmId，post包和返回包如下图所示，根据返回结果，pageSize参数为请求的题目数量，默认为50题，返回包中的TotalCount为剩余的最大题目数。</p>
 <p><div align="center"><br><img src="/img/GetPracticeList.png" alt="GetPracticeList" align="center"><br></div></p>
 <p><div align="center"><br><img src="/img/GetPracticeListRe.png" alt="GetPracticeListRe" align="center"><br></div></p>
-<h1 id="0x02_利用漏洞刷题">0x02 利用漏洞刷题</h1><p>　　在获取上述信息之后，就可以利用Burpsuite的Intruder功能刷分了。首先在点击按时做题时抓包，修改pageSize参数为上个返回包中的最大题目数，截取返回包，提取json(其中包含了tmAnswer、treeId、treeRoad、tmId信息)，将其保存到txt文件中。利用python解析json，提取tmAnswer、treeId、treeRoad、tmId信息，分别保存在tmAnswer.txt、treeId.txt、treeRoad.txt、tmId.txt中，代码如下：<br><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">with <span class="function"><span class="title">open</span><span class="params">(filename)</span></span> as f:</span><br><span class="line">    data = json.<span class="function"><span class="title">load</span><span class="params">(f)</span></span></span><br><span class="line">    print <span class="function"><span class="title">len</span><span class="params">(data)</span></span></span><br><span class="line">    <span class="keyword">for</span> <span class="tag">i</span> <span class="keyword">in</span> <span class="function"><span class="title">range</span><span class="params">(<span class="number">0</span>, len(data)</span></span>):</span><br><span class="line">        tmAnswer.<span class="function"><span class="title">append</span><span class="params">(data[i][<span class="string">'TmAnswer'</span>])</span></span></span><br><span class="line">        treeId.<span class="function"><span class="title">append</span><span class="params">(data[i][<span class="string">'TreeId'</span>])</span></span></span><br><span class="line">        treeRoad.<span class="function"><span class="title">append</span><span class="params">(data[i][<span class="string">'TreeRoad'</span>])</span></span></span><br><span class="line">        tmId.<span class="function"><span class="title">append</span><span class="params">(data[i][<span class="string">'RegID'</span>])</span></span></span><br><span class="line"></span><br><span class="line">    with <span class="function"><span class="title">open</span><span class="params">(<span class="string">"tmAnswer.txt"</span>, <span class="string">'w'</span>)</span></span> as ftmAnswer:</span><br><span class="line">        <span class="keyword">for</span> <span class="tag">i</span> <span class="keyword">in</span> <span class="function"><span class="title">range</span><span class="params">(<span class="number">0</span>, len(data)</span></span>):</span><br><span class="line">                ftmAnswer.<span class="function"><span class="title">write</span><span class="params">(tmAnswer[i] + <span class="string">'\n'</span>)</span></span></span><br><span class="line">    with <span class="function"><span class="title">open</span><span class="params">(<span class="string">"treeId.txt"</span>, <span class="string">'w'</span>)</span></span> as ftreeId:</span><br><span class="line">        <span class="keyword">for</span> <span class="tag">i</span> <span class="keyword">in</span> <span class="function"><span class="title">range</span><span class="params">(<span class="number">0</span>, len(data)</span></span>):</span><br><span class="line">            ftreeId.<span class="function"><span class="title">write</span><span class="params">(str(treeId[i])</span></span> + <span class="string">'\n'</span>)</span><br><span class="line"></span><br><span class="line">    with <span class="function"><span class="title">open</span><span class="params">(<span class="string">"treeRoad.txt"</span>, <span class="string">'w'</span>)</span></span> as ftreeRoad:</span><br><span class="line">        <span class="keyword">for</span> <span class="tag">i</span> <span class="keyword">in</span> <span class="function"><span class="title">range</span><span class="params">(<span class="number">0</span>, len(data)</span></span>):</span><br><span class="line">            ftreeRoad.<span class="function"><span class="title">write</span><span class="params">(str(treeRoad[i])</span></span>.<span class="function"><span class="title">replace</span><span class="params">(<span class="string">","</span>, <span class="string">"%2C"</span>)</span></span> + <span class="string">'\n'</span>)</span><br><span class="line"></span><br><span class="line">    with <span class="function"><span class="title">open</span><span class="params">(<span class="string">"tmId.txt"</span>, <span class="string">'w'</span>)</span></span> as ftmId:</span><br><span class="line">        <span class="keyword">for</span> <span class="tag">i</span> <span class="keyword">in</span> <span class="function"><span class="title">range</span><span class="params">(<span class="number">0</span>, len(data)</span></span>):</span><br><span class="line">            ftmId.<span class="function"><span class="title">write</span><span class="params">(str(tmId[i])</span></span> + <span class="string">'\n'</span>)</span><br></pre></td></tr></table></figure></p>
-<p>　　在测试过程中，发现返回的json中的TmAnswer有个别出现了格式错误，加入error存储错误的下标，将错误的情况剔除。修改后的代码如下：<br><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line">def <span class="function"><span class="title">dealJson</span><span class="params">(filename)</span></span>:</span><br><span class="line">    with <span class="function"><span class="title">open</span><span class="params">(filename)</span></span> as f:</span><br><span class="line">        data = json.<span class="function"><span class="title">load</span><span class="params">(f)</span></span></span><br><span class="line">    print <span class="function"><span class="title">len</span><span class="params">(data)</span></span></span><br><span class="line">    <span class="keyword">for</span> <span class="tag">i</span> <span class="keyword">in</span> <span class="function"><span class="title">range</span><span class="params">(<span class="number">0</span>, len(data)</span></span>):</span><br><span class="line">        tmAnswer.<span class="function"><span class="title">append</span><span class="params">(data[i][<span class="string">'TmAnswer'</span>])</span></span></span><br><span class="line">        treeId.<span class="function"><span class="title">append</span><span class="params">(data[i][<span class="string">'TreeId'</span>])</span></span></span><br><span class="line">        treeRoad.<span class="function"><span class="title">append</span><span class="params">(data[i][<span class="string">'TreeRoad'</span>])</span></span></span><br><span class="line">        tmId.<span class="function"><span class="title">append</span><span class="params">(data[i][<span class="string">'RegID'</span>])</span></span></span><br><span class="line"></span><br><span class="line">    with <span class="function"><span class="title">open</span><span class="params">(<span class="string">"tmAnswer.txt"</span>, <span class="string">'w'</span>)</span></span> as ftmAnswer:</span><br><span class="line">        <span class="keyword">for</span> <span class="tag">i</span> <span class="keyword">in</span> <span class="function"><span class="title">range</span><span class="params">(<span class="number">0</span>, len(data)</span></span>):</span><br><span class="line">            try:</span><br><span class="line">                ftmAnswer.<span class="function"><span class="title">write</span><span class="params">(tmAnswer[i] + <span class="string">'\n'</span>)</span></span></span><br><span class="line">            except:</span><br><span class="line">                error.<span class="function"><span class="title">append</span><span class="params">(i)</span></span></span><br><span class="line"></span><br><span class="line">    with <span class="function"><span class="title">open</span><span class="params">(<span class="string">"treeId.txt"</span>, <span class="string">'w'</span>)</span></span> as ftreeId:</span><br><span class="line">        <span class="keyword">for</span> <span class="tag">i</span> <span class="keyword">in</span> <span class="function"><span class="title">range</span><span class="params">(<span class="number">0</span>, len(data)</span></span>):</span><br><span class="line">            <span class="keyword">if</span> <span class="tag">i</span> <span class="keyword">in</span> error:</span><br><span class="line">                continue</span><br><span class="line">            ftreeId.<span class="function"><span class="title">write</span><span class="params">(str(treeId[i])</span></span> + <span class="string">'\n'</span>)</span><br><span class="line"></span><br><span class="line">    with <span class="function"><span class="title">open</span><span class="params">(<span class="string">"treeRoad.txt"</span>, <span class="string">'w'</span>)</span></span> as ftreeRoad:</span><br><span class="line">        <span class="keyword">for</span> <span class="tag">i</span> <span class="keyword">in</span> <span class="function"><span class="title">range</span><span class="params">(<span class="number">0</span>, len(data)</span></span>):</span><br><span class="line">            <span class="keyword">if</span> <span class="tag">i</span> <span class="keyword">in</span> error:</span><br><span class="line">                continue</span><br><span class="line">            ftreeRoad.<span class="function"><span class="title">write</span><span class="params">(str(treeRoad[i])</span></span>.<span class="function"><span class="title">replace</span><span class="params">(<span class="string">","</span>, <span class="string">"%2C"</span>)</span></span> + <span class="string">'\n'</span>)</span><br><span class="line"></span><br><span class="line">    with <span class="function"><span class="title">open</span><span class="params">(<span class="string">"tmId.txt"</span>, <span class="string">'w'</span>)</span></span> as ftmId:</span><br><span class="line">        <span class="keyword">for</span> <span class="tag">i</span> <span class="keyword">in</span> <span class="function"><span class="title">range</span><span class="params">(<span class="number">0</span>, len(data)</span></span>):</span><br><span class="line">            <span class="keyword">if</span> <span class="tag">i</span> <span class="keyword">in</span> error:</span><br><span class="line">                continue</span><br><span class="line">            ftmId.<span class="function"><span class="title">write</span><span class="params">(str(tmId[i])</span></span> + <span class="string">'\n'</span>)</span><br></pre></td></tr></table></figure></p>
+<h1 id="0x02_利用漏洞刷题">0x02 利用漏洞刷题</h1><p>　　在获取上述信息之后，就可以利用Burpsuite的Intruder功能刷分了。首先在点击按时做题时抓包，修改pageSize参数为上个返回包中的最大题目数，截取返回包，提取json(其中包含了tmAnswer、treeId、treeRoad、tmId信息)，将其保存到txt文件中。利用python解析json，提取tmAnswer、treeId、treeRoad、tmId信息，分别保存在tmAnswer.txt、treeId.txt、treeRoad.txt、tmId.txt中，代码如下：<br><figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">with</span> <span class="built_in">open</span>(filename) <span class="keyword">as</span> f:</div><div class="line">    data = json.<span class="built_in">load</span>(f)</div><div class="line">    print <span class="built_in">len</span>(data)</div><div class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">0</span>, <span class="built_in">len</span>(data)):</div><div class="line">        tmAnswer.append(data[i][<span class="string">'TmAnswer'</span>])</div><div class="line">        treeId.append(data[i][<span class="string">'TreeId'</span>])</div><div class="line">        treeRoad.append(data[i][<span class="string">'TreeRoad'</span>])</div><div class="line">        tmId.append(data[i][<span class="string">'RegID'</span>])</div><div class="line"></div><div class="line">    <span class="keyword">with</span> <span class="built_in">open</span>(<span class="string">"tmAnswer.txt"</span>, <span class="string">'w'</span>) <span class="keyword">as</span> ftmAnswer:</div><div class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">0</span>, <span class="built_in">len</span>(data)):</div><div class="line">                ftmAnswer.<span class="built_in">write</span>(tmAnswer[i] + <span class="string">'\n'</span>)</div><div class="line">    <span class="keyword">with</span> <span class="built_in">open</span>(<span class="string">"treeId.txt"</span>, <span class="string">'w'</span>) <span class="keyword">as</span> ftreeId:</div><div class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">0</span>, <span class="built_in">len</span>(data)):</div><div class="line">            ftreeId.<span class="built_in">write</span>(str(treeId[i]) + <span class="string">'\n'</span>)</div><div class="line"></div><div class="line">    <span class="keyword">with</span> <span class="built_in">open</span>(<span class="string">"treeRoad.txt"</span>, <span class="string">'w'</span>) <span class="keyword">as</span> ftreeRoad:</div><div class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">0</span>, <span class="built_in">len</span>(data)):</div><div class="line">            ftreeRoad.<span class="built_in">write</span>(str(treeRoad[i]).<span class="built_in">replace</span>(<span class="string">","</span>, <span class="string">"%2C"</span>) + <span class="string">'\n'</span>)</div><div class="line"></div><div class="line">    <span class="keyword">with</span> <span class="built_in">open</span>(<span class="string">"tmId.txt"</span>, <span class="string">'w'</span>) <span class="keyword">as</span> ftmId:</div><div class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">0</span>, <span class="built_in">len</span>(data)):</div><div class="line">            ftmId.<span class="built_in">write</span>(str(tmId[i]) + <span class="string">'\n'</span>)</div></pre></td></tr></table></figure></p>
+<p>　　在测试过程中，发现返回的json中的TmAnswer有个别出现了格式错误，加入error存储错误的下标，将错误的情况剔除。修改后的代码如下：<br><figure class="highlight kotlin"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div></pre></td><td class="code"><pre><div class="line">def dealJson(filename):</div><div class="line">    with <span class="keyword">open</span>(filename) <span class="keyword">as</span> f:</div><div class="line">        <span class="keyword">data</span> = json.load(f)</div><div class="line">    print len(<span class="keyword">data</span>)</div><div class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">0</span>, len(<span class="keyword">data</span>)):</div><div class="line">        tmAnswer.append(<span class="keyword">data</span>[i][<span class="string">'TmAnswer'</span>])</div><div class="line">        treeId.append(<span class="keyword">data</span>[i][<span class="string">'TreeId'</span>])</div><div class="line">        treeRoad.append(<span class="keyword">data</span>[i][<span class="string">'TreeRoad'</span>])</div><div class="line">        tmId.append(<span class="keyword">data</span>[i][<span class="string">'RegID'</span>])</div><div class="line"></div><div class="line">    with <span class="keyword">open</span>(<span class="string">"tmAnswer.txt"</span>, <span class="string">'w'</span>) <span class="keyword">as</span> ftmAnswer:</div><div class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">0</span>, len(<span class="keyword">data</span>)):</div><div class="line">            <span class="keyword">try</span>:</div><div class="line">                ftmAnswer.write(tmAnswer[i] + <span class="string">'\n'</span>)</div><div class="line">            except:</div><div class="line">                error.append(i)</div><div class="line"></div><div class="line">    with <span class="keyword">open</span>(<span class="string">"treeId.txt"</span>, <span class="string">'w'</span>) <span class="keyword">as</span> ftreeId:</div><div class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">0</span>, len(<span class="keyword">data</span>)):</div><div class="line">            <span class="keyword">if</span> i <span class="keyword">in</span> error:</div><div class="line">                <span class="keyword">continue</span></div><div class="line">            ftreeId.write(str(treeId[i]) + <span class="string">'\n'</span>)</div><div class="line"></div><div class="line">    with <span class="keyword">open</span>(<span class="string">"treeRoad.txt"</span>, <span class="string">'w'</span>) <span class="keyword">as</span> ftreeRoad:</div><div class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">0</span>, len(<span class="keyword">data</span>)):</div><div class="line">            <span class="keyword">if</span> i <span class="keyword">in</span> error:</div><div class="line">                <span class="keyword">continue</span></div><div class="line">            ftreeRoad.write(str(treeRoad[i]).replace(<span class="string">","</span>, <span class="string">"%2C"</span>) + <span class="string">'\n'</span>)</div><div class="line"></div><div class="line">    with <span class="keyword">open</span>(<span class="string">"tmId.txt"</span>, <span class="string">'w'</span>) <span class="keyword">as</span> ftmId:</div><div class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">0</span>, len(<span class="keyword">data</span>)):</div><div class="line">            <span class="keyword">if</span> i <span class="keyword">in</span> error:</div><div class="line">                <span class="keyword">continue</span></div><div class="line">            ftmId.write(str(tmId[i]) + <span class="string">'\n'</span>)</div></pre></td></tr></table></figure></p>
 <p>　　利用Burpsuite中的Intruder功能，选择Pitchfork模式，载入tmAnswer.txt、treeId.txt、treeRoad.txt、tmId.txt，实现遍历答题。</p>
 <p><div align="center"><br><img src="/img/Pitchfork.png" alt="Pitchfork" align="center"><br></div></p>
 <p><div align="center"><br><img src="/img/PitchforkRet.png" alt="PitchforkRet" align="center"><br></div></p>
 <h1 id="0x03">0x03</h1><p>　　<font color="red" size="12">妹纸说分不要弄太高，不要太高调！！！</font></p>
-</span>
+
       
     </div>
+    
+    
+    
+
+    
+
+    
+
+    
 
     <footer class="post-footer">
       
         <div class="post-tags">
           
-            <a href="/tags/Burp-Suite/" rel="tag">#Burp Suite</a>
+            <a href="/tags/python/" rel="tag"># python</a>
           
-            <a href="/tags/python/" rel="tag">#python</a>
+            <a href="/tags/Burp-Suite/" rel="tag"># Burp Suite</a>
           
         </div>
       
 
       
+      
+      
+
+      
         <div class="post-nav">
-          <div class="post-nav-prev post-nav-item">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/03/24/decode/" rel="next" title="Python编码转换">
+                <i class="fa fa-chevron-left"></i> Python编码转换
+              </a>
             
           </div>
 
-          <div class="post-nav-next post-nav-item">
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
             
-              <a href="/2016/03/24/decode/" rel="next">Python编码转换</a>
+              <a href="/2017/02/07/SinaL2/" rel="prev" title="SinaL2行情接口C#">
+                SinaL2行情接口C# <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -264,32 +424,46 @@
       
       
     </footer>
+  </div>
+  
+  
+  
   </article>
 
 
 
     <div class="post-spread">
       
+        
+<script>
+  with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='//bdimg.share.baidu.com/static/api/js/share.js?cdnversion='+~(-new Date()/36e5)];
+</script>
+
+      
     </div>
   </div>
 
 
-            </div>
+          </div>
+          
 
-            
 
-            
-              <div class="comments" id="comments">
-                
-                  <div class="ds-thread" data-thread-key="2016/08/08/ShowMeTheGirl/"
-                       data-title="做一个对妹纸有用的程序员" data-url="http://hyjal-binbin.com/2016/08/08/ShowMeTheGirl/">
-                  </div>
-                
-              </div>
-            
+          
+
+  
+    <div class="comments" id="comments">
+      <div class="ds-thread" data-thread-key="2016/08/08/ShowMeTheGirl/"
+           data-title="做一个对妹纸有用的程序员" data-url="http://hyjal-binbin.com/2016/08/08/ShowMeTheGirl/">
+      </div>
+    </div>
+
+  
+
+
+
         </div>
-
         
+          
   
   <div class="sidebar-toggle">
     <div class="sidebar-toggle-line-wrap">
@@ -300,134 +474,269 @@
   </div>
 
   <aside id="sidebar" class="sidebar">
+    
     <div class="sidebar-inner">
 
       
+
+      
         <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
             文章目录
           </li>
-          <li class="sidebar-nav-overview" data-target="site-overview">
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
             站点概览
           </li>
         </ul>
       
 
-      <section class="site-overview">
-        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-          <img class="site-author-image" src="/images/avatar.jpg" alt="Hyjal" itemprop="image"/>
-          <p class="site-author-name" itemprop="name">Hyjal</p>
-        </div>
-        <p class="site-description motion-element" itemprop="description"></p>
-        <nav class="site-state motion-element">
-          <div class="site-state-item site-state-posts">
-            <a href="/archives">
-              <span class="site-state-item-count">7</span>
-              <span class="site-state-item-name">日志</span>
-            </a>
-          </div>
-
-          <div class="site-state-item site-state-categories">
-            <a href="/categories">
-              <span class="site-state-item-count">5</span>
-              <span class="site-state-item-name">分类</span>
-              </a>
-          </div>
-
-          <div class="site-state-item site-state-tags">
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
-              <span class="site-state-item-count">3</span>
-              <span class="site-state-item-name">标签</span>
+              <img class="site-author-image" itemprop="image"
+                src="/images/avatar.jpg"
+                alt="Hyjal" />
+            
+              <p class="site-author-name" itemprop="name">Hyjal</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
               
-          </div>
-
-        </nav>
-
-        
-          <div class="feed-link motion-element">
-            <a href="/atom.xml" rel="alternate">
-              <i class="menu-item-icon icon-feed"></i>
-              RSS
-            </a>
-          </div>
-        
-
-        <div class="links-of-author motion-element">
-          
-        </div>
-
-        
-        
-
-        <div class="links-of-author motion-element">
-          
-            <p class="site-author-name">友情链接</p>
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">9</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
             
-              <span class="links-of-author-item">
-              <a href="http://youngroe.com/" target="_blank">Lyon's blog</a>
-              </span>
-            
-          
-        </div>
 
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">6</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+
+          
+          
+
+          
+          
+            <div class="links-of-blogroll motion-element links-of-blogroll-block">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-link"></i>
+                Links
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://youngroe.com/" title="Lyon's blog" target="_blank">Lyon's blog</a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+
+        </div>
       </section>
 
       
-        <section class="post-toc-wrap sidebar-panel-active">
-          <div class="post-toc-indicator-top post-toc-indicator"></div>
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
           <div class="post-toc">
+
             
+              
+            
+
             
               <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#0x00_背景"><span class="nav-number">1.</span> <span class="nav-text">0x00 背景</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#0x01_发现漏洞"><span class="nav-number">2.</span> <span class="nav-text">0x01 发现漏洞</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#0x02_利用漏洞刷题"><span class="nav-number">3.</span> <span class="nav-text">0x02 利用漏洞刷题</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#0x03"><span class="nav-number">4.</span> <span class="nav-text">0x03</span></a></li></ol></div>
             
+
           </div>
-          <div class="post-toc-indicator-bottom post-toc-indicator"></div>
         </section>
+      <!--/noindex-->
+      
+
       
 
     </div>
   </aside>
 
 
+        
+      </div>
     </main>
 
     <footer id="footer" class="footer">
-        <div class="footer-inner">
-            <div class="copyright" >
-  
-  &copy; &nbsp; 
-  <span itemprop="copyrightYear">2016</span>
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
   <span class="with-love">
-    <i class="icon-heart"></i>
+    <i class="fa fa-user"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">Hyjal</span>
-</div>
 
-<div class="powered-by">
-  由 <a class="theme-link" href="http://hexo.io">Hexo</a> 强力驱动
-</div>
-
-<div class="theme-info">
-  主题 -
-  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
-    NexT.Mist
-  </a>
+  
 </div>
 
 
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
 
-        </div>
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Mist</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
     </footer>
 
-    <div class="back-to-top"></div>
-</div>
-
-<script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
-
-  
-  
-  
     
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
 
   
     
@@ -438,6 +747,7 @@
     (function() {
       var ds = document.createElement('script');
       ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
       ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
       ds.charset = 'UTF-8';
       (document.getElementsByTagName('head')[0]
@@ -445,194 +755,50 @@
     })();
   </script>
 
+  
     
-  
-  
-  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js"></script>
-  <script type="text/javascript" src="/js/fancy-box.js?v=0.4.3"></script>
-
-
-  <script type="text/javascript" src="/js/helpers.js?v=0.4.3"></script>
+    
+    <script src="/lib/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+    <script src="/js/src/hook-duoshuo.js"></script>
   
 
-  <script type="text/javascript" src="/vendors/velocity/velocity.min.js"></script>
-  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js"></script>
-
-  <script type="text/javascript" src="/js/motion_global.js?v=0.4.3" id="motion.global"></script>
 
 
 
-  <script type="text/javascript" src="/js/search-toggle.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
 
 
   
-<script type="text/javascript" src="/js/bootstrap.scrollspy.js?v=0.4.3" id="bootstrap.scrollspy.custom"></script>
-
-
-<script type="text/javascript" id="sidebar.toc.highlight">
-  $(document).ready(function () {
-    var tocSelector = '.post-toc';
-    var $tocSelector = $(tocSelector);
-    var activeCurrentSelector = '.active-current';
-
-    $tocSelector
-      .on('activate.bs.scrollspy', function () {
-        var $currentActiveElement = $(tocSelector + ' .active').last();
-
-        removeCurrentActiveClass();
-        $currentActiveElement.addClass('active-current');
-
-        $tocSelector[0].scrollTop = $currentActiveElement.position().top;
-      })
-      .on('clear.bs.scrollspy', function () {
-        removeCurrentActiveClass();
-      });
-
-    function removeCurrentActiveClass () {
-      $(tocSelector + ' ' + activeCurrentSelector)
-        .removeClass(activeCurrentSelector.substring(1));
-    }
-
-    function processTOC () {
-      getTOCMaxHeight();
-      toggleTOCOverflowIndicators();
-    }
-
-    function getTOCMaxHeight () {
-      var $sidebarInner = $('.sidebar-inner');
-      var height = $('.sidebar').height() -
-                   $tocSelector.position().top -
-                   $('.post-toc-indicator-bottom').height();
-
-      $tocSelector.css('height', height);
-
-      return height;
-    }
-
-    function toggleTOCOverflowIndicators () {
-      tocOverflowIndicator(
-        '.post-toc-indicator-top',
-        $tocSelector.scrollTop() > 0 ? 'show' : 'hide'
-      );
-
-      tocOverflowIndicator(
-        '.post-toc-indicator-bottom',
-        $tocSelector.scrollTop() >= $tocSelector.find('ol').height() - $tocSelector.height() ? 'hide' : 'show'
-      )
-    }
-
-    $(document).on('sidebar.didShow', function () {
-      processTOC();
-    });
-
-    $('body').scrollspy({ target: tocSelector });
-    $(window).on('resize', function () {
-      if ( $('.sidebar').hasClass('sidebar-active') ) {
-        processTOC();
-      }
-    });
-
-    onScroll($tocSelector);
-
-    function onScroll (element) {
-      element.on('mousewheel DOMMouseScroll', function (event) {
-          var oe = event.originalEvent;
-          var delta = oe.wheelDelta || -oe.detail;
-          var self = this;
-
-          this.scrollTop += ( delta < 0 ? 1 : -1 ) * 30;
-          event.preventDefault();
-
-          toggleTOCOverflowIndicators();
-      });
-    }
-
-    function tocOverflowIndicator (indicator, action) {
-      $(indicator).velocity('stop').velocity({
-        opacity: action === 'show' ? 0.4 : 0
-      }, { duration: 100 });
-    }
-
-  });
-</script>
-
-
-  <script type="text/javascript" id="sidebar.nav">
-    $(document).ready(function () {
-      var html = $('html');
-
-      $('.sidebar-nav li').on('click', function () {
-        var item = $(this);
-        var activeTabClassName = 'sidebar-nav-active';
-        var activePanelClassName = 'sidebar-panel-active';
-        if (item.hasClass(activeTabClassName)) {
-          return;
-        }
-
-        var currentTarget = $('.' + activePanelClassName);
-        var target = $('.' + item.data('target'));
-
-        currentTarget.velocity('transition.slideUpOut', 200, function () {
-          target
-            .velocity('stop')
-            .velocity('transition.slideDownIn', 200)
-            .addClass(activePanelClassName);
-        });
-
-        item.siblings().removeClass(activeTabClassName);
-        item.addClass(activeTabClassName);
-      });
-
-      $('.post-toc a').on('click', function (e) {
-        e.preventDefault();
-        var offset = $(escapeSelector(this.getAttribute('href'))).offset().top;
-        html.velocity('stop').velocity('scroll', {
-          offset: offset  + 'px',
-          mobileHA: false
-        });
-      });
-
-      // Expand sidebar on post detail page by default, when post has a toc.
-      var $tocContent = $('.post-toc-content');
-      if (isDesktop() && CONFIG.sidebar === 'post') {
-        if ($tocContent.length > 0 && $tocContent.html().trim().length > 0) {
-          displaySidebar();
-        }
-      }
-    });
-  </script>
-
-
-
-
-<script type="text/javascript">
-    $(document).ready(function () {
-        if (CONFIG.sidebar === 'always') {
-            displaySidebar();
-        }
-    });
-</script>
 
 
 
 
 
+  
 
+  
 
+  
 
-<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"1","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"16"},"slide":{"type":"slide","bdImg":"3","bdPos":"left","bdTop":"250"}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+  
+  
 
+  
 
+  
 
-<!-- lazyload -->
-<script type="text/javascript" src="/js/lazyload.js"></script>
-<script type="text/javascript">
-    jQuery(function () {
-        jQuery("#posts img").lazyload({
-            placeholder: "/images/loading.gif",
-            effect: "fadeIn"
-        });
-    });
-</script>
+  
+
 </body>
 </html>
