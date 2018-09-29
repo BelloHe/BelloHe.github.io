@@ -5,7 +5,7 @@
   <subtitle><![CDATA[on the way]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://hyjal-binbin.com//"/>
-  <updated>2018-03-12T13:42:35.594Z</updated>
+  <updated>2018-09-29T11:33:28.694Z</updated>
   <id>http://hyjal-binbin.com//</id>
   
   <author>
@@ -14,6 +14,205 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[机器学习解决信息安全问题之ADFA-LD]]></title>
+    <link href="http://hyjal-binbin.com/2018/09/29/ADFA-LD/"/>
+    <id>http://hyjal-binbin.com/2018/09/29/ADFA-LD/</id>
+    <published>2018-09-29T11:30:25.000Z</published>
+    <updated>2018-09-29T11:33:28.694Z</updated>
+    <content type="html"><![CDATA[<h1 id="0x00_前言">0x00 前言</h1><p>　　本文记录基于兜哥《Web安全之深度学习实战》、论文《A Semantic Approach to Host-Based Intrusion Detection Systems Using Contiguous and Discontiguous System Call Patterns》和数据集ADFA-LD，利用机器学习解决信息安全问题。<br><a id="more"></a></p>
+<h1 id="0x01_数据集介绍">0x01 数据集介绍</h1><p>　　“The ADFA Intrusion Detection Datasets”为澳大利亚国防学院用于测试HIDS生成的数据集，<a href="https://www.unsw.adfa.edu.au/unsw-canberra-cyber/cybersecurity/ADFA-IDS-Datasets/" target="_blank" rel="external">++数据集介绍、相关论文及下载地址++</a>。ADFA数据及分为基于linux操作系统的The ADFA Linux Dataset(ADFA-LD)和和基于windows操作系统的The ADFA Windows Dataset(ADFA-WD)。本文中使用的数据集为ADFA-LD，采集系统配置如下表。1</p>
+<table>
+<thead>
+<tr>
+<th>系统</th>
+<th>版本</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Ubuntu Linux</td>
+<td>11.04</td>
+</tr>
+<tr>
+<td>Apache</td>
+<td>2.2.17</td>
+</tr>
+<tr>
+<td>PHP</td>
+<td>5.3.5</td>
+</tr>
+<tr>
+<td>TikiWiki</td>
+<td>8.1</td>
+</tr>
+</tbody>
+</table>
+<p>其中Ubuntu打上了所有的补丁，TikiWiki 8.1版本存在已知远程注入漏洞，这样的配置能够提供一个较为安全但存在漏洞的实验环境(官方数据更新时间为2013年)。ADFA-LD数据集解压后包括三个文件夹，如下表所示。</p>
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>描述</th>
+<th>数量</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Attack_Data</td>
+<td>标记为恶意的数据</td>
+<td>833</td>
+</tr>
+<tr>
+<td>Training_Data</td>
+<td>标记为正常的数据</td>
+<td>60</td>
+</tr>
+<tr>
+<td>Validation_Data</td>
+<td>评估模型误报率</td>
+<td>4372</td>
+</tr>
+</tbody>
+</table>
+<p>　　其中Attack_Data中包含6类攻击，分别为Adduser、Hydra_FTP、Hydra_SSH、Java_Meterpreter、Meterpreter、Web_Shell。在Gideon Creech和Jiankun Hu论文中对攻击数据进行了解释，攻击包含web-based exploitation、simulated social engineering、poisoned executables、emotely triggered vulnerabilities、remote password brute force、system manipulation using the C100 webshell。结合论文中的描述和参考文献1，对6类攻击描述如下表。<br>名称 | 描述<br>—-|—-<br>Adduser | 通过各种姿势添加root权限用户<br>Hydra_FTP | Hydra暴力破解FTP<br>Hydra_SSH | Hydra暴力破解SSH<br>Java_Meterpreter | metasploit - java meterpreter<br>Meterpreter | metasploit - meterpreter<br>Web_Shell | C100 webshell</p>
+<p>　　数据集已经对捕获的系统调用进行了处理，对每一个捕获的系统调用都使用唯一的数字进行代替，对应关系文件下载地址<a href="https://www.researchgate.net/profile/Obinna_Igbe/post/Were_can_I_get_a_labelled_version_of_the_ADFA-LD_dataset_for_HIDS_evaluation/attachment/59d6283879197b8077986958/AS%3A329293344329728%401455521059484/download/ADFA-LD%2BSyscall%2BList.txt" target="_blank" rel="external">++ADFA-LDSyscallList.txt++</a>。</p>
+<h1 id="0x02_机器学习实战">0x02 机器学习实战</h1><p>本文分别提取2-gram, 3-gram, (2-3gram), (1-5gram)作为特征向量,词袋大小为1000</p>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">from sklearn<span class="selector-class">.feature_extraction</span><span class="selector-class">.text</span> import CountVectorizer</div></pre></td></tr></table></figure>
+<p>并使用tf-idf优化</p>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">from sklearn<span class="selector-class">.feature_extraction</span><span class="selector-class">.text</span> import TfidfTransformer</div></pre></td></tr></table></figure>
+<p>选择kaggle比赛神器xgboost和深度学习mlp来进行测试。<br><figure class="highlight elm"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> xgboost <span class="keyword">as</span> xgb</div><div class="line"><span class="title">from</span> sklearn.neural_network <span class="keyword">import</span> MLPClassifier</div></pre></td></tr></table></figure></p>
+<p>使用train_test_split将Attack_Data和Training_Data随机取70%作为训练集，30%作为测试集，并将Validation_Data数据输入生成的模型检查误报数。</p>
+<p><code>train_test_split(x, y, test_size=0.3)</code></p>
+<p>测试结果如下表所示。<br><figure class="highlight capnproto"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">from</span> sklearn.metrics <span class="keyword">import</span> classification_report</div></pre></td></tr></table></figure></p>
+<table>
+<thead>
+<tr>
+<th>xgboost</th>
+<th>precision</th>
+<th>recall</th>
+<th>f1-score</th>
+<th>误报数(误报率)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2-gram</td>
+<td>0.98</td>
+<td>0.98</td>
+<td>0.98</td>
+<td>679(15.53%)</td>
+</tr>
+<tr>
+<td>3-gram</td>
+<td>0.99</td>
+<td>0.99</td>
+<td>0.99</td>
+<td>655(14.98%)</td>
+</tr>
+<tr>
+<td>2-3gram</td>
+<td>0.99</td>
+<td>0.99</td>
+<td>0.99</td>
+<td>665(15.21%)</td>
+</tr>
+<tr>
+<td>1-5gram</td>
+<td>0.87</td>
+<td>0.84</td>
+<td>0.84</td>
+<td>655(14.98%)</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>mlp</th>
+<th>precision</th>
+<th>recall</th>
+<th>f1-score</th>
+<th>误报数  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2-gram</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>609(13.93%)</td>
+</tr>
+<tr>
+<td>3-gram</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>684(15.64%)</td>
+</tr>
+<tr>
+<td>2-3gram</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>693(15.85%)</td>
+</tr>
+<tr>
+<td>1-5gram</td>
+<td>0.99</td>
+<td>0.99</td>
+<td>0.99</td>
+<td>684(15.65%)</td>
+</tr>
+</tbody>
+</table>
+<h1 id="0x03_小结">0x03 小结</h1><ol>
+<li>本文并未进行调参，所得结论不一定准确或者一定不准确。</li>
+<li>从测试集评分和Validation_Data数据集误报率看，选择2-gram和mlp具有最好的实验效果。</li>
+<li>测试集评分mlp高于xgboost，Validation_Data数据集误报率xgboost优于mlp，mlp过拟合现象比xgboost严重。<ol>
+<li>由于没有调参，mlp参数设置不合理。</li>
+<li>训练样本太少。</li>
+<li>xgboost做分类就是强</li>
+</ol>
+</li>
+<li>从误报率看，使用n-gram特征能够取得一定的实验效果，但高误报率依然存在，无法直接用于生产。<h1 id="参考文献">参考文献</h1></li>
+<li><a href="https://www.zuozuovera.cn/archives/918/" target="_blank" rel="external">ADFA数据集介绍</a></li>
+<li><a href="https://item.jd.com/12277728.html" target="_blank" rel="external">Web安全之深度学习实战</a></li>
+</ol>
+]]></content>
+    <summary type="html">
+    <![CDATA[<h1 id="0x00_前言">0x00 前言</h1><p>　　本文记录基于兜哥《Web安全之深度学习实战》、论文《A Semantic Approach to Host-Based Intrusion Detection Systems Using Contiguous and Discontiguous System Call Patterns》和数据集ADFA-LD，利用机器学习解决信息安全问题。<br>]]>
+    
+    </summary>
+    
+      <category term="机器学习" scheme="http://hyjal-binbin.com/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
+    
+      <category term="深度学习" scheme="http://hyjal-binbin.com/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[学习笔记之Linux后门检测]]></title>
+    <link href="http://hyjal-binbin.com/2018/05/21/LinuxBackDoor/"/>
+    <id>http://hyjal-binbin.com/2018/05/21/LinuxBackDoor/</id>
+    <published>2018-05-20T16:00:00.000Z</published>
+    <updated>2018-05-21T14:51:09.505Z</updated>
+    <content type="html"><![CDATA[<h1 id="0x00_简介">0x00 简介</h1><p>　　基于机器学习检测数据集ADFA-LD，ADFA数据集是澳大利亚国防学院（缩写为ADFA）对外发布的一套主机级入侵检测系统的数据集合,该数据集包括Linux（ADFA-LD）和Windows(ADFA-WD)两个OS平台，分别记录了各类系统调用次序。参考资料为G. Creech的博士论文和兜哥的《Web安全之深度学习实践》。</p>
+<h1 id="0x01_数据集介绍">0x01 数据集介绍</h1><p>　　</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<h1 id="0x00_简介">0x00 简介</h1><p>　　基于机器学习检测数据集ADFA-LD，ADFA数据集是澳大利亚国防学院（缩写为ADFA）对外发布的一套主机级入侵检测系统的数据集合,该数据集包括Linux（ADFA-LD）和Windows(ADFA-WD)两个O]]>
+    </summary>
+    
+      <category term="恶意代码检测" scheme="http://hyjal-binbin.com/categories/%E6%81%B6%E6%84%8F%E4%BB%A3%E7%A0%81%E6%A3%80%E6%B5%8B/"/>
+    
+      <category term="机器学习" scheme="http://hyjal-binbin.com/categories/%E6%81%B6%E6%84%8F%E4%BB%A3%E7%A0%81%E6%A3%80%E6%B5%8B/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
+    
+      <category term="python" scheme="http://hyjal-binbin.com/categories/%E6%81%B6%E6%84%8F%E4%BB%A3%E7%A0%81%E6%A3%80%E6%B5%8B/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/python/"/>
+    
+  </entry>
   
   <entry>
     <title><![CDATA[涨知识]]></title>
