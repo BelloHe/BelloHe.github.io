@@ -194,27 +194,6 @@
   </entry>
   
   <entry>
-    <title><![CDATA[学习笔记之Linux后门检测]]></title>
-    <link href="http://hyjal-binbin.com/2018/05/21/LinuxBackDoor/"/>
-    <id>http://hyjal-binbin.com/2018/05/21/LinuxBackDoor/</id>
-    <published>2018-05-20T16:00:00.000Z</published>
-    <updated>2018-05-21T14:51:09.505Z</updated>
-    <content type="html"><![CDATA[<h1 id="0x00_简介">0x00 简介</h1><p>　　基于机器学习检测数据集ADFA-LD，ADFA数据集是澳大利亚国防学院（缩写为ADFA）对外发布的一套主机级入侵检测系统的数据集合,该数据集包括Linux（ADFA-LD）和Windows(ADFA-WD)两个OS平台，分别记录了各类系统调用次序。参考资料为G. Creech的博士论文和兜哥的《Web安全之深度学习实践》。</p>
-<h1 id="0x01_数据集介绍">0x01 数据集介绍</h1><p>　　</p>
-]]></content>
-    <summary type="html">
-    <![CDATA[<h1 id="0x00_简介">0x00 简介</h1><p>　　基于机器学习检测数据集ADFA-LD，ADFA数据集是澳大利亚国防学院（缩写为ADFA）对外发布的一套主机级入侵检测系统的数据集合,该数据集包括Linux（ADFA-LD）和Windows(ADFA-WD)两个O]]>
-    </summary>
-    
-      <category term="恶意代码检测" scheme="http://hyjal-binbin.com/categories/%E6%81%B6%E6%84%8F%E4%BB%A3%E7%A0%81%E6%A3%80%E6%B5%8B/"/>
-    
-      <category term="机器学习" scheme="http://hyjal-binbin.com/categories/%E6%81%B6%E6%84%8F%E4%BB%A3%E7%A0%81%E6%A3%80%E6%B5%8B/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
-    
-      <category term="python" scheme="http://hyjal-binbin.com/categories/%E6%81%B6%E6%84%8F%E4%BB%A3%E7%A0%81%E6%A3%80%E6%B5%8B/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/python/"/>
-    
-  </entry>
-  
-  <entry>
     <title><![CDATA[涨知识]]></title>
     <link href="http://hyjal-binbin.com/2017/10/12/bigbrother/"/>
     <id>http://hyjal-binbin.com/2017/10/12/bigbrother/</id>
