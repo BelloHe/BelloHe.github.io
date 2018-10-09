@@ -89,7 +89,7 @@
 <meta property="og:site_name" content="Hyjal&#39;s blog">
 <meta property="og:description" content="0x00 前言　　本文记录基于兜哥《Web安全之深度学习实战》、论文《A Semantic Approach to Host-Based Intrusion Detection Systems Using Contiguous and Discontiguous System Call Patterns》和数据集ADFA-LD，利用机器学习解决信息安全问题。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-09-29T11:33:28.694Z">
+<meta property="og:updated_time" content="2018-10-09T10:41:26.822Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="机器学习解决信息安全问题之ADFA-LD">
 <meta name="twitter:description" content="0x00 前言　　本文记录基于兜哥《Web安全之深度学习实战》、论文《A Semantic Approach to Host-Based Intrusion Detection Systems Using Contiguous and Discontiguous System Call Patterns》和数据集ADFA-LD，利用机器学习解决信息安全问题。">
@@ -334,6 +334,11 @@
           
 
           
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv"><i class="fa fa-file-o"></i>
+            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>
+            </span>
+          
 
           
 
@@ -407,7 +412,41 @@
 </tr>
 </tbody>
 </table>
-<p>　　其中Attack_Data中包含6类攻击，分别为Adduser、Hydra_FTP、Hydra_SSH、Java_Meterpreter、Meterpreter、Web_Shell。在Gideon Creech和Jiankun Hu论文中对攻击数据进行了解释，攻击包含web-based exploitation、simulated social engineering、poisoned executables、emotely triggered vulnerabilities、remote password brute force、system manipulation using the C100 webshell。结合论文中的描述和参考文献1，对6类攻击描述如下表。<br>名称 | 描述<br>—-|—-<br>Adduser | 通过各种姿势添加root权限用户<br>Hydra_FTP | Hydra暴力破解FTP<br>Hydra_SSH | Hydra暴力破解SSH<br>Java_Meterpreter | metasploit - java meterpreter<br>Meterpreter | metasploit - meterpreter<br>Web_Shell | C100 webshell</p>
+<p>　　其中Attack_Data中包含6类攻击，分别为Adduser、Hydra_FTP、Hydra_SSH、Java_Meterpreter、Meterpreter、Web_Shell。在Gideon Creech和Jiankun Hu论文中对攻击数据进行了解释，攻击包含web-based exploitation、simulated social engineering、poisoned executables、emotely triggered vulnerabilities、remote password brute force、system manipulation using the C100 webshell。结合论文中的描述和参考文献1，对6类攻击描述如下表。</p>
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Adduser</td>
+<td>通过各种姿势添加root权限用户</td>
+</tr>
+<tr>
+<td>Hydra_FTP</td>
+<td>Hydra暴力破解FTP</td>
+</tr>
+<tr>
+<td>Hydra_SSH</td>
+<td>Hydra暴力破解SSH</td>
+</tr>
+<tr>
+<td>Java_Meterpreter</td>
+<td>metasploit - java meterpreter</td>
+</tr>
+<tr>
+<td>Meterpreter</td>
+<td>metasploit - meterpreter</td>
+</tr>
+<tr>
+<td>Web_Shell</td>
+<td>C100 webshell</td>
+</tr>
+</tbody>
+</table>
 <p>　　数据集已经对捕获的系统调用进行了处理，对每一个捕获的系统调用都使用唯一的数字进行代替，对应关系文件下载地址<a href="https://www.researchgate.net/profile/Obinna_Igbe/post/Were_can_I_get_a_labelled_version_of_the_ADFA-LD_dataset_for_HIDS_evaluation/attachment/59d6283879197b8077986958/AS%3A329293344329728%401455521059484/download/ADFA-LD%2BSyscall%2BList.txt" target="_blank" rel="external">++ADFA-LDSyscallList.txt++</a>。</p>
 <h1 id="0x02_机器学习实战">0x02 机器学习实战</h1><p>本文分别提取2-gram, 3-gram, (2-3gram), (1-5gram)作为特征向量,词袋大小为1000</p>
 <figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">from sklearn<span class="selector-class">.feature_extraction</span><span class="selector-class">.text</span> import CountVectorizer</div></pre></td></tr></table></figure>
@@ -766,6 +805,26 @@
 
 
         
+<div class="busuanzi-count">
+  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv">
+      <i class="fa fa-user"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+      
+    </span>
+  
+
+  
+    <span class="site-pv">
+      <i class="fa fa-eye"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+      
+    </span>
+  
+</div>
+
 
 
 
