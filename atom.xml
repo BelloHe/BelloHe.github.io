@@ -4,9 +4,9 @@
   <title><![CDATA[Hyjal's blog]]></title>
   <subtitle><![CDATA[on the way]]></subtitle>
   <link href="/atom.xml" rel="self"/>
-  <link href="http://hyjal-binbin.com//"/>
+  <link href="http://hyjal.net//"/>
   <updated>2018-10-09T10:41:26.822Z</updated>
-  <id>http://hyjal-binbin.com//</id>
+  <id>http://hyjal.net//</id>
   
   <author>
     <name><![CDATA[Hyjal]]></name>
@@ -17,8 +17,8 @@
   
   <entry>
     <title><![CDATA[机器学习解决信息安全问题之ADFA-LD]]></title>
-    <link href="http://hyjal-binbin.com/2018/09/29/ADFA-LD/"/>
-    <id>http://hyjal-binbin.com/2018/09/29/ADFA-LD/</id>
+    <link href="http://hyjal.net/2018/09/29/ADFA-LD/"/>
+    <id>http://hyjal.net/2018/09/29/ADFA-LD/</id>
     <published>2018-09-29T11:30:25.000Z</published>
     <updated>2018-10-09T10:41:26.822Z</updated>
     <content type="html"><![CDATA[<h1 id="0x00_前言">0x00 前言</h1><p>　　本文记录基于兜哥《Web安全之深度学习实战》、论文《A Semantic Approach to Host-Based Intrusion Detection Systems Using Contiguous and Discontiguous System Call Patterns》和数据集ADFA-LD，利用机器学习解决信息安全问题。<br><a id="more"></a></p>
@@ -221,16 +221,16 @@
     
     </summary>
     
-      <category term="机器学习" scheme="http://hyjal-binbin.com/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
+      <category term="机器学习" scheme="http://hyjal.net/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
     
-      <category term="深度学习" scheme="http://hyjal-binbin.com/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
+      <category term="深度学习" scheme="http://hyjal.net/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[涨知识]]></title>
-    <link href="http://hyjal-binbin.com/2017/10/12/bigbrother/"/>
-    <id>http://hyjal-binbin.com/2017/10/12/bigbrother/</id>
+    <link href="http://hyjal.net/2017/10/12/bigbrother/"/>
+    <id>http://hyjal.net/2017/10/12/bigbrother/</id>
     <published>2017-10-12T11:33:44.000Z</published>
     <updated>2018-03-12T13:42:35.594Z</updated>
     <content type="html"><![CDATA[<p>2018-3-8 更新<br>　　向大佬、大厂学习信息安全。包括安全资讯媒体、技术论坛、博客、微博、公众号、推特</p>
@@ -251,14 +251,14 @@
     
     </summary>
     
-      <category term="信息安全学习资料" scheme="http://hyjal-binbin.com/tags/%E4%BF%A1%E6%81%AF%E5%AE%89%E5%85%A8%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%96%99/"/>
+      <category term="信息安全学习资料" scheme="http://hyjal.net/tags/%E4%BF%A1%E6%81%AF%E5%AE%89%E5%85%A8%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%96%99/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[SinaL2行情接口C#]]></title>
-    <link href="http://hyjal-binbin.com/2017/02/07/SinaL2/"/>
-    <id>http://hyjal-binbin.com/2017/02/07/SinaL2/</id>
+    <link href="http://hyjal.net/2017/02/07/SinaL2/"/>
+    <id>http://hyjal.net/2017/02/07/SinaL2/</id>
     <published>2017-02-06T16:00:00.000Z</published>
     <updated>2018-03-12T13:39:30.598Z</updated>
     <content type="html"><![CDATA[<h1 id="0x00_说明">0x00 说明</h1><p>　　改自开源项目<a href="https://github.com/Emptyset110/SinaL2" target="_blank" rel="external"><font color="blue">dHydra</font></a>，因需求原因只提取其中行情订阅的部分。由于需要订阅全部股票，所以改为C#版本以提升性能。</p>
@@ -268,16 +268,16 @@
     <![CDATA[<h1 id="0x00_说明">0x00 说明</h1><p>　　改自开源项目<a href="https://github.com/Emptyset110/SinaL2" target="_blank" rel="external"><font color="blue">dH]]>
     </summary>
     
-      <category term="python" scheme="http://hyjal-binbin.com/categories/python/"/>
+      <category term="python" scheme="http://hyjal.net/categories/python/"/>
     
-      <category term="C#" scheme="http://hyjal-binbin.com/categories/python/C/"/>
+      <category term="C#" scheme="http://hyjal.net/categories/python/C/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[做一个对妹纸有用的程序员]]></title>
-    <link href="http://hyjal-binbin.com/2016/08/08/ShowMeTheGirl/"/>
-    <id>http://hyjal-binbin.com/2016/08/08/ShowMeTheGirl/</id>
+    <link href="http://hyjal.net/2016/08/08/ShowMeTheGirl/"/>
+    <id>http://hyjal.net/2016/08/08/ShowMeTheGirl/</id>
     <published>2016-08-08T12:27:25.000Z</published>
     <updated>2016-08-08T14:22:36.441Z</updated>
     <content type="html"><![CDATA[<h1 id="0x00_背景">0x00 背景</h1><p>　　接到妹纸电话，问我会不会使用按键精灵，帮她到一个网站上刷题。<br>　　<font color="red" size="12">我会！！！</font><br>　　妹纸提供的方案是用按键精灵实现每个题都选C，然后提交，但在实际使用过程中出现了以下问题：<br>　　(1)有些题并没有C选项<br>　　(2)选择答案按钮，提交按钮和下一题按钮的位置随题干和解析的长度变换，位置不固定<br>　　(3)该做题系统应该是部署在内网的，妹纸给的外网地址访问奇慢无比，经常掉线<br>　　由于以上原因，我认为无法通过按键精灵的方法达到500分(回答正确一题得0.2分)，所有决定采取其他的方法。<br><a id="more"></a></p>
@@ -298,16 +298,16 @@
     
     </summary>
     
-      <category term="python" scheme="http://hyjal-binbin.com/tags/python/"/>
+      <category term="python" scheme="http://hyjal.net/tags/python/"/>
     
-      <category term="Burp Suite" scheme="http://hyjal-binbin.com/tags/Burp-Suite/"/>
+      <category term="Burp Suite" scheme="http://hyjal.net/tags/Burp-Suite/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[Python编码转换]]></title>
-    <link href="http://hyjal-binbin.com/2016/03/24/decode/"/>
-    <id>http://hyjal-binbin.com/2016/03/24/decode/</id>
+    <link href="http://hyjal.net/2016/03/24/decode/"/>
+    <id>http://hyjal.net/2016/03/24/decode/</id>
     <published>2016-03-24T12:27:25.000Z</published>
     <updated>2016-09-23T02:52:01.935Z</updated>
     <content type="html"><![CDATA[<h1 id="0x00_概要">0x00 概要</h1><p>　　记录通过从linux传输文件到windows的辛酸历程。</p>
@@ -324,16 +324,16 @@
     
     </summary>
     
-      <category term="python" scheme="http://hyjal-binbin.com/tags/python/"/>
+      <category term="python" scheme="http://hyjal.net/tags/python/"/>
     
-      <category term="编码" scheme="http://hyjal-binbin.com/tags/%E7%BC%96%E7%A0%81/"/>
+      <category term="编码" scheme="http://hyjal.net/tags/%E7%BC%96%E7%A0%81/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[pandas库学习笔记]]></title>
-    <link href="http://hyjal-binbin.com/2015/12/10/pandas/"/>
-    <id>http://hyjal-binbin.com/2015/12/10/pandas/</id>
+    <link href="http://hyjal.net/2015/12/10/pandas/"/>
+    <id>http://hyjal.net/2015/12/10/pandas/</id>
     <published>2015-12-09T16:00:00.000Z</published>
     <updated>2016-07-12T10:38:09.111Z</updated>
     <content type="html"><![CDATA[<h1 id="0x00_简单说明">0x00 简单说明</h1><p>　　作为机器学习小白，看了一段时间的coursera上Andrew Ng的视频，感觉还是难以入门，所以报名参加阿里天池上的比赛将理论和实践结合来提高姿势。题目是公交线路客流预测，所给的数据中并没有将乘客数量统计出来，需要自己对数据进行统计。先是自己写个python来统计分析数据(大概900M)，但跑了一晚上，发现太慢，在网上搜索到了pandas库，不到半个小时就统计完成。</p>
@@ -351,14 +351,14 @@
     
     </summary>
     
-      <category term="机器学习" scheme="http://hyjal-binbin.com/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
+      <category term="机器学习" scheme="http://hyjal.net/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[python urllib2学习]]></title>
-    <link href="http://hyjal-binbin.com/2015/10/30/pythonweibo/"/>
-    <id>http://hyjal-binbin.com/2015/10/30/pythonweibo/</id>
+    <link href="http://hyjal.net/2015/10/30/pythonweibo/"/>
+    <id>http://hyjal.net/2015/10/30/pythonweibo/</id>
     <published>2015-10-30T10:05:39.191Z</published>
     <updated>2015-11-02T09:20:53.785Z</updated>
     <content type="html"><![CDATA[<h1 id="0x00_初探">0x00 初探</h1><p>　　提取百度主页html<br><figure class="highlight arduino"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#coding=utf8</span></div><div class="line"><span class="keyword">import</span> urllib2</div><div class="line"></div><div class="line"><span class="built_in">if</span> __name__ == <span class="string">'__main__'</span>:</div><div class="line">    url = <span class="string">'http://www.baidu.com'</span></div><div class="line">    <span class="built_in">print</span> urllib2.urlopen(url).<span class="built_in">read</span>()</div></pre></td></tr></table></figure></p>
@@ -371,16 +371,16 @@
     <![CDATA[<h1 id="0x00_初探">0x00 初探</h1><p>　　提取百度主页html<br><figure class="highlight arduino"><table><tr><td class="gutter"><pre><div class="line">1</di]]>
     </summary>
     
-      <category term="python" scheme="http://hyjal-binbin.com/categories/python/"/>
+      <category term="python" scheme="http://hyjal.net/categories/python/"/>
     
-      <category term="爬虫" scheme="http://hyjal-binbin.com/categories/python/%E7%88%AC%E8%99%AB/"/>
+      <category term="爬虫" scheme="http://hyjal.net/categories/python/%E7%88%AC%E8%99%AB/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[捕获所有USB设备插入消息]]></title>
-    <link href="http://hyjal-binbin.com/2015/10/28/USBMessage/"/>
-    <id>http://hyjal-binbin.com/2015/10/28/USBMessage/</id>
+    <link href="http://hyjal.net/2015/10/28/USBMessage/"/>
+    <id>http://hyjal.net/2015/10/28/USBMessage/</id>
     <published>2015-10-27T16:00:00.000Z</published>
     <updated>2015-10-30T08:13:41.189Z</updated>
     <content type="html"><![CDATA[<h1 id="0x00_说明">0x00 说明</h1><p>　　最先在网上copy的代码，能捕获U盘插入的消息，但不能捕获其他USB设备的消息，且无法获取U盘dbcc_name，多次询问度娘后终于找到正确的姿势，通过RegisterDeviceNotification注册DBT_DEVTYP_DEVICEINTERFACE，获取所有USB类设备的通知。</p>
@@ -397,16 +397,16 @@
     
     </summary>
     
-      <category term="Windows" scheme="http://hyjal-binbin.com/categories/Windows/"/>
+      <category term="Windows" scheme="http://hyjal.net/categories/Windows/"/>
     
-      <category term="USB" scheme="http://hyjal-binbin.com/categories/Windows/USB/"/>
+      <category term="USB" scheme="http://hyjal.net/categories/Windows/USB/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[利用acrobat SDK提取pdf文档内容]]></title>
-    <link href="http://hyjal-binbin.com/2015/10/14/GetpdfContent/"/>
-    <id>http://hyjal-binbin.com/2015/10/14/GetpdfContent/</id>
+    <link href="http://hyjal.net/2015/10/14/GetpdfContent/"/>
+    <id>http://hyjal.net/2015/10/14/GetpdfContent/</id>
     <published>2015-10-13T16:00:00.000Z</published>
     <updated>2015-10-14T08:16:52.158Z</updated>
     <content type="html"><![CDATA[<h1 id="0x00_背景">0x00 背景</h1><p>　　HackingTeam泄漏事件影响颇大，415.77G的内容大多是邮件内容，分析起来比较麻烦，因而被大多数人忽略。网上有很多邮件分析的文章<a href="http://www.sec-un.org/analysis-on-the-hackingteam-mail-security-threat-intelligence-2.html" target="_blank" rel="external"><font color="blue">HT邮件分析</font></a>,主要是针对邮件关联进行分析，若对邮件内容进行分析则需提取邮件附件中的内容，再针对内容做进一步分析。本文背景其实与上文无关，只是借此提升逼格，下面将介绍如何利用acrobat SDK提取pdf文档内容。</p>
@@ -422,14 +422,14 @@
     
     </summary>
     
-      <category term="Windows" scheme="http://hyjal-binbin.com/categories/Windows/"/>
+      <category term="Windows" scheme="http://hyjal.net/categories/Windows/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[windows平台下获取USB设备“身份证”]]></title>
-    <link href="http://hyjal-binbin.com/2015/10/07/device-CA/"/>
-    <id>http://hyjal-binbin.com/2015/10/07/device-CA/</id>
+    <link href="http://hyjal.net/2015/10/07/device-CA/"/>
+    <id>http://hyjal.net/2015/10/07/device-CA/</id>
     <published>2015-10-06T16:00:00.000Z</published>
     <updated>2015-10-22T03:13:30.149Z</updated>
     <content type="html"><![CDATA[<h1 id="0x00_写在前面">0x00 写在前面</h1><p>　　当我们将U盘插入windows主机时，会提示安装驱动，那么windows是如何判断应该安装哪个版本的驱动的呢？在这里将用到设备的身份信息，包括厂商、型号、序列号等。大概半年前做了一个关于设备检测的小工程，看了很多资料和帖子，将获取设备身份信息的方法在此记录，方便以后使用。</p>
@@ -446,9 +446,9 @@
     
     </summary>
     
-      <category term="Windows" scheme="http://hyjal-binbin.com/categories/Windows/"/>
+      <category term="Windows" scheme="http://hyjal.net/categories/Windows/"/>
     
-      <category term="USB" scheme="http://hyjal-binbin.com/categories/Windows/USB/"/>
+      <category term="USB" scheme="http://hyjal.net/categories/Windows/USB/"/>
     
   </entry>
   
